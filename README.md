@@ -1,4 +1,4 @@
-# 1T-proket-final
+# 1T-projet-final
 Exemple de la structure attendue pour le projet de fin d'année.
 
 Attention, ce projet ne répond pas exactement aux critères qui vous sont demandés.
