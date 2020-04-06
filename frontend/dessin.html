@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dessin</title>
+  <link type="text/css" rel="stylesheet" href="css/dessin.css">
+  <!--<script type='text/javascript' src="js/dessin.min.js"></script> -->
+  <script type='text/javascript' src="js/dessin-demo.js"></script>
+  <script type='text/javascript' src="js/etudiant1-traitement-colorier.js"></script>
+  <script type='text/javascript' src="js/etudiant2-traitement-pixels.js"></script>
+  <script type='text/javascript' src="js/etudiant3-traitement-effacer.js"></script>
+</head>
+<body>
+
+<div id="cadre">
+<div id="intro">
+</div>
+
+<div id="utilisateur">
+  <label for="name">Nom : </label>
+  <input id="name" type="text">
+  <label for="pass">Code : </label>
+  <input id="pass" type="text">
+  <input id="codeVisible" type="checkbox" checked><label for="codeVisible">visible</label>
+  <button id="boutonEffacer">Supprimer mon oeuvre</button>
+</div>
+
+  <div id="creation">
+  </div>
+
+<div id="rafraichir">
+  <div >
+    <p id="affichage">AFFICHAGE : </p>
+  </div>
+  <button id="boutonRafraichir">Rafraichir</button>
+</div>
+
+<div id="choixCouleur">
+  <label for="couleur">Couleur sélectionnée : </label>
+  <input type="color" id="couleur" name="couleur" value="#e66465">
+</div>
+
+<div id="zoneDessin">
+  <table>
+    <tbody id="dessin">
+    </tbody>
+  </table>
+</div>
+</div>
+
+</body>
+</html>
