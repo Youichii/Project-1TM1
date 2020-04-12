@@ -1,0 +1,79 @@
+body{
+  font-family: fantasy;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-image: url("../img/NightSky.jpg");
+}
+
+.logo{
+  animation: appear 4s ease forwards;
+}
+
+.logo a{
+  text-shadow: 8px 8px black;
+  font-family: fantasy;
+  text-align: center;
+  font-size: 53px;
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.FormBloc {
+  animation: appear 5s ease forwards;
+  position: relative;
+  margin-left: 40%;
+  margin-right: 40%;
+  position: relative;
+  text-align: center;
+  border: 1px solid Black;
+  background-color: white;
+  height: 500px;
+  min-width: 300px;
+  border-radius: 3px;
+}
+
+.title{
+font-size: 18px;
+margin-top: 30px;
+}
+
+.LoginForm input{
+  background-color: #ffffcc;
+  border-radius: 15px;
+  font-size: 20px;
+  margin: 10px;
+  padding-left: 5px;
+  height: 36px;
+  border: none;
+}
+
+
+.LoginForm button{
+  font-family: Arial;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color:#ffffcc ;
+  border : none;
+}
+
+.SignupButton a{
+  font-size: 17px;
+  text-align: center;
+  position: absolute;
+  text-decoration: none;
+  color: grey;
+  bottom: 3%;
+  right: 40%;
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 0.85;
+  }
+}
