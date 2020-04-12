@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajouter</title>
+</head>
+<body>
+   <header>
+
+       <h1>Ajouter une tâche</h1>
+   </header>
+   <section>
+
+
+
+       <form name="Ajouter" action="page-d-ajout" method="post">
+           <p>Veillez remplir tous les champs</p>
+           <fieldset>
+               <!-- Si on est dejà connecté, remplir auto les coordonnées-->
+               <legend>Vos coordonnées personnelles</legend>
+               <label for="nom">Nom</label>
+               <input type ="text" name="nom" id="nom"/>
+
+               <label for="prénom">Prénom</label>
+               <input type="text" name="prénom" id="prénom"/>
+
+               <label for="email">Votre adresse mail</label>
+               <input type="text" name="email" id="email">
+
+           </fieldset>
+
+           <fieldset>
+               <legend>Type de tâche</legend>
+               <p>Veillez cocher:</p>
+               <input type="checkbox" name="maison" id="maison"/>
+               <label for="maison">MAISON</label><br/>
+
+               <input type="checkbox" name="jardin" id="jardin"/>
+               <label for="jardin">JARDIN</label><br/>
+
+               <input type="checkbox" name="garage" id="garage"/>
+               <label for="garage">GARAGE</label><br/>
+
+               <input type="checkbox" name="reparation" id="reparation"/>
+               <label for="reparation">REPARATION</label><br/>
+
+               <input type="checkbox" name="autre" id="autre"/>
+               <label for="autre">AUTRE</label><br/>
+           </fieldset>
+
+           <fieldset>
+               <legend>Description</legend>
+               <textarea></textarea>
+           </fieldset>
+           <div class="button">
+               <button type="submit">Soumettre</button>
+           </div>
+
+       </form>
+   </section>
+
+
+
+</body>
+</html>
