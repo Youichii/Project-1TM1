@@ -2,7 +2,7 @@
 body{
     display: grid;
     background-image:url("../img/bureau.jpg");
-
+    margin:0px;
 }
 
 #mon_image{
@@ -60,7 +60,6 @@ body{
 
 #info{
     background-image:url("../img/bande.jpg");
-    
     border-style: solid;
     border-color: black;
     grid-column:1/6;
@@ -130,24 +129,36 @@ body{
     border:solid;
 }
 
-#bandeau{
-    
-    background-image: url("../img/bande.jpg");
-    grid-column:1/6;
-    grid-row:1;
-    border-collapse: separate;
-    margin-bottom: 15px;
-    border-style: solid;
-    border-color: black;
-    height:;
-    width: ;
-    text-align: center;
 
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to left, black, #333333);
+    min-height: 50px;
+  }
 
-
-}
-
-#leg{
+.logo{
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+  }
+  
+.navButton{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
+.navButton a{
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+.leg{
     color:grey;
     border:solid;
     border-color: black;
@@ -158,25 +169,14 @@ body{
     grid-column:4/6;
     grid-row: 2; 
     margin-top: 0px;
-    text-align: center;
     height:300px;
     width: 650px;
     border-color: black;
     background-color: whitesmoke;
     opacity: 80%;
     border:solid;
-}
-
-#propose{
-    background-color: silver;
     margin-bottom: 15px;
     border-style: solid;
     border-color:black;
-
-}
-
-#recherche{
-    background-color: silver;
-    border-style: solid;
-    border-color:black;
+    font-weight: bold;
 }
