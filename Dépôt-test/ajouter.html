@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Taches.css" type="text/css">
+    <title>ajouter</title>
+</head>
+<body>
+   <header>
+       <!--Banniere Aurélien-->
+       <nav>
+           <div class="logo">
+               <h4>Simple Tasks</h4>
+           </div>
+           <ul class="navButton">
+               <li><a href="#">Accueil</a></li>
+               <li><a href="#">Tâches</a></li>
+               <li><a href="#">Évaluations</a></li>
+               <li><a href="#">Profil</a></li>
+           </ul>
+           <form class="LoginForm" action="#" method="post">
+               <input type="text" name="UsernameUser" placeholder="Identifiant" required>
+               <input type="password" name="PasswordUser" placeholder="Mot de passe" required>
+               <button type="submit" name="SubmitLogin">Connexion</button>
+           </form>
+       </nav>
+
+       <h1>Ajouter une tâche</h1>
+   </header>
+   <section>
+
+
+
+       <form class ="AjTache" name="Ajouter" action="page-d-ajout" method="post">
+           <p>Veillez remplir tous les champs</p>
+           <fieldset class="coord">
+               <!-- Si on est dejà connecté, remplir auto les coordonnées-->
+               <legend>Vos coordonnées personnelles</legend>
+               <label for="nom">Nom</label>
+               <input type ="text" name="nom" id="nom"/>
+
+               <label for="prénom">Prénom</label>
+               <input type="text" name="prénom" id="prénom"/>
+
+               <label for="email">Votre adresse mail</label>
+               <input type="text" name="email" id="email">
+
+           </fieldset>
+
+           <fieldset class="selection">
+               <legend>Type de tâche</legend>
+               <p>Veillez cocher:</p>
+               <input type="checkbox" name="maison" id="maison"/>
+               <label for="maison">MAISON</label><br/>
+
+               <input type="checkbox" name="jardin" id="jardin"/>
+               <label for="jardin">JARDIN</label><br/>
+
+               <input type="checkbox" name="garage" id="garage"/>
+               <label for="garage">GARAGE</label><br/>
+
+               <input type="checkbox" name="reparation" id="reparation"/>
+               <label for="reparation">REPARATION</label><br/>
+
+               <input type="checkbox" name="autre" id="autre"/>
+               <label for="autre">AUTRE</label><br/>
+           </fieldset>
+
+           <fieldset class ="descri">
+               <legend>Description</legend>
+               <textarea></textarea>
+           </fieldset>
+           <div class="button1">
+               <button type="submit">Soumettre</button>
+           </div>
+
+       </form>
+   </section>
+
+
+
+</body>
+</html>
