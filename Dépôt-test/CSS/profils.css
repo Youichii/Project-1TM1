@@ -1,17 +1,33 @@
-/*----------------------------------------- - Bannières*/
-.bannieres {
-	position : relative ;
-	background-color : #4F6F7C ;
+	/*position : relative ;
+	background-color : black ;
 	color : white ;
 	width : 100% ;
 	height : 14% ;
 	text-align : center ;
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: linear-gradient(to left, black, #333333);
+	min-height: 50px;*/
+	position : relative ;
+	background: linear-gradient(to left, black, #333333) ;
+	min-height: 50px ;
+	width : 100% ;
+	text-align : center ;
+	top : 3px ;
+	//NE MARCHE PAS MOCHE
 }
+	
 .clic:hover{
 	text-decoration : underline ;
 }
 #bonne_page {
 	text-decoration : underline ;
+}
+
+#navigation_haut {
+	color : white; 
 }
 
 /*----------------------------------------- - Corps de la page */
@@ -21,8 +37,8 @@ body {
 .container {
 	font-family : Roboto,sans-serif ;
 	position : relative ;
-	background-image : url(../IMG/acceuil2.jpg);
-	background-attachment : fixed;
+	background-image : url(../IMG/acceuil8.jpg);
+	background-attachment : fixed ;
 }
 
 /*----------------------------------------- - Cadre par personne */
@@ -33,7 +49,6 @@ body {
 	width : 237px ;
 	margin : 20px  ;
 	padding : 10px ;
-	/*vertical-align : top ;*/
 }
 
 /*Nom - notation - commentaire*/
@@ -47,7 +62,6 @@ body {
 	height : 280PX ;
 	color : black ;
 	background: linear-gradient(white, transparent);
-	/*background-color : white ;*/
 	opacity : 0.9 ;
 }
 .nom_com {
@@ -64,7 +78,7 @@ body {
 	border-radius : 15px ;
 	width : 115px;
 	height : 32px;
-	background-color : #4F6F7C ;
+	background-color : black ;
 	color : white ;
 	opacity : 1.0 ;
 	border : none ;
