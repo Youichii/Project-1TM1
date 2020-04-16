@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset=utf-8>
+    <title>Profil public</title>
+    <script src="js/ProjetSQL-CB.js"></script>  `
+    <link rel="stylesheet" type="text/css" href="css/GLOBALCSS.css">
+
+  </head>
+  <body onload="initBis()" class="BodyPublic">
+    <!--<fieldset id ="bandeau">
+        <a href="" id="lienbis">Acceuil</a>
+        <a href="" id="lienbis">Profil</a>
+        <a href="" id="lienbis">Communauté</a>
+        <a href="" id="lienbis">Services</a>
+
+
+    </fieldset>-->
+    <header>
+        <nav class="BannerGlobal">
+          <div class="logo">
+            <h4>Simple Tasks</h4>
+          </div>
+          <ul class="navButton">
+            <li><a href="Accueil-AB.html">Accueil</a></li>
+            <li><a href="#">Tâches</a></li>
+            <li><a href="Profils-CS.html">Communauté</a></li>
+            <li><a href="#">Profil</a></li>
+          </ul>
+        </nav>
+    </header>
+    <img src="img/poney.jpg" alt="photo de profil" id="mon_image">
+
+    <fieldset id="page">
+        <div id="page2"></div>
+    </fieldset>
+
+    <fieldset id="info"></fieldset>
+
+    <fieldset id="commentaires">
+        <legend class="leg">
+            Ecrire un commentaire
+        </legend>
+
+        <input type="text" placeholder="Nom d'utilisateur" id="utilisateur" required>
+            Êtes-vous son:
+            <label for="radE">Enployé</label>
+        <input type="radio" id="radE" value="Employé" name="ER" name="Nom" checked>
+            <label for="radR">Employeur</label>
+        <input type="radio" id="radR" value="Employeur" name="ER"><br><br>
+            Introduire un commentaire:
+        <input type="text" placeholder="introduire un commentaire" id="comm" required>
+        <input type="button" onclick="note()" value="Noter la prestation" name="Noter" id="Noter">
+        <input type="button" onclick="commentaires()" value="Envoyer le commentaire" id="Envoyer">
+    </fieldset>
+
+    <fieldset id="zonecomm">
+        <legend class="leg">
+            Zone de commentaire
+        </legend>
+    </fieldset>
+
+    <fieldset id="note">
+        <legend class="leg">
+            Note des utilisateurs
+        </legend>
+    </fieldset>
+
+    <fieldset id="services">
+        <legend class="leg">
+            Je propose les services suivants
+        </legend>
+
+        </fieldset>
+  </body>
+</html>
