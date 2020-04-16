@@ -19,10 +19,13 @@
     <h1 class="SignupTitle">Inscription</h1>
     <div class="SignupBox">
       <form class="SignupForm" action="Accueil-AB.html" method="post">
+        <input type="text" name="Nom" placeholder="Nom" required>
+        <input type="text" name="Prenom" placeholder="Prénom" required>
         <input type="text" name="UserId" placeholder="Nom d'utilisateur" required>
         <input type="text" name="MailUser" placeholder="E-mail" required>
         <input type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" name="PhoneNumber" placeholder="GSM (+32123456789)" required>
-        </p><input type="date" name="Anniversary" value="Anniversaire">
+        <p class="Birth">Date de naissance :</p>
+        <input type="date" name="Anniversary" value="Anniversaire">
         <input type="password" name="PswdUser" placeholder="Mot de passe" required>
         <input type="password" name="PswdConfirm" placeholder="Confirmation mot de passe" required>
         <div class="SelectBloc">
@@ -34,6 +37,10 @@
         </div>
         <button type="submit" name="SignupButton">S'inscrire!</button>
       </form>
+  </div>
+  <div class="blankSignup">
+    <a class="arrow" href="#ScrollBottom">^</a></br></br>
+    <a id="ScrollBottom">Police de confidentialité</a>
   </div>
   </body>
 </html>
