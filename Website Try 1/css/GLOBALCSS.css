@@ -387,6 +387,7 @@ body#corps {
 	position : relative ;
 	background-image : url(../IMG/acceuil8.jpg);
 	background-attachment : fixed ;
+	text-align : center ;
 }
 
 .personne {
@@ -409,6 +410,7 @@ body#corps {
 	color : black ;
 	background: linear-gradient(white, transparent);
 	opacity : 0.9 ;
+	top : -5px ;
 }
 .nom_com {
 	position : relative ;
@@ -425,7 +427,7 @@ body#corps {
 	border-radius : 15px ;
 	width : 115px;
 	height : 32px;
-	background-color : Silver;
+	background-color : #DBDCDB ;
 	color : #111111 ;
 	opacity : 1.0 ;
 	border : none ;
