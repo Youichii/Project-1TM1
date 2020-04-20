@@ -22,9 +22,11 @@ CREATE TABLE taches(
     tache VARCHAR(100) NOT NULL,
     details LONG VARCHAR NULL,
     categorie VARCHAR(10) NOT NULL,
+    cote INTEGER NULL,
 
     CONSTRAINT pk_communaute_taches FOREIGN KEY(idCom) REFERENCES communaute(idCom)
 ) ;
+
 
 
 
