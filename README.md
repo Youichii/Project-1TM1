@@ -22,7 +22,7 @@ Nous désirons  crée un site web qui permettra de déposer des annonces de trav
 
   #FONCTIONNALITÉS SECONDAIRES
   
--Un profil public accessible pour chaque personne qui reprend les évalutations des autres utilisateurs.
+-Un profil public visible par tous les utilisateurs reprennant les données personnelles, les commentaires des autres usagers ansi qu'une note sur la qualité du travail effectué.
 
 -Un profil privé uniquement accessible par la personne connectée lui permettant de voir et modifier ses informations personnelles.
 
@@ -32,7 +32,6 @@ Nous désirons  crée un site web qui permettra de déposer des annonces de trav
 
 -Une fonctionnalité permettant de trier les tâches recherchées par mot-clés.
 
--Un système de notation personnel, permettant de voir les évalutations de tout le monde.
 
 
 
