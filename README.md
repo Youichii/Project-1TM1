@@ -8,7 +8,7 @@ Par exemple : ici il n'y a qu'une seule table, il n'a pas de formulaire, pas de 
 Aurélien Brille, Cécile Bonnet, Clémentine Sacré, Noelle Khazoum
 
 # Description du projet
-Vous devez expliquer textuellement et clairement ce qu'est votre projet, à quoi il sert, ce qu'il peut faire.
+Nous désirons une page web
 
 # Détail api rest
 Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le format de réponse.
