@@ -454,11 +454,12 @@ body#corps {
 
 
 body.BodyPublic{
-    display: grid;
     background-image:url("../img/bureau1.jpg");
     margin:0px;
 }
 
+   
+}
 #mon_image{
 
     border-style: solid;
@@ -466,8 +467,10 @@ body.BodyPublic{
     border-radius: 30%;
     width:300px;
     height:315px;
-    grid-column:1 ;
-    grid-row:2;
+    position : relative;
+	left:20%;
+	top : 10%;
+   
 }
 
 #note{
@@ -476,13 +479,13 @@ body.BodyPublic{
     border-style: solid;
     border-color: black;
     height:100px;
-    width: 200px;
-    grid-column:1 ;
-    grid-row:3;
+    width: 20%;
     opacity: 75%;
     background-color: whitesmoke;
     font-weight: bold;
     border:solid;
+	position:absolute;
+    top:47%;
 }
 
 #lienbis{
@@ -495,16 +498,21 @@ body.BodyPublic{
     border-style: double;
     border-color: black;
     height:300px;
-    width: 400px;
-    grid-column:2/4;
-    grid-row: 2;
+    width: 30%;
     background-color: whitesmoke;
     opacity: 75%;
+	font-style: italic;
+    font-weight: bold;
+    font-size: 200%;
+    color: green;
+    text-align: center;
+	position:relative; 
+	left:25%
     /*border:solid;*/
 
 }
 
-#page2{
+
     font-style: italic;
     font-weight: bold;
     font-size: 200%;
@@ -516,8 +524,6 @@ body.BodyPublic{
     background-image:url("../img/bande.jpg");
     border-style: solid;
     border-color: black;
-    grid-column:1/6;
-    grid-row:5;
     text-align: center;
     border-collapse: separate;
     margin-top: 30px;
@@ -550,8 +556,7 @@ body.BodyPublic{
     border-color: black;
     border-collapse: separate;
     margin-top: 30px;
-    grid-column:2/6;
-    grid-row:3;
+    
     width: ;
     height:100px;
     background-color: whitesmoke;
@@ -569,8 +574,7 @@ body.BodyPublic{
 }
 
 #zonecomm{
-    grid-column:1/6;
-    grid-row:4;
+    
     overflow:auto; /*probleme de scroll*/
     border-collapse: separate;
     margin-top: 25px;
@@ -591,11 +595,10 @@ body.BodyPublic{
 }
 
 #services{
-    grid-column:4/6;
-    grid-row: 2;
+    
     margin-top: 0px;
     height:300px;
-    width: 650px;
+    width:40%;
     border-color: black;
     background-color: whitesmoke;
     opacity: 80%;
@@ -604,6 +607,9 @@ body.BodyPublic{
     border-style: solid;
     border-color:black;
     font-weight: bold;
+	position: absolute;
+	right:0%;
+	top:20%;
 }
 
 /* -------------------------------------------Profils Privés CSS - CÉCILE BONNET---------------------------------------- */
