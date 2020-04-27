@@ -74,7 +74,6 @@ VALUES
 ('estelle87', 'Nettoyer les autos', 'Il est temps que vous laviez votre voiture !! N''attendez plus pour m''appeler.', 'garage', 7),
 ('sophia32', 'Aspirer les voitures', 'J''aspire vos voitures, malheureusement je ne fais pas l''extérieur je suis allergique à l''eau', 'garage', 9),
 ('oscar51', 'Nettoyer la piscine', 'Le printemps prend fin, bientôt un an que vous n''avez plus lavé votre piscine ? Je suis là !', 'maison', NULL),
-('victor89', 'Aller faire les courses', 'Je fais les courses pour tout type de personne, je paye et vous me rembourser à la fin.', 'autre', NULL),
 ('oscar90', 'Rattrapage', 'Si vous avez des soucis en cours dans n''importe quelle matière, je donne des rattrapages jusqu''au niveau de 4e secondaire.', 'autre', 5),
 ('marie54', 'Construire une cabane de jardin', 'Je suis bo en construction donc si vous avez besoin d''aide pour construire votre cabane, appelez moi.', 'jardin', 6),
 ('adam09', 'Construire enclos animaux (poules, lapins, ...)', 'Je construis des abris adaptés à vos animaux, il est important qu''ils aient un endroit pour vivre convenable.', 'autre', 8),
