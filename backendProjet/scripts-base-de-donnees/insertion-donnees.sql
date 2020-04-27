@@ -62,7 +62,6 @@ INSERT INTO taches
 VALUES
 ('ambre21', 'Tondre la pelouse', 'Bonjour ! Je me propose pour tondre votre pelouse, j''ai de l''endurance, je sais tenir longtemps. J''habite dans les environs de Liège.', 'jardin', 8),
 ('morgan53', 'Planter des fleurs', 'Bonjour, ayant fait des études de jardinage, je me propose pour planter votre fleurs avec délicatesse.', 'jardin', 6),
-('jade35', 'Réparer des bricoles', 'Je suis très manuel, alors je vous propose de réparer toutes sorties de bricoles, comme des portes, des meubles ou encore des lampes', 'reparation', NULL),
 ('victoire72', 'Laver les voitures', 'En ces beaux jours d''été je vous propose de laver vos voitures à petits prix.', 'garage', 9),
 ('clotaire87', 'Faire le lave-vaisselle', 'Votre vaisselle s''entasse depuis maintenant 3 mois? Je suis là ! Ayant travailler 4 ans à la plonge, j''ai le coup de main pour nettoyer la vaiselle.', 'maison', NULL),
 ('victor89', 'Ranger les chambres', 'Bonjour, je vous propose de ranger les chambres que ce soit celles d''adultes, d''ados, ou encore d''enfants !', 'maison', 2),
