@@ -14,7 +14,7 @@ function demarrage() {
 function affiche(texte) {
 	
 	let reponse = JSON.parse(texte) ;
-	let fiche = "", img, desc, cotation ;
+	let fiche = "", img, desc, cotation, name, total ;
 	let plein, moitiePlein, pasPlein ;
 	for (let i = 0 ; i < reponse.length ; i++) {
 		img = '<img src="img?url='+ reponse[i].photo +'" alt="test" width="234" height="250"/>' ;
@@ -27,17 +27,20 @@ function affiche(texte) {
 		
 		if (reponse[i].cote == null) {
 			cotation = "" ;
+			total = '<span>' + reponse[i].prenom + '</span>' ;
 		}
 		else {
-			cotation =  '<span id="cotation_personne">' + reponse[i].cote + "/10" ;
+			cotation =  '<span class="cotation_personne">' + reponse[i].cote + '/10 </span>' ;
+			name = '<span class="prenom_personne">' + reponse[i].prenom + '</span>' ;
+			total =  name + cotation ;
 		}
 		
 		fiche += '<div class="personne">\
-					 <div class="avatars"> ' + img + '</div>\
+					 <div> ' + img + '</div>\
 					 <div class="desc">\
-					 <div class="nom_com"><span id="prenom_personne">' + reponse[i].prenom + '</span>' + cotation + '</span></div>\
+					 <div class="nom_com">' + total + '</div>\
 					 <div class="info"><br><br><br><br>' + desc + '</div>\
-					 <div id="profil_bouton"><a href="root?url=PageProfilPublic-CB"><input onclick="blabla(\'' + reponse[i].idCom + '\');" type="button" value="Voir le profil" class="compte_bouton"></a></div>\
+					 <div class="profil_bouton"><a href="root?url=PageProfilPublic-CB"><input onclick="blabla(\'' + reponse[i].idCom + '\');" type="button" value="Voir le profil" class="compte_bouton"></a></div>\
 					 </div></div>' ;
 	}
 	return fiche ;
@@ -54,6 +57,7 @@ function blabla(code) {
 			}
 	xhr.send() ;
 }
+
 
 
 
