@@ -6,6 +6,8 @@ CREATE TABLE villes(
     CONSTRAINT pk_villes PRIMARY KEY(postal)
 ) ;
 
+
+
 //Table avec toutes les informations sur la personne
 CREATE TABLE communaute (
     idCom VARCHAR(16) NOT NULL,
@@ -25,6 +27,7 @@ CREATE TABLE communaute (
 ) ;
 
 
+
 //Table avec toutes les tâches
 CREATE TABLE taches(
     idCom VARCHAR(16) NOT NULL,
@@ -38,7 +41,6 @@ CREATE TABLE taches(
 
 
 
-
 //Table avec les commentaires
 CREATE TABLE commentaires (
     idCom VARCHAR(16) NOT NULL,
@@ -48,7 +50,6 @@ CREATE TABLE commentaires (
     CONSTRAINT pk_communaute_commentaires FOREIGN KEY(auteur) REFERENCES communaute(idCom)
 ) ;
 ALTER TABLE "DBA"."commentaires" ADD CONSTRAINT "communaute" NOT NULL FOREIGN KEY ( "idCom" ASC ) REFERENCES "DBA"."communaute" ( "idCom" );
-
 
 
 
