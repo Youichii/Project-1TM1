@@ -410,77 +410,26 @@ a.arrow{
 
 /* --------------------------------------Communauté CSS - CLÉMENTINE SACRÉ-------------------------------------------- */
 
-.navButton a.community{
+.blank-CS a{
+  margin-left: 45%;
+  color: #c1e1ad;
   text-decoration: underline;
 }
 
-#bonne_page {
-	text-decoration : underline ;
-}
-
-#navigation_haut {
-	color : white;
+.blank-CS {
+  position:static;
+  padding: 2%;
+  background-color: #000000;
+  bottom: 0;
+  background: linear-gradient(to left, black, #333333);
 }
 
 body#corps {
 	margin : 0px ;
 }
 
-.container {
-	font-family : Roboto,sans-serif ;
-	position : relative ;
-	background-image : url(../IMG/acceuil8.jpg);
-	background-attachment : fixed ;
-	text-align : center ;
-}
-
-.personne {
-	position : relative ;
-	word-wrap : break-word ;
-	display : inline-block ;
-	width : 237px ;
-	margin : 20px  ;
-	padding : 10px ;
-}
-
-#cotation_personne {
-	position : relative ;
-	text-align : right ;
-	left : 60px ;
-	padding : 4px 6px 4px 6px ;
-	background-color : #494747 ;
-	color : white ;
-	border-radius : 9px ;
-}
-
-#prenom_personne{
-	position : relative ;
-	left : 15px ;
-}
-
-.nom_com {
-	position : relative ;
-	top : 15px ; 
-}
-
-.info {
-	width : 235px ;
-	height : 175px ;
-}
-
-.desc {
-	position : relative ;
-	width : 234px ;
-	height : 280PX ;
-	color : black ;
-	background: linear-gradient(white, transparent);
-	opacity : 0.9 ;
-	top : -5px ;
-}
-
-#profil_bouton {
-	position : relative ;
-	text-align : center ;
+#bonne_page {
+	text-decoration : underline ;
 }
 
 .compte_bouton {
@@ -499,20 +448,71 @@ body#corps {
 	opacity: 0.7 ;
 }
 
-.blank-CS a{
-  margin-left: 45%;
-  color: #c1e1ad;
+.container {
+	font-family : Roboto,sans-serif ;
+	position : relative ;
+	background-image : url(../IMG/acceuil8.jpg);
+	background-attachment : fixed ;
+	text-align : center ;
+}
+
+.cotation_personne {
+	position : relative ;
+	text-align : right ;
+	left : 30px ;
+	padding : 4px 6px 4px 6px ;
+	background-color : #494747 ;
+	color : white ;
+	border-radius : 9px ;
+}
+
+.desc {
+	position : relative ;
+	width : 234px ;
+	height : 280PX ;
+	color : black ;
+	background: linear-gradient(white, transparent);
+	opacity : 0.9 ;
+	top : -5px ;
+}
+
+.info {
+	width : 235px ;
+	height : 175px ;
+}
+
+.navButton a.community{
   text-decoration: underline;
 }
 
-.blank-CS {
-  position:static;
-  padding: 2%;
-  background-color: #000000;
-  bottom: 0;
-  background: linear-gradient(to left, black, #333333);
+#navigation_haut {
+	color : white;
 }
 
+.nom_com {
+	position : relative ;
+	top : 15px ; 
+	text-align : center ;
+}
+
+.personne {
+	position : relative ;
+	word-wrap : break-word ;
+	display : inline-block ;
+	width : 237px ;
+	margin : 20px  ;
+	padding : 10px ;
+}
+
+.prenom_personne{
+	position : relative ;
+	text-align : center ;
+}
+
+#profil_bouton {
+	position : relative ;
+	text-align : center ;
+}
 
 /* ------------------------------------------Profils Publics CSS - CÉCILE BONNET---------------------------------------- */
 
