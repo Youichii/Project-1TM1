@@ -65,7 +65,7 @@ VALUES
 ('zoe73', '47', 'Ward', 'Zoé', 'F', '+32434219948', 'ward.zoe@gmail.com', '1992-11-15', 'fantome_mauve.png', NULL, 4000),
 ('victoire72', '48', 'Davies', 'Victoire', 'F', '+32400912486', 'davies.victoire@gmail.com', '1989-06-25', 'victoire.jpg', 'J''aime beaucoup le contact social, j''en ai besoin.', 1000),
 ('hector09', '49', 'Wallace', 'Hector', 'M', '+32413451665', 'wallace.hector@gmail.com', '2001-08-08', 'fantome_bleu.png', 'J''essaie de commencer le volley mais c''est dur.', 2000),
-('melchior98', '50', 'Wallace', 'Melchior', 'M', '+32442847481', 'wallace.melchior@gmail.com', '1998-09-14', 'melchior.jph', 'Je me balade 1h30 par jour, je bois du thé et je suis végétarien.', 1348);
+('melchior98', '50', 'Wallace', 'Melchior', 'M', '+32442847481', 'wallace.melchior@gmail.com', '1998-09-14', 'melchior.jpg', 'Je me balade 1h30 par jour, je bois du thé et je suis végétarien.', 1348);
 
 
 
