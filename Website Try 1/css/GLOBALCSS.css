@@ -179,8 +179,8 @@ body.BodyLogin{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  background-image: url("../img/zen-black.jpg");
-  background-size: contain;
+  background-image: url("img?url=zen-black.jpg");
+  background-size: cover;
 }
 
 .LoginLogo{
@@ -267,7 +267,8 @@ body.BodySignup{
   padding: 0px;
   box-sizing: border-box;
   background-image: url("../img/Signup-Img.jpg");
-  background-size: auto;
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 h1.SignupTitle{
@@ -286,12 +287,54 @@ h1.SignupTitle{
 
 }
 
+a#SignupConfirmation{
+  margin-left: 25%;
+  border: 1 px solid black;
+  border-radius: 3px;
+  position: relative;
+  color : blue;
+}
+
+a#retry{
+    margin-left: 40%;
+    color : blue;
+}
+
+p#WrongPswd, p#WrongMail{
+  text-align: center;
+  color: red;
+}
+
+.SelectBloc p{
+  color: black;
+  font-family: comic;
+  font-weight: 600;
+  font-size: 21px;
+  position: relative;
+  display: inline;
+  margin-left: 35%;
+}
+
 .SelectBloc select{
-  border-radius: 5px;
+  border-radius: 9px;
   font-size: 16px;
   position: relative;
   display: inline;
-  border: 1px solid Black;
+  border: none;
+  padding-left: 1%;
+}
+
+div.blocVilles select{
+  width: 220px;
+  margin-top: 5px;
+  font-size: 16px;
+  border-radius: 9px;
+  border: none;
+}
+
+div.blocVilles{
+  font-size: 17px;
+  text-align: center;
 }
 
 .SelectBloc p{
@@ -319,7 +362,7 @@ p.Birth{
 
 .SignupForm input,
 button{
-  font-size: 17px;
+  font-size: 18px;
   height: 18px;
   border-radius: 8px;
   margin: 15px auto 15px auto;
@@ -327,13 +370,13 @@ button{
   border: none;
 }
 
-.SignupForm button{
+input.buttonSignup{
   text-shadow: 1px 1px black;
   color: white;
   font-weight: bold;
   background-color: black;
-  width: 8rem;
-  height: 1.6rem;
+  width: 120px;
+  height: 1.3rem;
   cursor: pointer;
 }
 
@@ -342,10 +385,11 @@ button{
 }
 
 div.blankSignup {
-  margin-top: 17%;
-  position:static;
+  text-align: center;
+  padding: 0 47% 0 47%;
+  top: 96%;
+  position: absolute;
   background-color: #000000;
-  bottom: 0;
   background: linear-gradient(to left, black, #333333);
   height: 100px;
 }
@@ -355,16 +399,15 @@ a.arrow{
   font-weight: 800;
   text-decoration: none;
   color: #c1e1ad;
-  margin-left: 50%;
+  text-align: center;
 
 }
 
 .blankSignup a#ScrollBottom{
-
-  margin-left: 45.5%;
   color: #c1e1ad;
   text-decoration: underline;
 }
+
 /* --------------------------------------Communauté CSS - CLÉMENTINE SACRÉ-------------------------------------------- */
 
 .navButton a.community{
