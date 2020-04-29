@@ -10,13 +10,3 @@ BEGIN
 END
 
 
-
-
-//Lien entre Profils-CS et ProfilPublic-CB
-CREATE PROCEDURE stockage (identifiant char(16)) 
-BEGIN 
-    INSERT INTO transition 
-    (idTrans, idUtile)
-    VALUES 
-    ('nom', identifiant);
-END ;
