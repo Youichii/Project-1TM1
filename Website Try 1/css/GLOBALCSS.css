@@ -382,6 +382,7 @@ a.arrow{
 body#corps {
 	margin : 0px ;
 }
+
 .container {
 	font-family : Roboto,sans-serif ;
 	position : relative ;
@@ -399,10 +400,31 @@ body#corps {
 	padding : 10px ;
 }
 
+#cotation_personne {
+	position : relative ;
+	text-align : right ;
+	left : 60px ;
+	padding : 4px 6px 4px 6px ;
+	background-color : #494747 ;
+	color : white ;
+	border-radius : 9px ;
+}
+
+#prenom_personne{
+	position : relative ;
+	left : 15px ;
+}
+
+.nom_com {
+	position : relative ;
+	top : 15px ; 
+}
+
 .info {
 	width : 235px ;
 	height : 175px ;
 }
+
 .desc {
 	position : relative ;
 	width : 234px ;
@@ -412,15 +434,12 @@ body#corps {
 	opacity : 0.9 ;
 	top : -5px ;
 }
-.nom_com {
-	position : relative ;
-	top : 15px ;
-}
 
 #profil_bouton {
 	position : relative ;
 	text-align : center ;
 }
+
 .compte_bouton {
 	font-size: 0.8rem;
 	font-weight: 600;
@@ -432,6 +451,7 @@ body#corps {
 	opacity : 1.0 ;
 	border : none ;
 }
+
 .compte_bouton:hover {
 	opacity: 0.7 ;
 }
@@ -449,6 +469,7 @@ body#corps {
   bottom: 0;
   background: linear-gradient(to left, black, #333333);
 }
+
 
 /* ------------------------------------------Profils Publics CSS - CÉCILE BONNET---------------------------------------- */
 
