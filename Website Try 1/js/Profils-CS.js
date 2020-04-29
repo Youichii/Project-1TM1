@@ -6,7 +6,7 @@ const MOITIE = '🌗' ;
 /*◐●○*/
 function demarrage() {
 	let xhr = new XMLHttpRequest() ;
-	xhr.open('get', "http://localhost/json", true) ; 
+	xhr.open('get', "http://localhost/serv_donnees", true) ; 
 	xhr.onreadystatechange = 
 			function affichage() {
 				if (xhr.status == 200 && xhr.readyState == 4) {
@@ -65,7 +65,7 @@ function affiche(texte) {
 
 function blabla(code) {
 	let xhr = new XMLHttpRequest() ;
-	xhr.open('get', "http://localhost/stockages?identifiant=" + code , true) ; 
+	xhr.open('get', "http://localhost/serv_stockage?identifiant=" + code , true) ; 
 	xhr.onreadystatechange = 
 			function affichage() {
 				if (xhr.status == 200 && xhr.readyState == 4) {
