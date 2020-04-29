@@ -1,6 +1,6 @@
 //Ajout des villes et des codes postaux
-INSERT INTO villes()
-(postal INTEGER, ville VARCHAR(50))
+INSERT INTO villes
+(postal, ville)
 VALUES
 (5000,'Namur'),
 (1348,'Louvain-la-Neuve'),
@@ -9,7 +9,6 @@ VALUES
 (6600,'Bastogne'),
 (1000,'Bruxelles'),
 (3500,'Hasselt');
-
 
 
 
@@ -70,7 +69,6 @@ VALUES
 
 
 
-
 //Ajout des tâches dans tâches
 INSERT INTO taches
 (idCom, tache, details, categorie, cote)
@@ -109,8 +107,6 @@ VALUES
 ('patricia09', 'Peindre des murs', 'Bonjour, j''adore peindre , alors si vous avez besoin de repeindre quoi que ce soit, je suis là !', 'maison', 6),
 ('melchior98', 'Dressage de chevaux', 'Ma grand-mère a une écurie, j''y passe tous les étés, je m''y connais donc en chevaux !', 'autre', 8),
 ('leonie64', 'Faire la cuisine', 'Je vous offre mes mains pour faire de la pâtisserie de préférence !! En plus j''adore manger.', 'maison', NULL);
-
-
 
 
 
