@@ -1,3 +1,18 @@
+//Ajout des villes et des codes postaux
+INSERT INTO villes()
+(postal INTEGER, ville VARCHAR(50))
+VALUES
+(5000,'Namur'),
+(1348,'Louvain-la-Neuve'),
+(2000,'Anvers'),
+(4000,'Liège'),
+(6600,'Bastogne'),
+(1000,'Bruxelles'),
+(3500,'Hasselt');
+
+
+
+
 //Ajout des données dans la table communauté
 INSERT INTO communaute
 (idCom, mdp, nom, prenom, sexe, telephone, mail, anniversaire, photo, portrait, postal)
