@@ -1,3 +1,11 @@
+//Table des villes
+CREATE TABLE villes(
+    postal INTEGER NOT NULL,
+    ville VARCHAR(50) NOT NULL,
+
+    CONSTRAINT pk_villes PRIMARY KEY(postal)
+) ;
+
 //Table avec toutes les informations sur la personne
 CREATE TABLE communaute (
     idCom VARCHAR(16) NOT NULL,
@@ -10,10 +18,11 @@ CREATE TABLE communaute (
     anniversaire DATE NOT NULL,
     photo VARCHAR(50) NULL,
     portrait VARCHAR(120) NULL,
+    postal INTEGER NOT NULL,
     
-    CONSTRAINT pk_communaute PRIMARY KEY(idCom) 
+    CONSTRAINT pk_communaute PRIMARY KEY(idCom),
+    CONSTRAINT pk_communaute_villes FOREIGN KEY (postal) REFERENCES villes(postal) 
 ) ;
-
 
 
 //Table avec toutes les tâches
@@ -39,3 +48,12 @@ CREATE TABLE commentaires (
     CONSTRAINT pk_communaute_commentaires FOREIGN KEY(auteur) REFERENCES communaute(idCom)
 ) ;
 ALTER TABLE "DBA"."commentaires" ADD CONSTRAINT "communaute" NOT NULL FOREIGN KEY ( "idCom" ASC ) REFERENCES "DBA"."communaute" ( "idCom" );
+
+
+
+
+//Table qui permet de faire la transition entre 
+CREATE TABLE transition(
+    idTrans varchar(16) NOT NULL,
+    idUtile varchar(16) NOT NULL
+) ;
