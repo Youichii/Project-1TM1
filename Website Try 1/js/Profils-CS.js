@@ -1,4 +1,9 @@
 
+const REMPLIES = '🌕' ;
+const VIDES = '🌑' ;
+const MOITIE = '🌗' ;
+
+/*◐●○*/
 function demarrage() {
 	let xhr = new XMLHttpRequest() ;
 	xhr.open('get', "http://localhost/json", true) ; 
@@ -15,7 +20,8 @@ function demarrage() {
 function affiche(texte) {
 	
 	let reponse = JSON.parse(texte) ;
-	let fiche = "", img, desc ;
+	let fiche = "", img, desc, cotation ;
+	let plein, moitiePlein, pasPlein ;
 	for (let i = 0 ; i < reponse.length ; i++) {
 		img = '<img src="./img/'+ reponse[i].photo +'" alt="test" width="234" height="250"/>' ;
 		if (reponse[i]['portrait'] == null) {
@@ -24,13 +30,35 @@ function affiche(texte) {
 		else {
 			desc = reponse[i].portrait ;
 		}
-			fiche += '<div class="personne">\
-						 <div class="avatars"> ' + img + '</div>\
-						 <div class="desc">\
-						 <div class="nom_com">' + reponse[i].prenom + "     " + "★★★★☆" + '</div>\
-						 <div class="info"><br><br><br><br>' + desc + '</div>\
-						 <div id="profil_bouton"><a href="root?url=PageProfilPublic-CB"><input onclick="blabla(\'' + reponse[i].idCom + '\');" type="button" value="Voir le profil" class="compte_bouton"></a></div>\
-						 </div></div>' ;
+		
+		
+		cotation = "" ;
+		if (reponse[i].cote == null) {
+			cotation = "  " ;
+		}
+		else {
+			moitie = reponse[i].cote / 2 ; 
+			plein = parseInt(moitie) ;
+			pasPlein = 5 - parseInt(moitie) ;
+			moitiePlein = (moitie - parseInt(moitie))*2 ;
+			for (let i = 0 ; i < plein ; i++) {
+				cotation += REMPLIES ;
+			}
+			for (let i = 0 ; i < moitiePlein ; i++) {
+				cotation += MOITIE ;
+			}
+			for (let i = 0 ; i < pasPlein ; i++) {
+				cotation += VIDES ;
+			}
+		}
+		
+		fiche += '<div class="personne">\
+					 <div class="avatars"> ' + img + '</div>\
+					 <div class="desc">\
+					 <div class="nom_com">' + reponse[i].prenom +  '<span id="cotation_personne">' + cotation + '</span></div>\
+					 <div class="info"><br><br><br><br>' + desc + '</div>\
+					 <div id="profil_bouton"><a href="root?url=PageProfilPublic-CB"><input onclick="blabla(\'' + reponse[i].idCom + '\');" type="button" value="Voir le profil" class="compte_bouton"></a></div>\
+					 </div></div>' ;
 	}
 	return fiche ;
 }
@@ -46,7 +74,5 @@ function blabla(code) {
 			}
 	xhr.send() ;
 }
-
-
 
 
