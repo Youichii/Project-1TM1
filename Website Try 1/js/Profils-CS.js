@@ -1,12 +1,6 @@
-
-const REMPLIES = '🌕' ;
-const VIDES = '🌑' ;
-const MOITIE = '🌗' ;
-
-/*◐●○*/
 function demarrage() {
 	let xhr = new XMLHttpRequest() ;
-	xhr.open('get', "http://localhost/serv_donnees", true) ; 
+	xhr.open('get', "http://localhost/json", true) ; 
 	xhr.onreadystatechange = 
 			function affichage() {
 				if (xhr.status == 200 && xhr.readyState == 4) {
@@ -31,41 +25,27 @@ function affiche(texte) {
 			desc = reponse[i].portrait ;
 		}
 		
-		
-		cotation = "" ;
 		if (reponse[i].cote == null) {
-			cotation = "  " ;
+			cotation = "" ;
 		}
 		else {
-			moitie = reponse[i].cote / 2 ; 
-			plein = parseInt(moitie) ;
-			pasPlein = 5 - parseInt(moitie) ;
-			moitiePlein = (moitie - parseInt(moitie))*2 ;
-			for (let i = 0 ; i < plein ; i++) {
-				cotation += REMPLIES ;
-			}
-			for (let i = 0 ; i < moitiePlein ; i++) {
-				cotation += MOITIE ;
-			}
-			for (let i = 0 ; i < pasPlein ; i++) {
-				cotation += VIDES ;
-			}
+			cotation =  '<span id="cotation_personne">' + reponse[i].cote + "/10" ;
 		}
 		
 		fiche += '<div class="personne">\
 					 <div class="avatars"> ' + img + '</div>\
 					 <div class="desc">\
-					 <div class="nom_com">' + reponse[i].prenom +  '<span id="cotation_personne">' + cotation + '</span></div>\
+					 <div class="nom_com"><span id="prenom_personne">' + reponse[i].prenom + '</span>' + cotation + '</span></div>\
 					 <div class="info"><br><br><br><br>' + desc + '</div>\
-					 <div id="profil_bouton"><a href="root?url=PageProfilPublic-CB"><input onclick="blabla(\'' + reponse[i].idCom + '\');" type="button" value="Voir le profil" class="compte_bouton"></a></div>\
+					 <div id="profil_bouton"><a href="root?url=PageProfilPublic-CB"><input onclick="lien(\'' + reponse[i].idCom + '\');" type="button" value="Voir le profil" class="compte_bouton"></a></div>\
 					 </div></div>' ;
 	}
 	return fiche ;
 }
 
-function blabla(code) {
+function lien(code) {
 	let xhr = new XMLHttpRequest() ;
-	xhr.open('get', "http://localhost/serv_stockage?identifiant=" + code , true) ; 
+	xhr.open('get', "http://localhost/stockages?identifiant=" + code, true) ; 
 	xhr.onreadystatechange = 
 			function affichage() {
 				if (xhr.status == 200 && xhr.readyState == 4) {
@@ -74,5 +54,7 @@ function blabla(code) {
 			}
 	xhr.send() ;
 }
+
+
 
 
