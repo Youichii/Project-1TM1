@@ -4,38 +4,52 @@
     <meta charset="utf-8">
     <title>S'inscrire</title>
     <link rel="stylesheet" href="CSS/GLOBALCSS.css" type="text/css">
+    <script type="text/javascript" src="js/Signup-AB.js"></script>
   </head>
-  <body class="BodySignup">
+  <body class="BodySignup" onload="demarrage();">
     <header>
       <nav class="BannerGlobal">
         <div class="logo">
           <h4>Simple Tasks</h4>
         </div>
         <ul class="navButton">
-          <li><a href="./Accueil-AB.html">Accueil</a></li>
+          <li><a href="page?url=Accueil-AB">Accueil</a></li>
         </ul>
       </nav>
     </header>
     <h1 class="SignupTitle">Inscription</h1>
-    <div class="SignupBox">
-      <form class="SignupForm" action="Accueil-AB.html" method="post">
-        <input type="text" name="Nom" placeholder="Nom" required>
-        <input type="text" name="Prenom" placeholder="Prénom" required>
-        <input type="text" name="UserId" placeholder="Nom d'utilisateur" required>
-        <input type="text" name="MailUser" placeholder="E-mail" required>
-        <input type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" name="PhoneNumber" placeholder="GSM (+32123456789)" required>
+    <div class="SignupBox" id="FormSignup">
+      <form class="SignupForm"  action="#" method="get" id="formulaire" onsubmit="return getInformation();">
+        <input type="text" name="Nom" id="LastName" placeholder="Nom" required>
+        <input type="text" name="Prenom" id="FirstName" placeholder="Prénom" required>
+        <input type="text" name="UserId" id="uName" placeholder="Nom d'utilisateur" required>
+        <input type="text" name="MailUser" id="uMail" placeholder="E-mail" required>
+        <div class="blocVilles">
+           <p>Adresse :</p>
+           <select class="CitySelect" id="uVille" name="villes">
+              <option value="1000">1000 - Bruxelles</option>
+              <option value="1348" selected>1348 - Louvain-la-Neuve</option>
+              <option value="2000">2000 - Anvers</option>
+              <option value="3500">3500 - Hasselt</option>
+              <option value="4000">4000 - Liège</option>
+              <option value="5000">5000 - Namur</option>
+              <option value="6600">6600 - Bastogne</option>
+           </select>
+        </div>
+        <input type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" id="uPhone" name="PhoneNumber" placeholder="GSM (+32123456789)" required>
         <p class="Birth">Date de naissance :</p>
-        <input type="date" name="Anniversary" value="Anniversaire">
-        <input type="password" name="PswdUser" placeholder="Mot de passe" required>
-        <input type="password" name="PswdConfirm" placeholder="Confirmation mot de passe" required>
+        <input type="date" name="Anniversary" id="uBirth" value="Anniversaire">
+        <input type="password" name="PswdUser" id="uPswd" placeholder="Mot de passe" required>
+        <input type="password" name="PswdConfirm" id="uPswdConfirm" placeholder="Confirmation mot de passe" required>
         <div class="SelectBloc">
           <p>Sexe :</p>
-          <select class="ProfilSelect" name="choose">
-            <option value="SexH">Homme</option>
-            <option value="SexF" selected>Femme</option>
+          <select class="ProfilSelect" id="uSex" name="choose">
+            <option value="H">Homme</option>
+            <option value="F" selected>Femme</option>
           </select>
         </div>
-        <button type="submit" name="SignupButton">S'inscrire!</button>
+        <input class="buttonSignup" type="submit" name="Signup" value="s'inscrire"></button>
+        <a id='SignupConfirmation'  onclick='soumettreForm();' href='page?url=LoginPage-AB' hidden>Confirmer l'inscription?</a>
       </form>
   </div>
   <div class="blankSignup">
