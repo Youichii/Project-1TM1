@@ -11,4 +11,4 @@ END ;
 
 
 //Service qui appelle stockage
-CREATE SERVICE "serv_stockage" TYPE 'RAW' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call stockage(:identifiant);
+CREATE SERVICE "serv_stockage" TYPE 'RAW' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call proc_stockage(:identifiant);
