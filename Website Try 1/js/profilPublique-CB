@@ -74,18 +74,48 @@ function infos(donnee) {
 			photo = reponse[i].photo
 			portrait = reponse[i].portrait
 			tache = reponse[i].tache
-			commentaire = reponse[i].commentaire
-		    auteur = reponse[i].auteur 
-		    cote = reponse[i].cote
-			
+			if(commentaire == null ) {
+				commentaire = " Pas de commentaire pour le moment"
+			}
+			else {
+			commentaire = reponse[i].commentaire + " par " + reponse[i].auteur 
+			}
+		     
+		    if(cote == null ) {
+				cote = " Pas de cote pour le moment"
+			}
+			else {
+				cote=reponse[i].cote
+			}
+			photo = reponse[i].photo
+            if(tache == null){
+				
+				tache = "Pas de tâches pour le moment" 			
+			}
+			else{
+				tache = reponse[i].tache
+			}
 		}
 	
 	}
 	
 	document.getElementById("page").innerHTML = prenom + ' ' + nom + ' ' + '<br>' + sexe + '<br>' + telephone + '<br>' + mail + '<br>' + anniversaire + '<br>'  
-	document.getElementById("note").innerHTMLHTML = cote 
-	document.getElementById("zonecomm").innerHTML= commentaire + ' par ' + auteur 
-	 
-	// il faut un return mais je ne sais pas quoi mettre dedans 	
+	document.getElementById("notation").innerHTML = cote 
+	document.getElementById("zonecomm").innerHTML= commentaire 
+	document.getElementById("mon_image").innerHTML= photo 
+	document.getElementById("service").innerHTML= tache 
+	 	
 }
 
+function note(){
+	
+	
+
+}
+	
+function commentaire (){
+	
+	let newCommentaire = document.getElementById("comm")
+	let newAuteur = document.getelementById("utilisateur")
+}	
+	
