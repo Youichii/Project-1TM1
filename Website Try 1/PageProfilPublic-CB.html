@@ -3,17 +3,14 @@
   <head>
     <meta charset=utf-8>
     <title>Profil public</title>
-    <script src="js/ProjetSQL-CB.js"></script>  `
+    <script src="js/ProfilsPublic-CB.js"></script>  `
     <link rel="stylesheet" type="text/css" href="css/GLOBALCSS.css">
 
   </head>
-  <body onload="initBis()" class="BodyPublic">
-    <!--<fieldset id ="bandeau">
-        <a href="" id="lienbis">Acceuil</a>
-        <a href="" id="lienbis">Profil</a>
-        <a href="" id="lienbis">Communauté</a>
-        <a href="" id="lienbis">Services</a>
-    </fieldset>-->
+  <body onload="blabla()" class="BodyPublic" id='corps' >
+  
+
+   
     <header>
         <nav class="BannerGlobal">
           <div class="logo">
@@ -27,8 +24,8 @@
           </ul>
         </nav>
     </header>
-	
-    <img src="img/poney.jpg" alt="photo de profil" id="mon_image">
+	<div id='corps'></div>
+    <img alt="photo de profil" id="mon_image">
 
 	
     <fieldset id="page"></fieldset>
@@ -37,12 +34,14 @@
         <legend class="leg">
             Note des utilisateurs
         </legend>
+		<div id="notation"></div>
     </fieldset>
 	
 	<fieldset id="services">
         <legend class="leg">
             Je propose les services suivants
         </legend>
+		<div id = "service"></div>
     </fieldset>
 	
     <fieldset id="info"></fieldset>
@@ -71,6 +70,6 @@
     </fieldset>
     
 
-    
+
   </body>
 </html>
