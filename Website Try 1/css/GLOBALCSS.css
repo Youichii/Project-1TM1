@@ -531,7 +531,7 @@ body.BodyPublic{
     border-radius: 30%;
     width:300px;
     height:315px;
-    position : relative;
+    position: absolute;
 	left:20%;
 	top : 10%;
    
@@ -549,7 +549,7 @@ body.BodyPublic{
     font-weight: bold;
     border:solid;
 	position:absolute;
-    top:47%;
+    top:45%;
 }
 
 #lienbis{
@@ -561,38 +561,21 @@ body.BodyPublic{
     border-width: 1px;
     border-style: double;
     border-color: black;
-    height:300px;
+    height:48%;
     width: 30%;
+	top:20%;
     background-color: whitesmoke;
     opacity: 75%;
 	font-style: italic;
     font-weight: bold;
     font-size: 200%;
-    color: green;
+    color: cornflowerblue;
     text-align: center;
-	position:relative; 
-	left:25%
-    /*border:solid;*/
+	position: absolute;
+	left:25%;
+    border:solid;
+	border-color:black;
 
-}
-
-
-    font-style: italic;
-    font-weight: bold;
-    font-size: 200%;
-    color: green;
-    text-align: center;
-}
-
-#info{
-    background-image:url("../img/bande.jpg");
-    border-style: solid;
-    border-color: black;
-    text-align: center;
-    border-collapse: separate;
-    margin-top: 30px;
-    height:50px;
-    color:white;
 }
 
 #Noter{
@@ -620,14 +603,17 @@ body.BodyPublic{
     border-color: black;
     border-collapse: separate;
     margin-top: 30px;
-    
-    width: ;
+    top:65%;
+	position:absolute;
+    width:100%;
+	height:;
     height:100px;
     background-color: whitesmoke;
     opacity: 80%;
     border:solid;
     font-weight: bold;
     color:black
+	
 }
 
 #comm{
@@ -641,14 +627,19 @@ body.BodyPublic{
     
     overflow:auto; /*probleme de scroll*/
     border-collapse: separate;
-    margin-top: 25px;
-    width:;
-    height:100px;
+    margin-top: 5%;
+    width:100%;
+    height:30%;
     font-weight: bold;
     border-color: black;
     background-color: whitesmoke;
     opacity: 75%;
     border:solid;
+	position:absolute;
+	top:80%;
+	
+	
+	
 }
 
 .leg{
@@ -658,23 +649,23 @@ body.BodyPublic{
     background-color: white;
 }
 
-#services{
+#service{
     
-    margin-top: 0px;
-    height:300px;
-    width:40%;
+    
     border-color: black;
     background-color: whitesmoke;
     opacity: 80%;
     border:solid;
-    margin-bottom: 15px;
     border-style: solid;
-    border-color:black;
     font-weight: bold;
 	position: absolute;
-	right:0%;
+    left:60%;
 	top:20%;
-}
+	width:40%;
+	height:48%;
+}  
+
+  
 
 /* -------------------------------------------Profils Privés CSS - CÉCILE BONNET---------------------------------------- */
 
@@ -686,70 +677,89 @@ body.BodyPrive{
 
 }
 
-#droite{
-    float: right;
-    position: absolute;
-    right: 15%;
-}
 
-.boutton{
-    background-color:black ;
+
+/* .boutton{ */
+    /* background-color:black ; */
+    /* border:bold; */
+    /* border-color: black; */
+    /* color:white; */
+    /* font-size: 15px; */
+    /* font-weight: bold; */
+    /* border-radius:8px; */
+	
+
+/* } */
+
+.change{
+	background-color:black ;
     border:bold;
     border-color: black;
     color:white;
     font-size: 15px;
     font-weight: bold;
     border-radius:8px;
-
-}
-#NomComplet{
-    text-align: left;
-    font-size:40px;
-    margin-top: 15%;
-
-
-}
-#info{
-    text-align: left;
-    border:solid;
-    border:black;
-    font-style:italic;
-    font-weight: bolder;
-    color:black;
-    font-size: 25px;
-    line-height: 200%;
-
-
+   
 }
 
 
-/*-----Partie Gauche-----*/
 
-#gauche{
 
-  float: left;
 }
+#valeurs{
+   
+    text-align:left;
+   position:absolute;
+	left:90%;
+	top:10%;
+    color:red;
 
+
+}
 #description{
+	position:absolute;
+	left:40%;
+	top:5%;
 
-    background-color:white;
-    border:black;
-    margin-left:100%;
-    margin-bottom: 0%;
-    position: relative;
-    top:100%;
+    
+    
 
 }
-#description2{
-    margin-left: 50%;
-    margin-top: 25%;
+
+#descriptionTexte{
+	
+	position:absolute;
+	left:40%;
+	top:60%;
+	width:20%;
+	
     Font-style:italic;
     font-weight: bolder;
     color:black;
     font-size: 25px;
-
+	border:black;
 
 }
+#portrait{
+	position:absolute;
+	top:25%;
+	left:30%;
+	Font-style:italic;
+    font-weight: bolder;
+    color:black;
+    font-size: 25px;
+	border:black;
+	width:30%;
+   
+}
+#boutton{
+	position:absolute;
+	top:90%;
+	left:40%
+}
+
+
+
 
 #img{
     top:15%;
@@ -757,31 +767,30 @@ body.BodyPrive{
     margin-top: 30%;
 }
 
-#button{
-    background-color:black ;
-    border:bold;
-    border-color: black;
-    color:white;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius:8px;
-    margin-top: 35px;
-    margin-left: 60%;
 
-
-}
 
 #cadrephoto{
-    text-align: center;
-    margin-top: 25%;
-    margin-left: 50%;
-    border-color: black;
+    
+    position :absolute;
+	left:5%;
+	top:22%;
+    color: black;
     border-style: solid;
     height: 250px;
     width: 250px;
-    ;
+    text-align:center;
+	border-color:black;
 }
 
+#services{
+	
+	position :absolute;
+	left:5%;
+	top:75%;
+	height:10%;
+	width:20%;
+	
+}
 /* ------------------------------Tâches CSS - NOELLE KHAZOUM------------------------------------------ */
 
 body.BodyTaches{
