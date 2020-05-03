@@ -1,11 +1,7 @@
 
-// combien d'infos qui rentrent ? => Nom; Prénom; Sexe;
-// profil publique 
-
 var utilisateur
- 
-// 1) envoie les info de clem à la table transition  
-// je dois trouver ou mettre le "code" 
+var reponse 
+
 function blabla(code) {
 	let xhr = new XMLHttpRequest() ;
 	xhr.open('get', "http://localhost/stockages?identifiant=" + code , true) ; 
@@ -20,7 +16,7 @@ function blabla(code) {
 	xhr.send() ;
 }
 
-// 2) va chercher dans la table 'transition' chercher l'id de l'utilisateur 
+
 function chargementPage() {
 	
 	let xhr = new XMLHttpRequest() ;  
@@ -34,8 +30,8 @@ function chargementPage() {
 	}
 	xhr.send() ; 	
 }
+//////////////////////////////////////////////////////// Profil Publique/////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-// 3)  va chercher dans la table communauté : l'Id, le Nom et le Prenom
 function pageChargement(){
 	
 	let xhr = new XMLHttpRequest() ;  
@@ -52,18 +48,131 @@ function pageChargement(){
 
 }
 
-// 4) utilise l'id utilisateur pour rechercher les informations de l'utilisateur 
+
 function infos(donnee) {
 	
-	let reponse = JSON.parse(donnee);
-	console.log(reponse); 
+	reponse = JSON.parse(donnee); 
 	utilisateur = "alex12"
-	let valeurs
 	let nom, prenom, sexe, telephone, mail,anniversaire, photo, portrait, tache, commentaire, auteur, cote 
 	
 	for(i=0; i<reponse.length; i++){
 		if(reponse[i].idCom == utilisateur){
-			console.log(reponse[i])
+			
+			nom =reponse[i].nom
+			prenom= reponse[i].prenom
+		    sexe = reponse[i].sexe 
+			telephone = reponse[i].telephone
+			mail = reponse[i].mail
+			anniversaire = reponse[i].anniversaire
+			photo = reponse[i].photo
+			portrait = reponse[i].portrait
+			commentaire = reponse[i].commentaire
+			if(commentaire == null ) {
+				commentaire = " Pas de commentaire pour le moment"
+			}
+			else {
+			commentaire = reponse[i].commentaire + " par " + reponse[i].auteur 
+			}
+		    cote=reponse[i].cote 
+		    if(cote == null ) {
+				cote = " Pas de cote pour le moment"
+			}
+			else {
+				cote=reponse[i].cote
+			}
+			photo = reponse[i].photo
+			tache = reponse[i].tache
+            if(tache == null){
+				
+				tache = "Pas de tâches pour le moment" 	
+            console.log(tache)				
+			}
+			else{
+				tache = reponse[i].tache
+				console.log(tache)
+			}
+		}
+	
+	}
+	
+	document.getElementById("page").innerHTML = prenom + ' ' + nom + ' ' + '<br>' + sexe + '<br>' + telephone + '<br>' + mail + '<br>' + anniversaire + '<br>' + portrait
+	document.getElementById("notation").innerHTML = cote 
+	document.getElementById("zonecomm").innerHTML = commentaire 
+	document.getElementById("tache").innerHTML = tache // wtf 
+	
+	 	
+}
+
+function note(){
+	
+	let newNote  
+
+}
+	
+function commentaires(){
+	let compteur = 0
+	
+	let newAuteur = document.getElementById("utilisateur").value
+	
+	let newCommentaire= document.getElementById("comm").value
+	 
+	for ( let i=0; i<reponse.length; i++){
+		
+		if(reponse[i].idCom == String(newAuteur )){
+			 console.log(compteur += 1) 
+		     console.log(String(newAuteur))
+		
+		
+		if (compteur = 1){
+			alert("Votre commentaire à bien été enregistré");
+			break;
+		}
+		else if(compteur = 0){
+			alert("personne inconnue"); 
+			break;
+		} // problème avec le compteur !!!!
+		}
+	
+		
+     
+	}
+	 console.log(newCommentaire + newAuteur)
+	
+	let xhr = new XMLHttpRequest() ;  
+	xhr.open('get', "http://localhost/serv_Com?new_comm="+newCommentaire+"&new_auteur="+newAuteur+"&new_utilisateur="+utilisateur, true) ;
+	
+	xhr.send() ; 	
+	
+}	
+	
+
+
+//////////////////////////////////////////////////////////////////////////Profil privé ///////////////////////////////////////////////////////////////////////////////////////////////
+
+function pageChargementBis(){
+	
+	let xhr = new XMLHttpRequest() ;  
+	xhr.open('get', "http://localhost/serv_valeurs", true) ; 
+	xhr.onreadystatechange = function(){ 
+		if (xhr.status == 200 && xhr.readyState == 4) {  
+			
+	        informations(xhr.responseText) 
+		}
+		
+	}
+	
+	xhr.send() ; 	
+
+}
+
+function informations(donnee) {
+	
+	reponse = JSON.parse(donnee); 
+	utilisateur = "alex12"
+	let nom, prenom, sexe, telephone, mail,anniversaire, photo, portrait, tache
+	
+	for(i=0; i<reponse.length; i++){
+		if(reponse[i].idCom == utilisateur){
 			
 			nom =reponse[i].nom
 			prenom= reponse[i].prenom
@@ -74,23 +183,10 @@ function infos(donnee) {
 			photo = reponse[i].photo
 			portrait = reponse[i].portrait
 			tache = reponse[i].tache
-			if(commentaire == null ) {
-				commentaire = " Pas de commentaire pour le moment"
-			}
-			else {
-			commentaire = reponse[i].commentaire + " par " + reponse[i].auteur 
-			}
-		     
-		    if(cote == null ) {
-				cote = " Pas de cote pour le moment"
-			}
-			else {
-				cote=reponse[i].cote
-			}
 			photo = reponse[i].photo
             if(tache == null){
 				
-				tache = "Pas de tâches pour le moment" 			
+				tache ="Vous n'avez pas de tâches pour le moment" 			
 			}
 			else{
 				tache = reponse[i].tache
@@ -99,23 +195,59 @@ function infos(donnee) {
 	
 	}
 	
-	document.getElementById("page").innerHTML = prenom + ' ' + nom + ' ' + '<br>' + sexe + '<br>' + telephone + '<br>' + mail + '<br>' + anniversaire + '<br>'  
-	document.getElementById("notation").innerHTML = cote 
-	document.getElementById("zonecomm").innerHTML= commentaire 
-	document.getElementById("mon_image").innerHTML= photo 
-	document.getElementById("service").innerHTML= tache 
+	document.getElementById("valeurs").innerHTML = prenom +  ' ' + 
+	                                            nom  +
+ 									   '<br>' + sexe + 
+									   '<br>' + anniversaire +
+									   '<br>' + telephone + ' <input type="button" onclick="changTelephone()" value="Changer le Numéro de Telephone" id="Tel" class="change">'+
+									   '<br>' + mail + ' <input type="button" onclick="changMail()" value="Changer l\'adresse Mail" id="Mail" class="change">'+
+									   '<br>' + "ville"  + ' <input type="button" onclick="changVille()" value="Changer la Ville" id="Vill" class="change">'
+									  
+					     
+	//document.getElementById("mon_image").innerHTML= photo 
+	document.getElementById("services").innerHTML= tache;
+	console.log(tache)
+	document.getElementById("description").innerHTML = portrait
+	console.log(portrait)
+	
+	
 	 	
 }
 
-function note(){
+function changTelephone(){
+	newTelephone = prompt("Introduire votre nouveau numéro de telephone");
+	let xhr = new XMLHttpRequest() ;  
+	xhr.open('get', "http://localhost/serv_Telephone?new_telephone="+newTelephone+ "&new_utilisateur="+utilisateur, true) ;
 	
-	
+	xhr.send() ;
+	alert("Votre Numéro de telephone a bien été changé");
+} // fonctionne 
 
+function changMail(){
+	newMail = prompt("Introduire votre nouveau mail");
+	let xhr = new XMLHttpRequest() ;  
+	xhr.open('get', "http://localhost/serv_Mail?new_mail="+newMail+ "&new_utilisateur="+utilisateur, true) ;
+	
+	xhr.send() ;
+	alert("Votre Mail a bien été changé");
+} // fonctionne 
+
+function changVille(){
+	newVille = prompt("Introduire votre nouvelle ville");
+	let xhr = new XMLHttpRequest() ;  
+	xhr.open('get', "http://localhost/serv_Ville?new_ville="+newVille+ "&new_utilisateur="+utilisateur, true) ;
+	
+	xhr.send() ;
+	alert("Votre Ville a bien été changé");
+	
 }
+
+function changDescription(){ 
+	newDescription = document.getElementById("descriptionTexte").value 
+	console.log(newDescription)
+	let xhr = new XMLHttpRequest() ;  
+	xhr.open('get', "http://localhost/serv_Desc?new_desc="+newDescription+"&new_utilisateur="+utilisateur, true) ;
 	
-function commentaire (){
-	
-	let newCommentaire = document.getElementById("comm")
-	let newAuteur = document.getelementById("utilisateur")
-}	
-	
+	xhr.send() ;
+	alert("Votre Description a bien été changé");
+} // fonctionne 
