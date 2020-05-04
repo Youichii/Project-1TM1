@@ -21,6 +21,7 @@ CREATE TABLE communaute (
     photo VARCHAR(50) NULL,
     portrait VARCHAR(120) NULL,
     postal INTEGER NOT NULL,
+    cote INTEGER NULL,
     
     CONSTRAINT pk_communaute PRIMARY KEY(idCom),
     CONSTRAINT pk_communaute_villes FOREIGN KEY (postal) REFERENCES villes(postal) 
@@ -34,7 +35,7 @@ CREATE TABLE taches(
     tache VARCHAR(100) NOT NULL,
     details LONG VARCHAR NULL,
     categorie VARCHAR(10) NOT NULL,
-    cote INTEGER NULL,
+    
 
     CONSTRAINT pk_communaute_taches FOREIGN KEY(idCom) REFERENCES communaute(idCom)
 ) ;
