@@ -1,0 +1,7 @@
+CREATE SERVICE "serv_valeurs"
+TYPE 'JSON' 
+       AUTHORIZATION OFF 
+       USER "DBA" 
+       URL ON 
+       METHODS 'GET' 
+AS call proc_valeurs()
