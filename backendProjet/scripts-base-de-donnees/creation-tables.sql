@@ -54,8 +54,4 @@ ALTER TABLE "DBA"."commentaires" ADD CONSTRAINT "communaute" NOT NULL FOREIGN KE
 
 
 
-//Table qui permet de faire la transition entre 
-CREATE TABLE transition(
-    idTrans varchar(16) NOT NULL,
-    idUtile varchar(16) NOT NULL
-) ;
+
