@@ -1,5 +1,6 @@
 <!--Pour la page Profils-CS.html => Clémentine Sacré-----------------------------------------------------------------------------------> 
 
+//Procedure qui retourne certaines données
 CREATE PROCEDURE proc_donnees() 
 RESULT (idCom VARCHAR, nom VARCHAR, prenom VARCHAR, sexe CHAR(1), telephone VARCHAR, mail VARCHAR, anniversaire DATE, photo VARCHAR, portrait VARCHAR)
 BEGIN
