@@ -26,7 +26,7 @@ VALUES
 ('edouard75', '8', 'Hall', 'Edouard', 'M', '+32466745398', 'hall.edouard@gmail.com', '1999-11-18', 'edouard.jpg', NULL, 4000, 5.5),
 ('lou15', '9', 'County', 'Lou', 'M', '+32475655768', 'county.lou@gmail.com', '1980-05-22', 'lou.jpg', 'J''adore voyager, j''ai visité la plupart des continents. Ces vacances-ci j''opte pour l''Océanie !', 4000, 8.5),
 ('jade35', '10', 'Wheeler', 'Jade', 'F', '+32488675908', 'wheeler.jade@gmail.com', '1985-08-02', 'fantome_rose.png', NULL, 5000, 9),
-('clemence75', '11', 'Powell', 'Clémence', 'F', '+32455463758', 'powell.clemence@gmail.com', '1986-07-26', 'fantome_mauve.png', NULL, 1348),
+('clemence75', '11', 'Powell', 'Clémence', 'F', '+32455463758', 'powell.clemence@gmail.com', '1986-07-26', 'fantome_mauve.png', NULL, 1348, 7),
 ('aubin87', '12', 'Long', 'Aubin', 'M', '+32400989075', 'long.aubin@gmail.com', '1989-07-30', 'aubin.jpg', 'Je suis cycliste professionel, j''ai fais 3 fois le tour de France et j''adore ça.', 1000, 3.1),
 ('colin23', '13', 'Palmer', 'Colin', 'M', '+32409765665', 'palmer.colin@gmail.com', '1995-06-30', 'colin.jpg', 'Je suis passé à The Voice l''année passée car j''adore chanter.', 2000, 4),
 ('elsa86', '14', 'Cox', 'Elsa', 'F', '+32422341198', 'coxe.elsa@gmail.com', '1992-10-28', 'fantome_mauve.png', 'Je fais de la boxe ainsi que de la danse classique, je cherche l''équilibre parfait.', 3500, 5),
