@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="CSS/GLOBALCSS.css" type="text/css">
-    <script type="text/javascript" src="js/Login-AB.js"></script>
+    <script src="js/Login-AB.js"></script>
     <title>Se connecter</title>
   </head>
   <body class="BodyLogin">
     <nav class="LoginLogo">
-        <a href="page?url=Accueil-AB"><h4>Simple Tasks</h4></a>
+        <a href="root?url=Accueil-AB"><h4>Simple Tasks</h4></a>
     </nav>
-    <div class="FormBloc">
+    <div class="FormBloc" id="blocCo">
       <div class="title">
         <h1>Se connecter</h1>
       </div>
-      <form class="LoginForm" action="page?url=Accueil-AB" method="post">
-        <input type="text" name="UsernameUser" placeholder="Identifiant" required><br>
-        <input type="password" name="PasswordUser" placeholder="Mot de passe" required><br>
-        <button type="submit" name="SubmitLogin">Connexion</button>
+      <form class="LoginForm" id="formCo" action="#" method="get" onsubmit="return changePage();">
+        <input id="nomUtilisateur" type="text" name="UsernameUser" placeholder="Identifiant" required><br>
+        <input id="motDePasse" type="password" name="PasswordUser" placeholder="Mot de passe" required><br>
+        <input type="submit" name="SubmitLogin" value="Connexion">
       </form>
       <div class="SignupButton">
-        <a href="page?url=SignupPage-AB">Inscription</a>
+        <a href="root?url=SignupPage-AB">Inscription</a>
       </div>
     </div>
   </body>
