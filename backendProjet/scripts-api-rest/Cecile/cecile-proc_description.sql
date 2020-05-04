@@ -11,10 +11,3 @@ where idCom = new_utilisateur
 
 END
 
-CREATE SERVICE "serv_Desc"
-TYPE 'JSON' 
-       AUTHORIZATION OFF 
-       USER "DBA" 
-       URL ON 
-       METHODS 'GET' 
-AS call proc_Desc(:new_desc,:new_utilisateur)
