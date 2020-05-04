@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/GLOBALCSS.css">
 
   </head>
-  <body onload="blabla()" class="BodyPublic" id='corps' >
+  <body onload="chargementPage(), pageChargement();" class="BodyPublic" id='corps' >
   
 
    
@@ -19,13 +19,13 @@
           <ul class="navButton">
             <li><a href="Accueil-AB.html">Accueil</a></li>
             <li><a href="#">Tâches</a></li>
-            <li><a href="Profils-CS.html">Communauté</a></li>
+            <li><a href="root?url=Profils-CS">Communauté</a></li>
             <li><a href="#">Profil</a></li>
           </ul>
         </nav>
     </header>
 	<div id='corps'></div>
-    <img alt="photo de profil" id="mon_image">
+    <div id="mon_img">
 
 	
     <fieldset id="page"></fieldset>
@@ -35,16 +35,17 @@
             Note des utilisateurs
         </legend>
 		<div id="notation"></div>
+		<input type="button" onclick="note()" value="Noter la prestation" name="Noter" id="Noter">
     </fieldset>
 	
-	<fieldset id="services">
+	<fieldset id="service">
         <legend class="leg">
             Je propose les services suivants
         </legend>
-		<div id = "service"></div>
+		<div id ="tache"></div>
     </fieldset>
 	
-    <fieldset id="info"></fieldset>
+    
 
     <fieldset id="commentaires">
         <legend class="leg">
@@ -52,14 +53,9 @@
         </legend>
 
         <input type="text" placeholder="Nom d'utilisateur" id="utilisateur" required>
-            Êtes-vous son:
-            <label for="radE">Enployé</label>
-        <input type="radio" id="radE" value="Employé" name="ER" name="Nom" checked>
-            <label for="radR">Employeur</label>
-        <input type="radio" id="radR" value="Employeur" name="ER"><br><br>
             Introduire un commentaire:
         <input type="text" placeholder="introduire un commentaire" id="comm" required>
-        <input type="button" onclick="note()" value="Noter la prestation" name="Noter" id="Noter">
+        
         <input type="button" onclick="commentaires()" value="Envoyer le commentaire" id="Envoyer">
     </fieldset>
 
