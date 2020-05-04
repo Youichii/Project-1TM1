@@ -32,28 +32,3 @@ Nous désirons  crée un site web qui permettra de déposer des annonces de trav
 
 -Une fonctionnalité permettant de trier les tâches recherchées par mot-clés.
 
-
-
-
-# Détail api rest
-Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le format de réponse.
-Indiquez aussi qui en est l'auteur. (Cela peut être "commun", mais il faut au  moins 1 webservice complet personnel par membre du groupe.)
-
--Clémentine Sacré:
-  - proc_donnees :
-      endpoint : Appelé lors de onload de la page Profils-CS.html
-      paramètres : /
-      format de réponse : en JSON
-
-
--Noelle Khazoum:
-
-
-
--Cécile Bonnet:
-
-
-
--Aurélien Brille:
-
-
