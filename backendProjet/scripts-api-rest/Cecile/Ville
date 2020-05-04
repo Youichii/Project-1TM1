@@ -1,0 +1,20 @@
+// Changer La Ville -> récupère la variable new_ville dans une liste prédéfinie JS et va modifier la base de donnée 'communaute ' 
+dans la colonne  là uniquement là ou l'idCom est égale à la variable new_utilisateur \\ 
+
+CREATE PROCEDURE proc_Ville(in new_ville VARCHAR(50),new_utilisateur VARCHAR(50))
+
+BEGIN 
+
+update dba.communaute
+set ville  = new_ville
+where idCom = new_utilisateur 
+
+END
+
+CREATE SERVICE "serv_Vill"
+TYPE 'JSON' 
+       AUTHORIZATION OFF 
+       USER "DBA" 
+       URL ON 
+       METHODS 'GET' 
+AS call proc_Ville(:new_ville,:new_utilisateur)
