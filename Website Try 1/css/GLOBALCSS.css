@@ -517,6 +517,8 @@ body#corps {
 /* ------------------------------------------Profils Publics CSS - CÉCILE BONNET---------------------------------------- */
 
 
+
+
 body.BodyPublic{
     background-image:url("../img/bureau1.jpg");
     margin:0px;
@@ -575,6 +577,7 @@ body.BodyPublic{
 	left:25%;
     border:solid;
 	border-color:black;
+	overflow:scroll;
 
 }
 
@@ -586,6 +589,11 @@ body.BodyPublic{
     font-size: 15px;
     font-weight: bold;
     border-radius:8px;
+	text-align:center;
+	position:absolute;
+	bottom:5%;
+	left:25%;
+	
 }
 
 #Envoyer{
@@ -694,7 +702,6 @@ body.BodyPrive{
 .change{
 	background-color:black ;
     border:bold;
-    border-color: black;
     color:white;
     font-size: 15px;
     font-weight: bold;
@@ -706,20 +713,22 @@ body.BodyPrive{
 
 
 }
-#valeurs{
+/* #valeurs{ */
    
-    text-align:left;
-   position:absolute;
-	left:90%;
-	top:10%;
-    color:red;
+    /* text-align:left; */
+   /* position:absolute; */
+	/* left:90%; */
+	/* top:10%; */
+    /* color:red; */
 
 
-}
+/* } */
 #description{
 	position:absolute;
 	left:40%;
 	top:5%;
+	color:grey;
+	
 
     
     
@@ -729,15 +738,16 @@ body.BodyPrive{
 #descriptionTexte{
 	
 	position:absolute;
-	left:40%;
+	left:30%;
 	top:60%;
-	width:20%;
+	width:35%;
 	
     Font-style:italic;
     font-weight: bolder;
     color:black;
     font-size: 25px;
-	border:black;
+	border-color:black;
+	border:1px solid;
 
 }
 #portrait{
@@ -746,16 +756,16 @@ body.BodyPrive{
 	left:30%;
 	Font-style:italic;
     font-weight: bolder;
-    color:black;
+    color: black;
     font-size: 25px;
-	border:black;
+	border:white;
 	width:30%;
    
 }
 #boutton{
 	position:absolute;
 	top:90%;
-	left:40%
+	left:35%
 }
 
 
@@ -774,12 +784,8 @@ body.BodyPrive{
     position :absolute;
 	left:5%;
 	top:22%;
-    color: black;
-    border-style: solid;
-    height: 250px;
-    width: 250px;
-    text-align:center;
-	border-color:black;
+    
+	
 }
 
 #services{
@@ -789,7 +795,14 @@ body.BodyPrive{
 	top:75%;
 	height:10%;
 	width:20%;
+	Font-style:italic;
+    font-weight: bolder;
+    color: black;
+    font-size: 25px;
+	border:white;
+	width:20%;
 	
+
 }
 /* ------------------------------Tâches CSS - NOELLE KHAZOUM------------------------------------------ */
 
