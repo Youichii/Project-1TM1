@@ -11,7 +11,7 @@ Aurélien Brille, Cécile Bonnet, Clémentine Sacré, Noelle Khazoum
 
   #BESOIN DU CLIENT
   
-Nous désirons  crée un site web qui permettra de déposer des annonces de travail et/ou d'en rechercher. Ces travaux constitueront uniquement en des petites tâches réalisables par tous (nettoyage, jardinage, photographie,..).
+Nous désirons  crée un site web qui permettra de déposer des annonces de travail et/ou d'en rechercher. Ces travaux constitueront uniquement en des petites tâches réalisables par tous (nettoyage, jardinage, photographie,...).
 
 
   #FONCTIONNALITÉS PRINCIPALES
@@ -22,7 +22,7 @@ Nous désirons  crée un site web qui permettra de déposer des annonces de trav
 
   #FONCTIONNALITÉS SECONDAIRES
   
--Un profil public visible par tous les utilisateurs reprennant les données personnelles, les commentaires des autres usagers ansi qu'une note sur la qualité du travail effectué.
+-Un profil public visible par tous les utilisateurs reprennant les données personnelles, les commentaires des autres usagers ainsi qu'une note.
 
 -Un profil privé uniquement accessible par la personne connectée lui permettant de voir et modifier ses informations personnelles.
 
@@ -40,7 +40,10 @@ Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le fo
 Indiquez aussi qui en est l'auteur. (Cela peut être "commun", mais il faut au  moins 1 webservice complet personnel par membre du groupe.)
 
 -Clémentine Sacré:
-
+  - proc_donnees :
+      endpoint : Appelé lors de onload de la page Profils-CS.html
+      paramètres : /
+      format de réponse : en JSON
 
 
 -Noelle Khazoum:
