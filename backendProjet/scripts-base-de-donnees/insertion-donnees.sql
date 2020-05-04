@@ -71,7 +71,7 @@ VALUES
 
 //Ajout des tâches dans tâches
 INSERT INTO taches
-(idCom, tache, details, categorie, cote)
+(idCom, tache, details, categorie)
 VALUES
 ('ambre21', 'Tondre la pelouse', 'Bonjour ! Je me propose pour tondre votre pelouse, j''ai de l''endurance, je sais tenir longtemps. J''habite dans les environs de Liège.', 'jardin'),
 ('morgan53', 'Planter des fleurs', 'Bonjour, ayant fait des études de jardinage, je me propose pour planter votre fleurs avec délicatesse.', 'jardin'),
