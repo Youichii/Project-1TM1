@@ -1,4 +1,6 @@
 
+
+
 var utilisateur
 var reponse 
 
@@ -53,14 +55,15 @@ function infos(donnee) {
 	
 	reponse = JSON.parse(donnee); 
 	utilisateur = "alex12"
-	let nom, prenom, sexe, telephone, mail,anniversaire, photo, portrait, tache, commentaire, auteur, cote 
-	
+	let nom, prenom, sexe, telephone, mail,anniversaire, photo, portrait, tache, commentaire, auteur, cote, ville 
+	let comment=""
 	for(i=0; i<reponse.length; i++){
 		if(reponse[i].idCom == utilisateur){
 			
 			nom =reponse[i].nom
 			prenom= reponse[i].prenom
-		    sexe = reponse[i].sexe 
+		    sexe = reponse[i].sexe
+			
 			telephone = reponse[i].telephone
 			mail = reponse[i].mail
 			anniversaire = reponse[i].anniversaire
@@ -68,10 +71,11 @@ function infos(donnee) {
 			portrait = reponse[i].portrait
 			commentaire = reponse[i].commentaire
 			if(commentaire == null ) {
-				commentaire = " Pas de commentaire pour le moment"
+				comment = " Pas de commentaire pour le moment"
 			}
 			else {
-			commentaire = reponse[i].commentaire + " par " + reponse[i].auteur 
+			    comment += " - " + reponse[i].commentaire + " par " + reponse[i].auteur +"<br>"
+				
 			}
 		    cote=reponse[i].cote 
 		    if(cote == null ) {
@@ -84,28 +88,48 @@ function infos(donnee) {
 			tache = reponse[i].tache
             if(tache == null){
 				
-				tache = "Pas de tâches pour le moment" 	
+				tache = "Pas de tâche pour le moment" 	
             console.log(tache)				
 			}
 			else{
 				tache = reponse[i].tache
 				console.log(tache)
 			}
+			ville = reponse[i].ville
+			
 		}
 	
 	}
 	
-	document.getElementById("page").innerHTML = prenom + ' ' + nom + ' ' + '<br>' + sexe + '<br>' + telephone + '<br>' + mail + '<br>' + anniversaire + '<br>' + portrait
+	document.getElementById("page").innerHTML = prenom + ' ' + nom + ' ' + '<br>' + sexe + '<br>' + ville + '<br>' + telephone + '<br>' + mail + '<br>' + anniversaire + '<br>' + portrait
 	document.getElementById("notation").innerHTML = cote 
-	document.getElementById("zonecomm").innerHTML = commentaire 
-	document.getElementById("tache").innerHTML = tache // wtf 
+	document.getElementById("zonecomm").innerHTML = comment
+	document.getElementById("tache").innerHTML = tache 
 	
 	 	
 }
 
 function note(){
+	let newNote = +prompt ("Veuillez introduire une note sur 10")
 	
-	let newNote  
+	let inter = document.getElementById("notation").value
+	 
+	if(newNote <= 10 && newNote > 0 && newNote != String){
+		if(inter = String){
+			
+		}
+        else if ( inter = Number){
+			newNote = (newNote + inter)/2
+			
+			}		
+	}
+	else{alert("Entrée non valide")}
+	
+	let xhr = new XMLHttpRequest() ;  
+	xhr.open('get', "http://localhost/serv_Note?new_note="+newNote+"&new_utilisateur="+utilisateur, true) ;
+	
+	xhr.send() ; 	
+	
 
 }
 	
@@ -119,29 +143,32 @@ function commentaires(){
 	for ( let i=0; i<reponse.length; i++){
 		
 		if(reponse[i].idCom == String(newAuteur )){
-			 console.log(compteur += 1) 
+			compteur+=1
+			 console.log(compteur) 
 		     console.log(String(newAuteur))
 		
-		
-		if (compteur = 1){
+		}
+	}
+		if (compteur == 1){
 			alert("Votre commentaire à bien été enregistré");
-			break;
+			
+			let xhr = new XMLHttpRequest() ;  
+	        xhr.open('get', "http://localhost/serv_Com?utilisateur="+utilisateur+"&new_com="+newCommentaire+"&new_auteur="+newAuteur, true) ;
+	
+	        xhr.send() ; 
 		}
-		else if(compteur = 0){
+		else {
 			alert("personne inconnue"); 
-			break;
-		} // problème avec le compteur !!!!
-		}
+			
+		} 
+		
 	
 		
      
-	}
-	 console.log(newCommentaire + newAuteur)
 	
-	let xhr = new XMLHttpRequest() ;  
-	xhr.open('get', "http://localhost/serv_Com?new_comm="+newCommentaire+"&new_auteur="+newAuteur+"&new_utilisateur="+utilisateur, true) ;
 	
-	xhr.send() ; 	
+	
+		
 	
 }	
 	
@@ -173,7 +200,7 @@ function informations(donnee) {
 	
 	for(i=0; i<reponse.length; i++){
 		if(reponse[i].idCom == utilisateur){
-			
+			ville=reponse[i].ville
 			nom =reponse[i].nom
 			prenom= reponse[i].prenom
 		    sexe = reponse[i].sexe 
@@ -201,14 +228,15 @@ function informations(donnee) {
 									   '<br>' + anniversaire +
 									   '<br>' + telephone + ' <input type="button" onclick="changTelephone()" value="Changer le Numéro de Telephone" id="Tel" class="change">'+
 									   '<br>' + mail + ' <input type="button" onclick="changMail()" value="Changer l\'adresse Mail" id="Mail" class="change">'+
-									   '<br>' + "ville"  + ' <input type="button" onclick="changVille()" value="Changer la Ville" id="Vill" class="change">'
+									   '<br>' + ville  + ' <input type="button" onclick="changVille()" value="Changer la Ville" id="Vill" class="change">'
 									  
 					     
-	//document.getElementById("mon_image").innerHTML= photo 
+	
 	document.getElementById("services").innerHTML= tache;
 	console.log(tache)
 	document.getElementById("description").innerHTML = portrait
 	console.log(portrait)
+	document.getElementById("cadrephoto").innerHTML =  '<img src="img?url='+ photo +'" alt="test" width="234" height="250"/>' ;
 	
 	
 	 	
