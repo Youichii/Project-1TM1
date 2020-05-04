@@ -179,7 +179,7 @@ body.BodyLogin{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  background-image: url("img?url=zen-black.jpg");
+  background-image: url("../img/zen-black.jpg");
   background-size: cover;
 }
 
