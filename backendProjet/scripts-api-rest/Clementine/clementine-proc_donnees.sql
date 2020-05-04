@@ -1,10 +1,6 @@
-<!--Pour la page Profils-CS.html => Clémentine Sacré-----------------------------------------------------------------------------------> 
-
 endpoint : Appelé lors de onload de la page Profils-CS.html 
 paramètres : / 
 format de réponse : en JSON
-
-
 
 
 //Procedure qui retourne certaines données
@@ -15,14 +11,4 @@ BEGIN
     select idCom, nom, prenom, sexe, telephone, mail, anniversaire, photo, portrait
     from dba.communaute ;
 END ;
-
-
-
-
-//Service qui appelle donnees
-CREATE SERVICE "serv_donnees" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call proc_donnees();
-
-
-
-
 
