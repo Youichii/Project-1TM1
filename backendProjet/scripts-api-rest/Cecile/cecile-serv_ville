@@ -1,0 +1,7 @@
+CREATE SERVICE "serv_Ville"
+TYPE 'JSON' 
+       AUTHORIZATION OFF 
+       USER "DBA" 
+       URL ON 
+       METHODS 'GET' 
+AS call proc_Ville(:new_ville,:new_utilisateur)
