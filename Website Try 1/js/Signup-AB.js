@@ -1,7 +1,7 @@
 var userVerification = "";
 function demarrage() {
 	let xhr = new XMLHttpRequest() ;
-	xhr.open('get', "http://localhost/json?url=Signup-AB", true) ;
+	xhr.open('get', "http://localhost/serv_donnees", true) ;
 	xhr.onreadystatechange =
 			function affichage() {
 				if (xhr.status == 200 && xhr.readyState == 4) {
@@ -21,13 +21,13 @@ var tabData = {};
 
 function getInformation(){
   if(getId("uPswd") != getId("uPswdConfirm")){
-    document.getElementById("formulaire").innerHTML = "<p id='WrongPswd'>Les mots de passe ne sont pas identiques</p><a id='retry' href='page?url=SignupPage-AB'>Rééssayer</a>";
+    document.getElementById("formulaire").innerHTML = "<p id='WrongPswd'>Les mots de passe ne sont pas identiques</p><a id='retry' href='root?url=SignupPage-AB'>Rééssayer</a>";
     return false;
   }
   else {
     for(let i=0; i< userVerification.length; i++){
       if(getId("uMail") == userVerification[i].mail || getId("uName") == userVerification[i].idCom){
-      document.getElementById("formulaire").innerHTML = "<p id='WrongMail'>Désolé, cette adresse mail/nom d'utilisateur est déjà utilisé(e)</p><a id='retry' href='page?url=SignupPage-AB'>Rééssayer</a>";
+      document.getElementById("formulaire").innerHTML = "<p id='WrongMail'>Désolé, cette adresse mail/nom d'utilisateur est déjà utilisé(e)</p><a id='retry' href='root?url=SignupPage-AB'>Rééssayer</a>";
       return false;
      }
    }
