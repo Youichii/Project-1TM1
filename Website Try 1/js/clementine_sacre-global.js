@@ -1,3 +1,8 @@
+"use strict";
+// auteur : Clémentine Sacré HE201876
+
+/* ****************************** */
+
 function start(ident) {
 	cacher(ident) ;
 }
