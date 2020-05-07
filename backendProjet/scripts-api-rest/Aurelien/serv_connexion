@@ -1,1 +1,0 @@
-CREATE SERVICE "serv_connexion" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call proc_connexion(:nomUtilisateur,:motDePasse);
