@@ -1,5 +1,5 @@
 "use strict";
-// auteur : Sacré Clémentine HE201876
+// auteur : Clémentine Sacré HE201876
 
 /* ****************************** */
 
