@@ -3,10 +3,10 @@
 
 CREATE PROCEDURE "DBA"."proc_Com"(in utilisateur VARCHAR(25), new_com LONG VARCHAR, new_auteur VARCHAR(25))
 BEGIN 
-insert into dba.commentaires
-(idCom,commentaire,auteur)
-VALUES 
-(utilisateur,new_com,new_auteur);
+  insert into dba.commentaires
+  (idCom,commentaire,auteur)
+  VALUES 
+  (utilisateur,new_com,new_auteur);
 END
 
 
