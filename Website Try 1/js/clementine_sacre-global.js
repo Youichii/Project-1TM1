@@ -23,7 +23,6 @@ function cacher(identifiant) {
 }
 
 function compte(utilisateurEnCours) {
-	console.log(utilisateurEnCours) ;
 	document.getElementById("tout").id = utilisateurEnCours ;
 }
 
