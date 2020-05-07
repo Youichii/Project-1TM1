@@ -2,13 +2,10 @@
 
 
 CREATE PROCEDURE proc_Note(in new_note INTEGER,new_utilisateur VARCHAR(50))
-
 BEGIN 
-
-update dba.taches
-set note  = new_note
-where idCom = new_utilisateur 
-
+  update dba.taches
+  set note  = new_note
+  where idCom = new_utilisateur 
 END
 
 
