@@ -1,6 +1,6 @@
-function demarrage() {
+function demarrage_cs() {
 	let xhr = new XMLHttpRequest() ;
-	xhr.open('get', "http://localhost/json", true) ; 
+	xhr.open('get', "http://localhost/serv_donnees", true) ; 
 	xhr.onreadystatechange = 
 			function affichage() {
 				if (xhr.status == 200 && xhr.readyState == 4) {
@@ -12,7 +12,6 @@ function demarrage() {
 
 
 function affiche(texte) {
-	
 	let reponse = JSON.parse(texte) ;
 	let fiche = "", img, desc, cotation, name, total ;
 	let plein, moitiePlein, pasPlein ;
@@ -40,26 +39,8 @@ function affiche(texte) {
 					 <div class="desc">\
 					 <div class="nom_com">' + total + '</div>\
 					 <div class="info"><br><br><br><br>' + desc + '</div>\
-					 <div class="profil_bouton"><a href="root?url=PageProfilPublic-CB"><input onclick="blabla(\'' + reponse[i].idCom + '\');" type="button" value="Voir le profil" class="compte_bouton"></a></div>\
+					 <div class="profil_bouton"><a onclick="cacher(\'pageprofilpublic_cb\'), pageChargement(\'' + reponse[i].idCom + '\');"><input type="button" value="Voir le profil" class="compte_bouton"></a></div>\
 					 </div></div>' ;
 	}
 	return fiche ;
 }
-
-function blabla(code) {
-	let xhr = new XMLHttpRequest() ;
-	xhr.open('get', "http://localhost/stockages?identifiant=" + code, true) ; 
-	xhr.onreadystatechange = 
-			function affichage() {
-				if (xhr.status == 200 && xhr.readyState == 4) {
-						xhr.responseText ;
-					}
-			}
-	xhr.send() ;
-}
-
-
-
-
-
-
