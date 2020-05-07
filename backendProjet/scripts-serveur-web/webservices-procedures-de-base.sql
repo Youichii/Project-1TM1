@@ -1,3 +1,5 @@
+--------------- Procédures / fonctions de base -------------------------------------------------------------------
+
 /*_______________________-Chemin de la base de données-________________________________*/
 
 ALTER FUNCTION "DBA"."getPath"() 
@@ -43,3 +45,12 @@ BEGIN
     Call sa_set_http_header('Access-Control-Allow-Origin', '*');
     select xp_read_file(dba.getPath() || url || '.html'); 
 END
+
+
+--------------- Webservices de base -------------------------------------------------------------------
+
+CREATE SERVICE "js" TYPE 'RAW' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call dba.http_getJS(:url);
+
+CREATE SERVICE "img" TYPE 'RAW' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call dba.http_getIMG(:url);
+
+CREATE SERVICE "css" TYPE 'RAW' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call dba.http_getCSS(:url);
