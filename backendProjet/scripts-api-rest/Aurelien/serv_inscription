@@ -1,1 +1,0 @@
-CREATE SERVICE "receiveData" TYPE 'RAW' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call inscription(:LastName,:FirstName,:Username,:uMail,:uPhone,:uVille,:uBirth,:uPswd,:uSex,:Color);
