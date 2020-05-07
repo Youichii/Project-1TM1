@@ -1,3 +1,7 @@
+"use strict";
+// auteur : Cécile Bonnet matricule
+/* ****************************** */
+
 var user = document.body.id ;
 var reponse ;
 
