@@ -1,3 +1,8 @@
+"use strict";
+// auteur : Aurélien Brille matricule
+
+/* ****************************** */
+
 let profilConnexion = "";
 
 function changePage(){
