@@ -1,7 +1,0 @@
-create service "serv_Note"
-TYPE 'JSON' 
-       AUTHORIZATION OFF 
-       USER "DBA" 
-       URL ON 
-       METHODS 'GET' 
-AS call proc_Note(:new_note,:utilisateur)
