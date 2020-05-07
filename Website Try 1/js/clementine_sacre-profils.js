@@ -1,3 +1,8 @@
+"use strict";
+// auteur : Sacré Clémentine HE201876
+
+/* ****************************** */
+
 function demarrage_cs() {
 	let xhr = new XMLHttpRequest() ;
 	xhr.open('get', "http://localhost/serv_donnees", true) ; 
