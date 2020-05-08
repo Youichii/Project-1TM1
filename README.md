@@ -40,9 +40,9 @@ Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le fo
 
 - Aurélien Brille :
     - receiveData :
-          - Paramètres :
-          - Format de réponse :
-          - Endpoint  :
+      - Paramètres :
+      - Format de réponse :
+      - Endpoint  :
     - serv_connexions
          
           
