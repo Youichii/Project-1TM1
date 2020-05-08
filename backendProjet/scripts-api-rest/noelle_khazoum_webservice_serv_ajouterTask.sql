@@ -9,11 +9,5 @@ BEGIN
 END
 
 
+CREATE SERVICE "serv_ajouterTask" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call proc_ajouterTask(:task_,:personne_,:desc_,:cat_);
 
-CREATE SERVICE "serv_ajouterTask"
-TYPE 'JSON'
-      AUTHOTIZATION OFF
-      USER "DBA"
-      URL ON
-      METHODS 'GET'
-AS call proc_ajouterTask(:task_:,personne_,:desc_,;cat_)
