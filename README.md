@@ -78,9 +78,9 @@ Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le fo
       - Format de réponse :
       - Endpoint :
 - serv_donnees 
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint :
+      - Paramètres : /
+      - Format de réponse : ?
+      - Endpoint : ?
 - serv_aff
       - Paramètres :
       - Format de réponse :
