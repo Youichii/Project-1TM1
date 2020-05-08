@@ -11,10 +11,4 @@ BEGIN
 END;
 
 
-CREATE SERVICE "serv_aff"
-  TYPE 'JSON'
-  AUTHOTIZATION OFF
-  USER "DBA"
-  URL ON
-  METHODS 'GET'
-AS call proc_aff(:a_nom,:a_prenom,:a_email,:a_telephone,:a_ville,:a_tache,:a_description);
+CREATE SERVICE "serv_aff" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call proc_aff(:a_nom,:a_prenom,:a_email,:a_telephone,:a_ville,:a_tache,:a_description);
