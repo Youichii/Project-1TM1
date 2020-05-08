@@ -730,6 +730,13 @@ div.BodyPrive{
 	left:35%
 }
 
+#reTour{
+	position:absolute;
+	top:90%;
+	left:5%;
+	
+}
+
 #img{
     top:15%;
     left:20%;
