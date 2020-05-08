@@ -16,17 +16,17 @@ Nous désirons  crée un site web qui permettra de déposer des annonces de trav
 
   #FONCTIONNALITÉS PRINCIPALES
   
--Un page qui référence toutes les tâches postés sur le site et qui permet également à l'utilisateur d'en ajouter.
+- Une page qui référence toutes les tâches postés sur le site et qui permet également à l'utilisateur d'en ajouter.
 
--Un système de connexion/inscription qui servira à identifier un utilisateur en lui fournissant accès à une page "profil privé"           regroupant ses donnés ainsi qu'avoir accès à toutes les fonctionnalités du site.
+- Un système de connexion/inscription qui servira à identifier un utilisateur en lui fournissant accès à une page "profil privé"           regroupant ses donnés ainsi qu'avoir accès à toutes les fonctionnalités du site.
 
   #FONCTIONNALITÉS SECONDAIRES
   
--Un profil public visible par tous les utilisateurs reprennant les données personnelles, les commentaires des autres usagers ainsi qu'une note.
+- Un profil public visible par tous les utilisateurs reprennant les données personnelles, les commentaires des autres usagers ainsi qu'une note.
 
--Un profil privé uniquement accessible par la personne connectée lui permettant de voir et modifier ses informations personnelles.
+- Un profil privé uniquement accessible par la personne connectée lui permettant de voir et modifier ses informations personnelles.
 
--Une page listant tous les profils inscrits sur le site, et permettant d'accéder directement à leur profil public via un boutton.
+- Une page listant tous les profils inscrits sur le site, et permettant d'accéder directement à leur profil public via un boutton.
 
 -Une page d'accueil permettant de s'inscrire ou de se connecter sur le site.
 
