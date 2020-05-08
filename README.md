@@ -42,41 +42,25 @@ Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le fo
     - receiveData :
           - Paramètres :
           - Format de réponse :
-          - Endpoint :
+          - Endpoint  :
     - serv_connexions
-          - Paramètres :
-          - Format de réponse :
-          - Endpoint :
+         
           
 - Cécile Bonnet :
     - serv_Desc
-          - Paramètres :
-          - Format de réponse :
-          - Endpoint :
+          
     - serv_Mail
-          - Paramètres :
-          - Format de réponse :
-          - Endpoint :
+          
     - serv_Notes
-          - Paramètres :
-          - Format de réponse :
-          - Endpoint :
+          
     - serv_Telephone
-          - Paramètres :
-          - Format de réponse :
-          - Endpoint :
+          
     - serv_Ville
-          - Paramètres :
-          - Format de réponse :
-          - Endpoint :
+         
     - serv_com
-          - Paramètres :
-          - Format de réponse :
-          - Endpoint :
+          
     - serv_valeurs
-          - Paramètres :
-          - Format de réponse :
-          - Endpoint :
+          
     - serv_valeursBis
           - Paramètres :
           - Format de réponse :
@@ -84,19 +68,13 @@ Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le fo
           
 - Clémentine Sacré :
     - serv_donnees 
-          - Paramètres : /
-          - Format de réponse : ?
-          - Endpoint : ?
+          
           
  - Noelle Khazoum :
     - serv_aff
-          - Paramètres :
-          - Format de réponse :
-          - Endpoint :
+          
     - serv_ajouterTask
-          - Paramètres :
-          - Format de réponse :
-          - Endpoint :
+         
   
 # Détail DB
 - Table des villes (contient 6 villes et leur code postal attitré) :
