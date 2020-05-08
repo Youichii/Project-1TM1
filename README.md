@@ -6,36 +6,35 @@ Aurélien Brille, Cécile Bonnet, Clémentine Sacré, Noelle Khazoum
 # Description du projet
   - BESOIN DU CLIENT
   
-Nous désirons  crée un site web qui permettra de déposer des annonces de travail et/ou d'en rechercher. Ces travaux constitueront uniquement en des petites tâches réalisables par tous (nettoyage, jardinage, photographie,...).
+Nous désirons créer un site web qui permettra de déposer des annonces de travail et/ou d'en rechercher. Ces travaux constitueront uniquement en des petites tâches réalisables par tous (nettoyage, jardinage, photographie,...).
 
 
   - FONCTIONNALITÉS PRINCIPALES
   
-    - Une page qui référence toutes les tâches postés sur le site et qui permet également à l'utilisateur d'en ajouter.
-    - Un système de connexion/inscription qui servira à identifier un utilisateur en lui fournissant accès à une page "profil privé"           regroupant ses donnés ainsi qu'avoir accès à toutes les fonctionnalités du site.
+    - Une page qui référence toutes les tâches postées sur le site et qui permet également à l'utilisateur d'en ajouter.
+    - Un système de connexion/inscription qui servira à identifier un utilisateur en lui fournissant accès à une page "profil privé"           regroupant ses données ainsi qu'avoir accès à toutes les fonctionnalités du site.
 
   - FONCTIONNALITÉS SECONDAIRES
-  
-    - Un profil public visible par tous les utilisateurs reprennant les données personnelles, les commentaires des autres usagers ainsi qu'une note.
+    
+    - Une page d'accueil permettant de s'inscrire ou de se connecter sur le site.
+    - Un profil public reprennant les données personnelles de chaque utilisateur, les commentaires des autres usagers ainsi qu'une note.
     - Un profil privé uniquement accessible par la personne connectée lui permettant de voir et modifier ses informations personnelles.
     - Une page listant tous les profils inscrits sur le site, et permettant d'accéder directement à leur profil public via un boutton.
-    - Une page d'accueil permettant de s'inscrire ou de se connecter sur le site.
-    - Une fonctionnalité permettant de trier les tâches recherchées par mot-clés.
+    - Une fonctionnalité permettant de trier les tâches recherchées par mot-clés sur la page des tâches.
 
 # Aspects implémentés
 La liste des aspects techniques qu'il faut implémenter pour mettre en place le projet, en séparant les aspects backend (base de données, procédures SQL, webservices, serveur de fichiers) et les aspects frontend (html, css, js, page web et fonctionnalités à proposer aux utilisateurs). ???
-  x Backend :
-  - Base de données :
-  - Procédures SQL :
-  - Webservices :
-  - Serveur de fichiers :
+
+  - Base de données : Tables reprenant les informations sur les personnes, les tâches que certaines personnes proposent, et les avis laissés par d'autres personnes aux utilisateurs ;
+  - Procédures SQL : Tables allant chercher les informations selon la page sur laquelle son se trouve et pouvant modifier des données quand certains boutons le proposent et ajouter des données lors d'une inscription ;
+  - Webservices : La plupart des webservices en JSON afin de modifier/ajouter/chercher des données ;
+  - Serveur de fichiers : ?
   
-  x Frontend :
-  - HTML :
-  - CSS :
-  - JS
-  - Page web :
-  - Fonctionnalités :
+  - HTML : page comprenant toutes les pages, affichant la page demandée et cachant le reste des pages en attendant ;
+  - CSS : site le plus esthétique possible, et le plus ergonomique ; 
+  - JS : fonctions appelées lors de l'affichage d'une page ou lors d'un appel de bouton ;
+  - Page web : 
+  - Fonctionnalités : permet s'inscrire/de se connecter. Egalement de déposer/chercher des tables, de mettre des avis/note aux différentes personnes de la communauté ;
 
 # Détail api rest
 Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le format de réponse. Indiquez aussi qui en est l'auteur. (Cela peut être "commun", mais il faut au moins 1 webservice complet personnel par membre du groupe.)
