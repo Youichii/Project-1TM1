@@ -32,3 +32,63 @@ Nous désirons  crée un site web qui permettra de déposer des annonces de trav
 
 -Une fonctionnalité permettant de trier les tâches recherchées par mot-clés.
 
+# Aspects implémentés
+La liste des aspects techniques qu'il faut implémenter pour mettre en place le projet, en séparant les aspects backend (base de données, procédures SQL, webservices, serveur de fichiers) et les aspects frontend (html, css, js, page web et fonctionnalités à proposer aux utilisateurs). ???
+
+# Détail api rest
+Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le format de réponse. Indiquez aussi qui en est l'auteur. (Cela peut être "commun", mais il faut au moins 1 webservice complet personnel par membre du groupe.)
+- receiveData :
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_connexions
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_Desc
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_Mail
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_Notes
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_Telephone
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_Ville
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_com
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_valeurs
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_valeursBis
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_donnees 
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_aff
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+- serv_ajouterTask
+      Paramètres :
+      Format de réponse :
+      Endpoint :
+  
+# Détail DB
+Présenter les tables et les champs des tables SQL
