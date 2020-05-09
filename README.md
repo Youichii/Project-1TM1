@@ -37,7 +37,9 @@ La liste des aspects techniques qu'il faut implémenter pour mettre en place le 
   - Fonctionnalités : permet s'inscrire/de se connecter. Egalement de déposer/chercher des tables, de mettre des avis/note aux différentes personnes de la communauté ;
 
 # Détail api rest
-Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le format de réponse. Indiquez aussi qui en est l'auteur. (Cela peut être "commun", mais il faut au moins 1 webservice complet personnel par membre du groupe.)
+endpoint = ce que fait ta procédure, son but, que fait-elle
+format = ce qu'elle renvoie en quel format etc /!\ faire du français pas juste mettre les noms des colonnes
+param = mm chose, que prend la procédure
 
 - Aurélien Brille :
     - receiveData :
@@ -92,10 +94,10 @@ Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le fo
       - Endpoint  :
                 
 - Clémentine Sacré :
-    - serv_donnees :
+    - serv_donnees (appelle procédure "donnee"):
       - Paramètres : /
-      - Format de réponse : ? 
-      - Endpoint  : ?
+      - Format de réponse : renvoie en JSON le nom (varchar de 30) de toutes les personnes, ainsi que leur prénom (varchar de 30), leur photo (varchar de 50), leur portrait (varchar de 120) et leur cote (entier entre 0 et 10) afin de pouvoir afficher un pré-profil de chaque personne inscrite. Leur id (varchar de 16) est également renvoyé afin de pouvoir accéder à une autre page plus développée sur chacun d'eux ;
+      - Endpoint  : Retrouve les données utiles pour la page communauté et les renvoie ;
  
  - Noelle Khazoum :
     - serv_aff :
