@@ -47,7 +47,7 @@ CREATE TABLE taches(
     idCat VARCHAR(4) NOT NULL,
     
     CONSTRAINT pk_communaute_taches FOREIGN KEY(idCom) REFERENCES communaute(idCom),
-	CONSTRAINT pk_communaute_categories FOREIGN KEY(idCat) REFERENCES categories(idCat)
+    CONSTRAINT pk_communaute_categories FOREIGN KEY(idCat) REFERENCES categories(idCat)
 ) ;
 
 
