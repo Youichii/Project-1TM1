@@ -8,6 +8,16 @@ CREATE TABLE villes(
 
 
 
+//Table des catégories
+CREATE TABLE categories(
+    idCat VARCHAR(4) NOT NULL,
+    categorie VARCHAR(11) NOT NULL,
+
+    CONSTRAINT pk_categories PRIMARY KEY(idCat)
+)
+
+
+
 //Table avec toutes les informations sur la personne
 CREATE TABLE communaute (
     idCom VARCHAR(16) NOT NULL,
@@ -34,10 +44,10 @@ CREATE TABLE taches(
     idCom VARCHAR(16) NOT NULL,
     tache VARCHAR(100) NOT NULL,
     details LONG VARCHAR NULL,
-    categorie VARCHAR(10) NOT NULL,
+    idCat VARCHAR(4) NOT NULL,
     
-
-    CONSTRAINT pk_communaute_taches FOREIGN KEY(idCom) REFERENCES communaute(idCom)
+    CONSTRAINT pk_communaute_taches FOREIGN KEY(idCom) REFERENCES communaute(idCom),
+	CONSTRAINT pk_communaute_categories FOREIGN KEY(idCat) REFERENCES categories(idCat)
 ) ;
 
 
