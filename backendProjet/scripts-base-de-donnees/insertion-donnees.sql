@@ -12,6 +12,18 @@ VALUES
 
 
 
+//Ajout des catégories et de leur id
+INSERT INTO categories
+(idCat, categorie)
+VALUES
+('c01','autre'),
+('c02','garage'),
+('c03','jardin'),
+('c04','maison'),
+('c05','reparation');
+
+
+
 //Ajout des données dans la table communauté
 INSERT INTO communaute
 (idCom, mdp, nom, prenom, sexe, telephone, mail, anniversaire, photo, portrait, postal, cote)
@@ -71,42 +83,42 @@ VALUES
 
 //Ajout des tâches dans tâches
 INSERT INTO taches
-(idCom, tache, details, categorie)
+(idCom, tache, details, idCat)
 VALUES
-('ambre21', 'Tondre la pelouse', 'Bonjour ! Je me propose pour tondre votre pelouse, j''ai de l''endurance, je sais tenir longtemps. J''habite dans les environs de Liège.', 'jardin'),
-('morgan53', 'Planter des fleurs', 'Bonjour, ayant fait des études de jardinage, je me propose pour planter votre fleurs avec délicatesse.', 'jardin'),
-('victoire72', 'Laver les voitures', 'En ces beaux jours d''été je vous propose de laver vos voitures à petits prix.', 'garage'),
-('clotaire87', 'Faire le lave-vaisselle', 'Votre vaisselle s''entasse depuis maintenant 3 mois? Je suis là ! Ayant travailler 4 ans à la plonge, j''ai le coup de main pour nettoyer la vaiselle.', 'maison'),
-('victor89', 'Ranger les chambres', 'Bonjour, je vous propose de ranger les chambres que ce soit celles d''adultes, d''ados, ou encore d''enfants !', 'maison'),
-('jeanne77', 'Tondre le jardin', 'J''ai la dernière tondeuse de chez Samsung alors comptez sur moi pour etre rapide et efficace', 'jardin'),
-('celine84', 'Regonfler les pneus de voiture', 'En tant qu''ancien mécano, j''ai tout le matériel qu''il faut pour une mise à jour de vos pneus !', 'garage'),
-('auguste34', 'Tuyauterie', 'Bachelier en tuyauterie, faites moi confiance, je suis habile de mes deux mains.', 'maison'),
-('aubin87', 'Réparer des vélos', 'Je répare vos vélos aussi rapidement que possible !', 'reparation'),
-('elsa86', 'Tailler la haie', 'Bonjour, j''amène ma propre tailleuse et échelle, je m''occupe de tout.', 'jardin'),
-('estelle87', 'Nettoyer les autos', 'Il est temps que vous laviez votre voiture !! N''attendez plus pour m''appeler.', 'garage'),
-('sophia32', 'Aspirer les voitures', 'J''aspire vos voitures, malheureusement je ne fais pas l''extérieur je suis allergique à l''eau', 'garage'),
-('oscar51', 'Nettoyer la piscine', 'Le printemps prend fin, bientôt un an que vous n''avez plus lavé votre piscine ? Je suis là !', 'maison'),
-('oscar90', 'Rattrapage', 'Si vous avez des soucis en cours dans n''importe quelle matière, je donne des rattrapages jusqu''au niveau de 4e secondaire.', 'autre'),
-('marie54', 'Construire une cabane de jardin', 'Je suis bo en construction donc si vous avez besoin d''aide pour construire votre cabane, appelez moi.', 'jardin'),
-('adam09', 'Construire enclos animaux (poules, lapins, ...)', 'Je construis des abris adaptés à vos animaux, il est important qu''ils aient un endroit pour vivre convenable.', 'autre'),
-('gaspard78', 'Laver les animaux', 'J''ai 17 chats, 2 renards, 6 oiseaux, 1 serpent et 4 chiens que je lave tous les jours. Je pense donc être à la hauteur pour laver vos animaux avec le plus de délicatesse possible.', 'autre'),
-('jade35', 'Repassage', 'Bonjour, je repasse vos chemises et tout autre chose dans la région du Brabant Wallon', 'maison'),
-('achille23', 'Babysitting', 'Je garde vos enfants entre 6 mois et 216 mois.', 'autre'),
-('emile42', 'Je vais faire vos courses', 'Je me propose pour aller faire vos courses à votre place, dans les environs de Namur.', 'autre'),
-('edouard75', 'Conseiller en plantes', 'Je suis herbologiste, si vous avez des conseils je suis donc à votre disposition', 'jardin'),
-('francoise98', 'Babysitteuse', 'J''adore les enfants, je suis grande soeur de 2 petites soeurs et 3 petits frère, j''ai donc la fibre maternelle.', 'autre'),
-('hector09', 'Cours d''anglais et de math', 'J''ai un doctorat en mathémtiques et j''ai fais 3 ans aux USA, j''ai donc les compétences pour vous permettre de réussir votre année.', 'autre'),
-('zoe73', 'Déraciner les mauvaises plantes', 'Il est très important de garder un jardin en bonne santé, je me propose pour vous aider en retirer les mauvaises herbes !', 'jardin'),
-('marcel12', 'Déraciner les arbres', 'Je me propose pour participer à la déforstation en retirant les arbres qui vous gênent, n''attendez plus.', 'jardin'),
-('agathe86', 'Apprendre le français', 'Je suis native française et j''ai un bachelier en langue romane.', 'autre'),
-('max97', 'Laver les vitres', 'Vous avez plein de traces de doigts sur votre vitre ? Faites appel à moi !', 'maison'),
-('blanche23', 'Cueillir fruits (pommes, cerises, poires,...)', 'Je cueille vos fruits, j''amène mes paniers et mon échelle.', 'jardin'),
-('henri14', 'Faire des desserts', 'Ma maman est cuisnière professionnelle, et il semblerait que j''ai récupéré cette fibre.', 'maison'),
-('leon01', 'Photographe', 'J''ai un appareil de super bonne qualité, je me propose donc pour prendre des photos de ce que vous voulez.', 'autre'),
-('alizee13', 'Sortir les animaux de compagnie', 'Si vous n''avez pas le temps pour sortir vos animaux, je me propose pour le faire.', 'autre'),
-('patricia09', 'Peindre des murs', 'Bonjour, j''adore peindre , alors si vous avez besoin de repeindre quoi que ce soit, je suis là !', 'maison'),
-('melchior98', 'Dressage de chevaux', 'Ma grand-mère a une écurie, j''y passe tous les étés, je m''y connais donc en chevaux !', 'autre'),
-('leonie64', 'Faire la cuisine', 'Je vous offre mes mains pour faire de la pâtisserie de préférence !! En plus j''adore manger.', 'maison');
+('ambre21', 'Tondre la pelouse', 'Bonjour ! Je me propose pour tondre votre pelouse, j''ai de l''endurance, je sais tenir longtemps. J''habite dans les environs de Liège.', 'c03'),
+('morgan53', 'Planter des fleurs', 'Bonjour, ayant fait des études de jardinage, je me propose pour planter votre fleurs avec délicatesse.', 'c03'),
+('victoire72', 'Laver les voitures', 'En ces beaux jours d''été je vous propose de laver vos voitures à petits prix.', 'c02'),
+('clotaire87', 'Faire le lave-vaisselle', 'Votre vaisselle s''entasse depuis maintenant 3 mois? Je suis là ! Ayant travailler 4 ans à la plonge, j''ai le coup de main pour nettoyer la vaiselle.', 'c04'),
+('victor89', 'Ranger les chambres', 'Bonjour, je vous propose de ranger les chambres que ce soit celles d''adultes, d''ados, ou encore d''enfants !', 'c04'),
+('jeanne77', 'Tondre le jardin', 'J''ai la dernière tondeuse de chez Samsung alors comptez sur moi pour etre rapide et efficace', 'c03'),
+('celine84', 'Regonfler les pneus de voiture', 'En tant qu''ancien mécano, j''ai tout le matériel qu''il faut pour une mise à jour de vos pneus !', 'c02'),
+('auguste34', 'Tuyauterie', 'Bachelier en tuyauterie, faites moi confiance, je suis habile de mes deux mains.', 'c04'),
+('aubin87', 'Réparer des vélos', 'Je répare vos vélos aussi rapidement que possible !', 'c05'),
+('elsa86', 'Tailler la haie', 'Bonjour, j''amène ma propre tailleuse et échelle, je m''occupe de tout.', 'c03'),
+('estelle87', 'Nettoyer les autos', 'Il est temps que vous laviez votre voiture !! N''attendez plus pour m''appeler.', 'c02'),
+('sophia32', 'Aspirer les voitures', 'J''aspire vos voitures, malheureusement je ne fais pas l''extérieur je suis allergique à l''eau', 'c02'),
+('oscar51', 'Nettoyer la piscine', 'Le printemps prend fin, bientôt un an que vous n''avez plus lavé votre piscine ? Je suis là !', 'c04'),
+('oscar90', 'Rattrapage', 'Si vous avez des soucis en cours dans n''importe quelle matière, je donne des rattrapages jusqu''au niveau de 4e secondaire.', 'c01'),
+('marie54', 'Construire une cabane de jardin', 'Je suis bo en construction donc si vous avez besoin d''aide pour construire votre cabane, appelez moi.', 'c03'),
+('adam09', 'Construire enclos animaux (poules, lapins, ...)', 'Je construis des abris adaptés à vos animaux, il est important qu''ils aient un endroit pour vivre convenable.', 'c01'),
+('gaspard78', 'Laver les animaux', 'J''ai 17 chats, 2 renards, 6 oiseaux, 1 serpent et 4 chiens que je lave tous les jours. Je pense donc être à la hauteur pour laver vos animaux avec le plus de délicatesse possible.', 'c01'),
+('jade35', 'Repassage', 'Bonjour, je repasse vos chemises et tout autre chose dans la région du Brabant Wallon', 'c04'),
+('achille23', 'Babysitting', 'Je garde vos enfants entre 6 mois et 216 mois.', 'c01'),
+('emile42', 'Je vais faire vos courses', 'Je me propose pour aller faire vos courses à votre place, dans les environs de Namur.', 'c01'),
+('edouard75', 'Conseiller en plantes', 'Je suis herbologiste, si vous avez des conseils je suis donc à votre disposition', 'c03'),
+('francoise98', 'Babysitteuse', 'J''adore les enfants, je suis grande soeur de 2 petites soeurs et 3 petits frère, j''ai donc la fibre maternelle.', 'c01'),
+('hector09', 'Cours d''anglais et de math', 'J''ai un doctorat en mathémtiques et j''ai fais 3 ans aux USA, j''ai donc les compétences pour vous permettre de réussir votre année.', 'c01'),
+('zoe73', 'Déraciner les mauvaises plantes', 'Il est très important de garder un jardin en bonne santé, je me propose pour vous aider en retirer les mauvaises herbes !', 'c03'),
+('marcel12', 'Déraciner les arbres', 'Je me propose pour participer à la déforstation en retirant les arbres qui vous gênent, n''attendez plus.', 'c03'),
+('agathe86', 'Apprendre le français', 'Je suis native française et j''ai un bachelier en langue romane.', 'c01'),
+('max97', 'Laver les vitres', 'Vous avez plein de traces de doigts sur votre vitre ? Faites appel à moi !', 'c04'),
+('blanche23', 'Cueillir fruits (pommes, cerises, poires,...)', 'Je cueille vos fruits, j''amène mes paniers et mon échelle.', 'c03'),
+('henri14', 'Faire des desserts', 'Ma maman est cuisnière professionnelle, et il semblerait que j''ai récupéré cette fibre.', 'c04'),
+('leon01', 'Photographe', 'J''ai un appareil de super bonne qualité, je me propose donc pour prendre des photos de ce que vous voulez.', 'c01'),
+('alizee13', 'Sortir les animaux de compagnie', 'Si vous n''avez pas le temps pour sortir vos animaux, je me propose pour le faire.', 'c01'),
+('patricia09', 'Peindre des murs', 'Bonjour, j''adore peindre , alors si vous avez besoin de repeindre quoi que ce soit, je suis là !', 'c04'),
+('melchior98', 'Dressage de chevaux', 'Ma grand-mère a une écurie, j''y passe tous les étés, je m''y connais donc en chevaux !', 'c01'),
+('leonie64', 'Faire la cuisine', 'Je vous offre mes mains pour faire de la pâtisserie de préférence !! En plus j''adore manger.', 'c04');
 
 
 
