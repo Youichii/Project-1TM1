@@ -4,7 +4,7 @@
 
 
 var reponse ;
-var user = "achille23"
+var user = document.body.id
 var info;
 
 
