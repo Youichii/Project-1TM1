@@ -1,13 +1,15 @@
 /* Auteur : Cécile Bonnet HE201796*/
 
 
-CREATE PROCEDURE proc_Ville(in new_ville VARCHAR(50),new_utilisateur VARCHAR(50))
-BEGIN 
-  update dba.communaute
-  set ville  = new_ville
-  where idCom = new_utilisateur 
-END
+CREATE  PROCEDURE "DBA"."proc_Ville"(in new_ville VARCHAR(50), new_utilisateur VARCHAR(50))
 
+Begin 
+
+update dba.communaute 
+set postal = new_ville
+where idCom = new_utilisateur 
+
+End
 
 /******************************************************/
 
