@@ -1,4 +1,4 @@
-/* Auteur : Cécile Bonnet matricule */
+/* Auteur : Cécile Bonnet HE201796*/
 
 
 CREATE PROCEDURE proc_Ville(in new_ville VARCHAR(50),new_utilisateur VARCHAR(50))
