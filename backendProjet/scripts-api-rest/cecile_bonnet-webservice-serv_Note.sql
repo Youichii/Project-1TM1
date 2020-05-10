@@ -1,4 +1,4 @@
-/* Auteur : Cécile Bonnet matricule */
+/* Auteur : Cécile Bonnet HE201796
 
 
 CREATE PROCEDURE proc_Note(in new_note INTEGER,new_utilisateur VARCHAR(50))
