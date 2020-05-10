@@ -114,7 +114,7 @@ param = mm chose, que prend la procédure
 # Détail DB
 - Table des villes (contient 6 villes et leur code postal attitré) :
     - postal représente la PK de la table, qui représente le code postal d'une ville, en chiffre ;
-    - ville représente le nom de la ville en lettre ;
+    - ville représente le nom de la ville ;
     
 - Table de la communauté (toutes les informations sur les personnes inscrites) :
     - idCom qui représente la PK de la table, l'identifiant de l'utilisateur, c'est le nom qu'il utilise pour se connecter ;
@@ -134,9 +134,13 @@ param = mm chose, que prend la procédure
     - idCom représente une FK dans la table, c'est l'identifiant de l'utilisateur qui propose la tâche ;
     - tache représente le nom de la tâche proposée par l'utilisateur ;
     - details représente une description brève de la tâche proposée par l'utilisateur ;
-    - categorie représente le type/la catégorie de tâche que l'utilisateur a proposé ;
+    - idCar représente une FK dans la table, c'est l'identifiant de la catégorie de tâche que l'utilisateur a proposé ;
     
 - Table des commentaires (avis que certaines personnes laissent à d'autres personnes) : 
     - idCom représente une FK dans la table, c'est l'identifiant de la personne chez qui on laisse le commentaire ;
     - commentaire représente un avis laissé repar un autre utilisateur, ce qui permet à la communauté d'avoir un avis sur l'utilisateur, positif ou négatif ;
     - auteur représente l'identifiant de la personne qui écrit le commentaire ;
+    
+- Table des catégories (les différentes catégories de tâches existantes) : 
+  - idCar représente l'identifiant d'une catégorie de tâche ;
+  - categorie représente le nom de la catégorie ;
