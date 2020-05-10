@@ -108,7 +108,7 @@ param = mm chose, que prend la procédure
                 
     - serv_ajouterTask : (appelle la procédure "proc_ajouterTask)
       - Paramètres : prend en paramètres la nouvelle tache ajoutée, sa catégorie, sa description et l'id de la personne qui a ajouté cette tâche. 
-      - Format de réponse : ajouter une nouvelle ligne à la table taches de la base de donnée
+      - Format de réponse : pas de reponse.
       - Endpoint  : Crée une nouvelle ligne dans la base de donnée.
                
   
