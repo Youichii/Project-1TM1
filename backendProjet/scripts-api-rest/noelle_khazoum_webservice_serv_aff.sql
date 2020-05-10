@@ -1,14 +1,25 @@
-// pour affiner les taches selon la catégorie
+// Utilise la base de donnée pour affiner les tâches dans la page Affiner et affiche également les tâches dans la page Tâches
+ALTER PROCEDURE "DBA"."proc_aff" ()
 
-CREATE PROCEDURE proc_aff ()
-RESULT (a_nom VARCHAR, a_prenom VARCHAR, a_email VARCHAR, a_telephone VARCHAR, a_ville VARCHAR, a_postal VARCHAR, a_tache VARCHAR, a_description LONG VARCHAR)
+RESULT (nom VARCHAR(50),prenom VARCHAR(50),mail VARCHAR (60), telephone VARCHAR (15), ville VARCHAR(50), tache long VARCHAR, details LONG VARCHAR)
+
 BEGIN
+
    call sa_set_http_header('Access-Control-Allow-Origin', '*');
-   select idCom, categorie, tache, details, nom, prenom, email, telephone, ville, postal
+
+   select nom, prenom, mail, telephone, ville, tache, details
+
    from dba.communaute as C
-   left join dba.taches as T on C.idCom = T.idCom
-   left join dba.ville as V on C.postal = V.postal
-END;
+
+   join dba.taches as T on C.idCom = T.idCom
+
+   join dba.villes as V on C.postal = V.postal
+   
+   group by C.nom, C.prenom, C.mail, C.telephone, V.ville, T.tache, T.details
+
+END
 
 
-CREATE SERVICE "serv_aff" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call proc_aff(:a_nom,:a_prenom,:a_email,:a_telephone,:a_ville,:a_tache,:a_description);
+
+
+CREATE SERVICE "serv_aff" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call proc_aff();
