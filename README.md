@@ -100,15 +100,16 @@ param = mm chose, que prend la procédure
       - Endpoint  : Retrouve les données utiles pour la page communauté et les renvoie ;
  
  - Noelle Khazoum :
-    - serv_aff :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+    - serv_aff :(appelle la procédure "proc_aff")
+      - Paramètres : /
+      - Format de réponse : 1) dans la page TACHE; envoie en JSON la tache (LONG VARCHAR), sa description, details (long varchar) et les informations de la personne concernée (nom (varchar(50), prenom (varchar(50), mail (varchar (60), telephone (vARCHAR (15)), ville (vARCHAR(50)).
+      2) dans la page Affiner; envoie en JSON les iformations triés par categorie (varchar (30)) avec la tache (long varchar), par nom (varchar (50)) et par ville (varchar (50)).
+      - Endpoint  : Affiche dans les pages Tache et Affiner les taches et les informations liées. 
                 
-    - serv_ajouterTask :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+    - serv_ajouterTask : (appelle la procédure "proc_ajouterTask)
+      - Paramètres : prend en paramètres la nouvelle tache ajoutée, sa catégorie, sa description et l'id de la personne qui a ajouté cette tâche. 
+      - Format de réponse : ajouter une nouvelle ligne à la table taches de la base de donnée
+      - Endpoint  : Crée une nouvelle ligne dans la base de donnée.
                
   
 # Détail DB
