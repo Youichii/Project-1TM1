@@ -53,45 +53,46 @@ param = mm chose, que prend la procédure
       - Endpoint  :
  
 - Cécile Bonnet :
-    - serv_Desc :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+    - serv_Desc : appelle la procédure proc_Desc
+      - Paramètres : Prend en paramètre, la nouvelle description introduite dans la page HTML privé & l'id de la personne connecté 
+      - Format de réponse :Pas de réponse -> Modifie la table 
+      - Endpoint  : Va modifier la description de la personne connecté, dans la table communauté.
                 
-    - serv_Mail :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+    - serv_Mail : appelle la procédure proc_Mail
+    - Paramètres :Prend en paramètre la nourvelle adresse mail introduite dans la page HTML privé & l'id de la personne connecté 
+      - Format de réponse :Pas de réponse -> Modifie la table 
+      - Endpoint  : Va modifier l'adresse mail de la personne connecté, dans la table communauté. 
                 
     - serv_Notes :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+      - Paramètres :Prend en paramètre, la nouvelle note introduite dans la page HTML publique & l'id de la personne connecté 
+      - Format de réponse : Pas de réponse -> Modifie la table 
+      - Endpoint  : Va modifier la note de la personne connecté, dans la table communauté.
                 
-    - serv_Telephone :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+    - serv_Telephone : appelle la procédure proc_Telephone 
+      - Paramètres : Prend en paramètre, la nouvelle description introduite dans la page HTML privé & l'id de la personne connecté 
+      - Format de réponse :Pas de réponse -> Modifie la table 
+      - Endpoint  : Va modifier le telephone de la personne connecté, dans la table communauté.
                 
-    - serv_Ville :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+    - serv_Ville : appelle la procédure proc_ville 
+      - Paramètres : Prend en paramètre, la nouvelle description introduite dans la page HTML & l'id de la personne connecté 
+      - Format de réponse :Pas de réponse -> Modifie la table 
+      - Endpoint  : Va modifier la ville de la personne connecté, dans la table communaué 
                
-    - serv_com :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+    - serv_com : appelle la procédure proc_com
+      - Paramètres : Prend en paramètre, le nouveau commentaire , l'id de la personne chez qui est écrit le commentaire & l'id de la personne connecté 
+      - Format de réponse : Pas de réponse -> Modifie la table 
+      - Endpoint  : Va ajouter le commentaire introduit dans la page HTML publique dans la table commentaire avec l'id de l'auteur du commentaire ainsi que l'id du destinataire de ce commentaire.
                 
-    - serv_valeurs :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+    - serv_valeurs : appelle la procédure proc_valeurs 
+      - Paramètres : prend en paramètre l'identifiant (idCom de la personne sur laquelle on a cliqué) 
+      - Format de réponse :renvoie en JSON les information nécéssaire dans la page publique pour en faire un portrait visible par les autres utilisateurs. Pour cela nous avons besoin du nom [VARCHAR(30)], du prénom [VARCHAR(30)], du sex [CHAR(1)], du numéro de télephone [VARCHAR(15)], le mail [VARCHAR(40)], la date de naissance [DATE], la photo [VARCHAR(50)], le portrait [VARCHAR(120)], la ville via un join sur postal dans la table villes [INTEGER], la cote [INTEGER], les commentaires via un join sur idCom dans la table commentaires [ VARCHAR(120)] et pour finir les taches qu'il propose via un join sur idCom dans la table taches [ VARCHAR(100)]
+     - Endpoint  : Lorsque la personne connecté click sur un des profils de la page communauté, les procédures renvoie les infos dans la page profil publique afin de se faire une idée sur la personne ainsi que de la contacter. 
                 
-    - serv_valeursBis :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+    - serv_valeursBis : appelle la procédure proc_valeursBis 
+      - Paramètres : prend en paramètre l'identifiant de la personne connecté 
+      - Format de réponse :renvoie en JSON les information nécéssaire dans la page publique pour en faire un portrait visible par les autres utilisateurs. Pour cela nous avons besoin du nom [VARCHAR(30)], du prénom [VARCHAR(30)], du sex [CHAR(1)], du numéro de télephone [VARCHAR(15)], le mail [VARCHAR(40)], la date de naissance [DATE], la photo [VARCHAR(50)], le portrait [VARCHAR(120)], la ville via un join sur postal dans la table villes [INTEGER],  et pour finir les taches qu'il propose via un join sur idCom dans la table taches [ VARCHAR(100)]
+      
+      - Endpoint  : Cette procédure envoie dans la page du profil privé de la personne connecté les informations générales qu'il peut en partie modifier comme sa ville son mail, son portrait ext.. 
                 
 - Clémentine Sacré :
     - serv_donnees (appelle procédure "donnee"):
