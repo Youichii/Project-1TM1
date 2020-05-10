@@ -102,7 +102,7 @@
 			</details>
 
 			<details>
-			  <summary class="summaryLocalisation"><strong>LOCALISATION</strong></summary>
+			  <summary class="summaryLocalisation" id="localisationId"><strong>LOCALISATION</strong></summary>
 			  <ul>
 				<li><a href="#"></a></li>
 				
@@ -110,7 +110,7 @@
 			</details>
 
 			<details>
-			  <summary class="summaryAnnonceur"><strong>ANNONCEUR</strong></summary>
+			  <summary class="summaryAnnonceur" id="annonceur"><strong>ANNONCEUR</strong></summary>
 			  <ul>
 				<li><a href="#"></a></li>
 				
@@ -122,7 +122,7 @@
 
 
 <!--Ajouter-NK-->
-	<div id='ajouter_nk'class="BodyAjouter">
+	<div id='ajouter_nk' class="BodyAjouter">
 		<header>
 			<nav class="BannerGlobal">
 				<div class="logo">
@@ -174,6 +174,7 @@
 		</section>
 	</div>
 
+
 	
 <!--LoginPage-AB-->
 	<div id='loginpage_ab' class="BodyLogin">
@@ -207,8 +208,7 @@
 			</div>
 			
 			<ul class="navButton">
-			  <!-- <li><a onclick='cacher("accueil_ab");'>Accueil</a></li> -->
-			  <li><a onclick='cacher("taches_nk");'>Tâches</a></li>
+			  <li><a onclick='cacher("taches_nk"),affichageTache() ;'>Tâches</a></li>
 			  <li><a onclick='cacher("profils_cs"),demarrage_cs();;'>Communauté</a></li>
 			  <li><a href="#" class="underline">Profil</a></li>
 			</ul>
@@ -218,8 +218,8 @@
 			
 			<div id="services"></div>
 			
-			<div id="valeurs" style="font-style:italic; font-weight: bolder; color:black; font-size: 25px;line-height: 200%; position:relative; left:70%; top:70%;">
-						<div id="nom"></div>
+			<div id="valeurs">
+						<div id="nom_cb"></div>
 						<div id="sexe"></div>
 						<div id="anniversaire"></div>
 						<div id="telephone"></div>
@@ -242,6 +242,7 @@
 		</div>
 	</div>
   
+  
 <!--PageProfilPublic-CB-->
 	<div id='pageprofilpublic_cb' class="BodyPublic">
 		<header>
@@ -252,7 +253,7 @@
 			  
 			  <ul class="navButton">
 				<!-- <li><a onclick='cacher("accueil_ab");'>Accueil</a></li> -->
-				<li><a onclick='cacher("taches_nk");'>Tâches</a></li>
+				<li><a onclick='cacher("taches_nk"),affichageTache();'>Tâches</a></li>
 				<li><a onclick='cacher("profils_cs"),demarrage_cs();'>Communauté</a></li>
 				<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
 			  </ul>
@@ -318,7 +319,7 @@
 			
 			<ul class="navButton">
 				<!-- <li><a onclick='cacher("accueil_ab");'>Accueil</a></li> -->
-				<li><a onclick='cacher("taches_nk");'>Tâches</a></li>
+				<li><a onclick='cacher("taches_nk"),affichageTache();'>Tâches</a></li>
 				<li><a class="community" href="#">Communauté</a></li>
 				<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
 			</ul>
@@ -343,7 +344,7 @@
 			</div>
 			
 			<ul class="navButton">
-			  <li><a onclick='cacher("accueil_ab");'>Accueil</a></li>
+			  <li><a onclick='cacher("accueil_ab"),affichageTache();'>Accueil</a></li>
 			</ul>
 		  </nav>
 		</header>
@@ -422,13 +423,13 @@
 			
 			<div id="optionsTaches">
 				<ul class="listNav">
-					<li><a class="ajouterta"   href="Ajouter-NK.html">AJOUTER</a></li>
-					<li><a class="affinerta"  href="Affiner-NK.html">AFFINER</a></li>
+					<li><a class="ajouterta" onclick="addTask(), cacher('ajouter_nk');">AJOUTER</a></li>
+					<li><a class="affinerta" onclick="affinerTache(), cacher('affiner_nk');">AFFINER</a></li>
 					<li>
 						<form class="barre">
 							<input type="search" name="barrech" id="barrech" placeholder="mot-clé">
 							<!--Faire une fonction js recherche () qui chercher un mot clé-->
-							<input class="button2"   type="button" value="RECHERHCER" onclick="rechercher()">
+							<input class="button2"   type="button" value="RECHERCHER" onclick="rechercher()">
 						</form>
 					</li>
 				</ul>
@@ -438,21 +439,7 @@
 				<h1 class="DescTaches">Tâches disponibles: </h1>
 				
 				<div class="boxtache">
-					<details id="informations">
-						<summary id="summaryTache">
-							 <ul>
-				                              <li id ="tacheSummary"></li>
-					                 </ul>
-						</summary>
-						
-						<P id="idDescription"></p>
-
-							<ul>
-							  <li id="idName">Nom:</li>
-							  <li id="idPren">Prenom:</li>
-							  <li id="idTel">Télèphone:</li>
-							  <li id="idEmail">E-mail:</li>
-							</ul>
+					<details id="informations" value="cc">
 					</details>
 				</div>
 			</section>
