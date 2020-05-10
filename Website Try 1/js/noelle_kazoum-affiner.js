@@ -170,7 +170,7 @@ function affinerTache(informations){
 
     let xhr = new XMLHttpRequest();
 
-    xhr.open('get', "http://localhost/serv_affiner/", true);
+    xhr.open('get', "http://localhost/serv_aff/", true);
 
     
 
