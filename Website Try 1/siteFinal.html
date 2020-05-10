@@ -235,38 +235,26 @@
 			  <li><a href="#" class="underline">Profil</a></li>
 			</ul>
 		</nav>
-		
-		<div id="cadrephoto"></div>
-		
-		<div id="services"></div>
-		
-		<div id="valeurs" style="font-style:italic; 
-	                                font-weight: bolder; color:black; font-size: 25px;line-height: 200%;
-									position:relative; left:70%; top:70%;">
-		<div id="nom"></div>
-		<div id="sexe"></div>
-		<div id="anniversaire"></div>
-		<div id="telephone"></div>
-		<div id="mail"></div>
-		<div id="ville"></div>
-		
+		<div class="fond_ecran_cb">
+			<div id="cadrephoto"></div>
+			
+			<div id="services"></div>
+			
+			<div id="valeurs"></div>
+			 
+			<fieldset id="portrait">
+			<div id="description"></div>
+			</fieldset>
+				  
+			<textarea rows="5" cols="40" placeholder="Votre description" id="descriptionTexte"></textarea> <!--ok -->
+			<input type="button" value="changer votre description" onclick="changDescription();" class="change" id="boutton">
 		</div>
-		
-		 
-		<fieldset id="portrait">
-		<div id="description"></div>
-		</fieldset>
-		<input type="button" value="changer votre description" onclick="changDescription();" class="change" id="boutton">	  
-		<textarea rows="5" cols="40" placeholder="Votre description" id="descriptionTexte"></textarea> <!--ok -->
-		<input type="button" value="changer votre description" onclick="changDescription();" class="change" id="boutton">
-		
 		<div id="banniere_cb">
-		  <div class="blank">
+		  <div class="blank_cb">
 			<a href="#">Police de confidentialité</a>
 		  </div>
 		</div>
 	</div>
-  
   
 <!--PageProfilPublic-CB-->
 	<div id='pageprofilpublic_cb' class="BodyPublic">
@@ -285,48 +273,50 @@
 			</nav>
 		</header>
 		
-		<div id='corps'></div>
-		
-		<div id="mon_img"></div>
-		
-		<fieldset id="page"></fieldset>
-		 <fieldset id="note">
-			<legend class="leg">
-				Note des utilisateurs
-			</legend>
+		<div id="ecran_fond_cb">
+			<div id='corps'></div>
 			
-			<div id="notation"></div>
-			<input type="button" onclick="note()" value="Noter la prestation" name="Noter" id="Noter">
-		</fieldset>
-		
-		<fieldset id="service">
-			<legend class="leg">
-				Je propose les services suivants
-			</legend>
+			<div id="mon_img"></div>
 			
-			<div id ="tache"></div>
-		</fieldset>
-
-		<fieldset id="commentaires">
-			<legend class="leg">
-				Ecrire un commentaire
-			</legend>
-
-			<input type="text" placeholder="Nom d'utilisateur" id="utilisateur" required>
-				Introduire un commentaire:
-			<input type="text" placeholder="introduire un commentaire" id="comm" required>
+			<fieldset id="page"></fieldset>
+			 <fieldset id="note">
+				<legend class="leg">
+					Note des utilisateurs
+				</legend>
+				
+				<div id="notation"></div>
+				<input type="button" onclick="note()" value="Noter la prestation" name="Noter" id="Noter">
+			</fieldset>
 			
-			<input type="button" onclick="commentaires()" value="Envoyer le commentaire" id="Envoyer">
-		</fieldset>
+			<fieldset id="service">
+				<legend class="leg">
+					Je propose les services suivants
+				</legend>
+				
+				<div id ="tache"></div>
+			</fieldset>
 
-		<fieldset id="zonecomm">
-			<legend class="leg">
-				Zone de commentaire
-			</legend>
-		</fieldset>
+			<fieldset id="commentaires">
+				<legend class="leg">
+					Ecrire un commentaire
+				</legend>
+
+				<input type="text" placeholder="Nom d'utilisateur" id="utilisateur" required>
+					Introduire un commentaire:
+				<input type="text" placeholder="introduire un commentaire" id="comm" required>
+				
+				<input type="button" onclick="commentaires()" value="Envoyer le commentaire" id="Envoyer">
+			</fieldset>
+
+			<fieldset id="zonecomm">
+				<legend class="leg">
+					Zone de commentaire
+				</legend>
+			</fieldset>
+		</div>
 		
 		<div id="banniere_pp">
-		  <div class="blank">
+		  <div class="blank_bc">
 			<a href="#">Police de confidentialité</a>
 		  </div>
 		</div>
