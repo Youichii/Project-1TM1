@@ -1,4 +1,4 @@
-/* Auteur : Cécile Bonnet matricule */
+/* Auteur : Cécile Bonnet HE201796 */
 
 
 CREATE PROCEDURE "DBA"."proc_valeursBis"(in usager VARCHAR(16)) 
