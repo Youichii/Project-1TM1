@@ -1,4 +1,4 @@
-/* Auteur : Cécile Bonnet matricule */
+/* Auteur : Cécile Bonnet HE201796 */
 
 
 CREATE PROCEDURE "DBA"."proc_Com"(in utilisateur VARCHAR(25), new_com LONG VARCHAR, new_auteur VARCHAR(25))
