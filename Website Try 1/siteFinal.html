@@ -72,58 +72,48 @@
 			  <summary class="summaryDomaine"><strong>DOMAINE</strong></summary>
 			  <p id="idMaison">
 				<strong>MAISON </strong>
-				  <li><a href="pagectach1">Tache 1</a></li>
-				  <li><a href="pagetache2">Tache 2</a></li>
-				  <li><a href="pagetache3">Tache 3</a></li>
-				  <li><a href="pagetache4">Tache 4</a></li>
+				  <li><a href="#"></a></li>
+				  
 			  </p>
 
 			  <p id="idJardin">
 				<strong>JARDIN </strong>
-				  <li><a href="pagectach1">Tache 1</a></li>
-				  <li><a href="pagetache2">Tache 2</a></li>
-				  <li><a href="pagetache3">Tache 3</a></li>
-				  <li><a href="pagetache4">Tache 4</a></li>
+				  <li><a href="#"></a></li>
+				  
 			  </p>
 
 			  <p id="idGarage">
 				<strong>GARAGE </strong>
-				  <li><a href="pagectach1">Tache 1</a></li>
-				  <li><a href="pagetache2">Tache 2</a></li>
-				  <li><a href="pagetache3">Tache 3</a></li>
-				  <li><a href="pagetache4">Tache 4</a></li>
+				  <li><a href="#"></a></li>
+				  
 			  </p>
 
 			  <p id="idReparation">
 				<strong>REPARATION</strong>
-				  <li><a href="pagectach1">Tache 1</a></li>
-				  <li><a href="pagetache2">Tache 2</a></li>
-				  <li><a href="pagetache3">Tache 3</a></li>
-				  <li><a href="pagetache4">Tache 4</a></li>
+				  <li><a href="#"></a></li>
+				  
 			  </p>
 
 			  <p id="idAutre">
 				<strong>AUTRE </strong>
-				  <li><a href="pagectach1">Tache 1</a></li>
-				  <li><a href="pagetache2">Tache 2</a></li>
-				  <li><a href="pagetache3">Tache 3</a></li>
-				  <li><a href="pagetache4">Tache 4</a></li>
+				  <li><a href="#"></a></li>
+				  
 			  </p>
 			</details>
 
 			<details>
 			  <summary class="summaryLocalisation"><strong>LOCALISATION</strong></summary>
 			  <ul>
-				<li><a href="#">Brabant-Wallon</a></li>
-				<li><a href="#">Bruxelles</a></li>
+				<li><a href="#"></a></li>
+				
 			  </ul>
 			</details>
 
 			<details>
 			  <summary class="summaryAnnonceur"><strong>ANNONCEUR</strong></summary>
 			  <ul>
-				<li><a href="#">Tokyo</a></li>
-				<li><a href="#">Rio</a></li>
+				<li><a href="#"></a></li>
+				
 			  </ul>
 			</details>
 		  </ul>
@@ -152,35 +142,23 @@
 		<section>
 			<form class="formAjouter"  name="Ajouter" action="page-d-ajout" method="post">
 				<p>Veillez remplir tous les champs</p>
-				<fieldset>
-					<!-- Si on est dejà connecté, remplir auto les coordonnées-->
-					<legend>Vos coordonnées personnelles</legend>
-					<label for="nom">Nom</label>
-					<input type ="text" name="nom" id="nom"/></br>
-
-					<label for="prénom">Prénom</label>
-					<input type="text" name="prénom" id="prénom"/></br>
-
-					<label for="email">Votre adresse mail</label>
-					<input type="text" name="email" id="email"></br>
-				</fieldset>
 				
 				<fieldset>
 					<legend>Type de tâche</legend>
 					<p>Veillez cocher:</p>
-					<input type="checkbox" name="maison" id="maison"/>
+					<input type="checkbox" name="a_tache" id="maison"/>
 					<label for="maison">MAISON</label><br/>
 
-					<input type="checkbox" name="jardin" id="jardin"/>
+					<input type="checkbox" name="a_tache" id="jardin"/>
 					<label for="jardin">JARDIN</label><br/>
 
-					<input type="checkbox" name="garage" id="garage"/>
+					<input type="checkbox" name="a_tachee" id="garage"/>
 					<label for="garage">GARAGE</label><br/>
 
-					<input type="checkbox" name="reparation" id="reparation"/>
+					<input type="checkbox" name="a_tache" id="reparation"/>
 					<label for="reparation">REPARATION</label><br/>
 
-					<input type="checkbox" name="autre" id="autre"/>
+					<input type="checkbox" name="a_tache" id="autre"/>
 					<label for="autre">AUTRE</label><br/>
 				</fieldset>
 
@@ -190,7 +168,7 @@
 				</fieldset>
 				
 				<div class="buttonAjouter">
-					<button type="submit">Soumettre</button>
+					<input type="button" value = "Soumettre" onclick ="addTask();">
 				</div>
 			</form>
 		</section>
@@ -461,10 +439,13 @@
 				
 				<div class="boxtache">
 					<details id="informations">
-						<summary id="summaryTache">Tondre une pelouse</summary>
+						<summary id="summaryTache">
+							 <ul>
+				                              <li id ="tacheSummary"></li>
+					                 </ul>
+						</summary>
 						
-						<P id="idDescription">Vous aimez travailler en plein air et profiter du soleil tout en travaillant ?</br>
-							Alors cette tâche est faite pour vous !</p>
+						<P id="idDescription"></p>
 
 							<ul>
 							  <li id="idName">Nom:</li>
