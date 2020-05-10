@@ -87,7 +87,7 @@ function infos(donnee) {
     document.getElementById("notation").innerHTML = cote ;
     document.getElementById("zonecomm").innerHTML = comment ;
     document.getElementById("tache").innerHTML = tache ;
-	document.getElementById("mon_img").innerHTML =  '<img src="img?url='+ photo +'" alt="test" width="234" height="250"/>' ;	
+	document.getElementById("mon_img").innerHTML =  '<img src="img?url='+ photo +'" alt="test" id="photo_img" width="234" height="250"/>' ;	
 
 }
 function retour(){
