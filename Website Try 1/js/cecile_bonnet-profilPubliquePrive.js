@@ -1,5 +1,5 @@
 "use strict";
-// auteur : Cécile Bonnet matricule
+// auteur : Cécile Bonnet HE201796
 /* ****************************** */
 
 
@@ -88,40 +88,7 @@ function infos(donnee) {
     document.getElementById("zonecomm").innerHTML = comment ;
     document.getElementById("tache").innerHTML = tache ;
 	document.getElementById("mon_img").innerHTML =  '<img src="img?url='+ photo +'" alt="test" id="photo_img" width="234" height="250"/>' ;	
-
 }
-function retour(){
-	
-	let xhr = new XMLHttpRequest() ;  
-	xhr.open('get', "http://localhost/serv_Retour?usager=" + reponse[0].idCom, true) ; 
-	xhr.onreadystatechange = function(){ 
-		if (xhr.status == 200 && xhr.readyState == 4) {  
-	        let retournement=JSON.parse(xhr.responseText);
-			
-		    document.getElementById("notation").innerHTML = retournement[0].cote 
-		console.log(retournement[0].cote)
-			
-		}
-	}
-	
-	xhr.send() ; 
-	// console.log(JSON.parse(retournement) )
-
-	
-}
-function retourBis(){
-	
-	let xhr = new XMLHttpRequest() ;  
-	xhr.open('get', "http://localhost/serv_RetoutBis?usager=" + reponse[0].idCom, true) ; 
-	xhr.onreadystatechange = function(){  console.log("bonjour")
-		if (xhr.status == 200 && xhr.readyState == 4) {  
-	        let retournement=JSON.parse(xhr.responseText) ;
-			console.log(retournement)
-			document.getElementById("zonecomm").innerHTML += retournement[retournement.length].commentaire
-			
-			}
-		}
-	}
 
 
 function note(){
