@@ -1,6 +1,5 @@
 "use strict";
-// auteur : Aurélien Brille matricule
-
+// auteur : Aurélien Brille HE201788
 /* ****************************** */
 
 var userVerification = "";
