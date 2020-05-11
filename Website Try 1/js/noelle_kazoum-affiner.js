@@ -41,13 +41,16 @@ function addTask(){
 	 let nouvelleTache, descriptionTache ;
 	
 	
-	const coche = document.querySelectorAll('input [name="atache"]:checked');
-	
-	let categorieTache  ;
-	coche.forEach((checkbox) => {
-		categorieTache.push(checkbox.value);
-	  }
-	);
+	for (let i = 0; i < caseCoche.lenght; i++){
+		if (caseCoche[i].checked){
+			categorieTache = caseCoche[i].value;
+			alert ("Votre tâche" + categorieTache + " a bien été ajoutée !" );
+		
+		}
+
+        }
+
+
 	
 	
 	
@@ -63,10 +66,12 @@ function addTask(){
 
     xhr.send();
 
-	console.log("Votre tâche  " + nouvelleTache + categorieTache +  " a bien été ajoutée !" );
+    console.log("Votre tâche  " + nouvelleTache + categorieTache +  " a bien été ajoutée !" );
 	
    
 }
+
+
 
 //AFFINER LES TACHES
 // Prendre les taches existantes à partir de la base de donnée et les trier dans le HTML
