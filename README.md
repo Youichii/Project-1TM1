@@ -6,16 +6,15 @@ Aurélien Brille, Cécile Bonnet, Clémentine Sacré, Noelle Khazoum
 # Description du projet
   - BESOIN DU CLIENT
   
-Nous désirons créer un site web qui permettra de déposer des annonces de travail et/ou d'en rechercher. Ces travaux constitueront uniquement en des petites tâches réalisables par tous (nettoyage, jardinage, photographie,...).
+Le site simple task offre la possibilité aux utilisateurs de déposer des annonces et/ou d'en trouver et de se mettre en contact sans intermédiaires avec la personne désiré.
 
-// Le site simple task offre la possibilité aux utilisateurs de déposer des annonces et/ou d'en trouver et de se mettre en contact sans intermédiaires avec la personne désiré. \\
+
 
   - FONCTIONNALITÉS PRINCIPALES
   
-    - Une page qui référence toutes les tâches postées sur le site et qui permet également à l'utilisateur d'en ajouter.
-    // Une page tache regroupant l'ensemble des tâches. La recherche peut être affiné selon une catégorie de tâche, un lieu géographique ou..    
-    - Un système de connexion/inscription qui servira à identifier un utilisateur en lui fournissant accès à une page "profil privé"           regroupant ses données modifiables ainsi qu'avoir accès à toutes les fonctionnalités du site.
-    // Un système de connexion/ inscription qui vise à protéger insi qu'à limité l'accès aux informations personnelles introduite dans le site. 
+    - Une page regroupant l'ensemble des tâches déjà proposées sur le site ainsi que d'une zone pour ajouter ses propres propositions de tâches. La recherche peut être affiné selon une catégorie de tâche, un lieu géographique ou..    
+    - Un système de connexion/ inscription qui vise à protéger ainsi qu'à limité l'accès aux informations personnelles introduite dans le site. 
+    
 
   - FONCTIONNALITÉS SECONDAIRES
     
@@ -29,8 +28,7 @@ Nous désirons créer un site web qui permettra de déposer des annonces de trav
 La liste des aspects techniques qu'il faut implémenter pour mettre en place le projet, en séparant les aspects backend (base de données, procédures SQL, webservices, serveur de fichiers) et les aspects frontend (html, css, js, page web et fonctionnalités à proposer aux utilisateurs). ???
 
   - Base de données : Tables reprenant les informations sur les personnes, les tâches que certaines personnes proposent, et les avis laissés par d'autres personnes aux utilisateurs ;
-  - Procédures SQL : Tables allant chercher les informations selon la page sur laquelle son se trouve et pouvant modifier des données quand certains boutons le proposent et ajouter des données lors d'une inscription ;
-  // Instructions appellées via un web service dans un JS affin d'ammener des informations dans la page ou de modifier la table selon la nature de la procédure. 
+  - Procédures SQL : Liste d'instructions appellées via un web service dans un JS afin d'ammener des informations dans la page ou de modifier la table.
   - Webservices : La plupart des webservices en JSON afin de modifier/ajouter/chercher des données ;
   - Serveur de fichiers : 
   <!-- serveur central au sein d’un réseau d’ordinateurs qui met des systèmes de fichiers ou, tout du moins, des parties d’un système de fichiers à disposition des clients associés. Les serveurs de fichiers offrent ainsi aux utilisateurs un lieu de stockage centralisé pour les fichiers présents sur leurs propres supports de données, ce lieu étant accessible à tous les clients autorisés-->
@@ -89,13 +87,13 @@ param = mm chose, que prend la procédure
       - Endpoint  : Va ajouter le commentaire introduit dans la page HTML publique dans la table commentaire avec l'id de l'auteur du commentaire ainsi que l'id du destinataire de ce commentaire.
                 
     - serv_valeurs : appelle la procédure proc_valeurs 
-      - Paramètres : prend en paramètre l'identifiant (idCom de la personne sur laquelle on a cliqué) 
-      - Format de réponse : renvoie en JSON les information nécéssaire dans la page publique pour en faire un portrait visible par les autres utilisateurs. Pour cela nous avons besoin du nom [VARCHAR(30)], du prénom [VARCHAR(30)], du sex [CHAR(1)], du numéro de télephone [VARCHAR(15)], le mail [VARCHAR(40)], la date de naissance [DATE], la photo [VARCHAR(50)], le portrait [VARCHAR(120)], la ville via un join sur postal dans la table villes [INTEGER], la cote [INTEGER], les commentaires via un join sur idCom dans la table commentaires [ VARCHAR(120)] et pour finir les taches qu'il propose via un join sur idCom dans la table taches [ VARCHAR(100)]
+      - Paramètres : prend en paramètre l'identifiant (idCom) de la personne sur laquelle on a cliqué dans la page Communauté
+      - Format de réponse :Cette procédure renvoie en JSON uniquement (sur base de l'id de  la personne)  les informations nécéssaires dans la page publique pour faire un portrait visible par les autres utilisateurs. Pour cela nous avons besoin du nom [VARCHAR(30)], du prénom [VARCHAR(30)], du sex [CHAR(1)], du numéro de télephone [VARCHAR(15)], le mail [VARCHAR(40)], la date de naissance [DATE], la photo [VARCHAR(50)], le portrait [VARCHAR(120)], la ville via un join sur postal dans la table villes [INTEGER], la cote [INTEGER], les commentaires via un join sur idCom dans la table commentaires [ VARCHAR(120)] et pour finir les taches qu'il propose via un join sur idCom dans la table taches [ VARCHAR(100)]
       - Endpoint  : Lorsque la personne connecté click sur un des profils de la page communauté, les procédures renvoie les infos dans la page profil publique afin de se faire une idée sur la personne ainsi que de la contacter. 
                 
     - serv_valeursBis : appelle la procédure proc_valeursBis 
       - Paramètres : prend en paramètre l'identifiant de la personne connecté 
-      - Format de réponse : renvoie en JSON les information nécéssaire dans la page publique pour en faire un portrait visible par les autres utilisateurs. Pour cela nous avons besoin du nom [VARCHAR(30)], du prénom [VARCHAR(30)], du sex [CHAR(1)], du numéro de télephone [VARCHAR(15)], le mail [VARCHAR(40)], la date de naissance [DATE], la photo [VARCHAR(50)], le portrait [VARCHAR(120)], la ville via un join sur postal dans la table villes [INTEGER],  et pour finir les taches qu'il propose via un join sur idCom dans la table taches [ VARCHAR(100)]
+      - Format de réponse : renvoie en JSON les uniquement les informations nécéssaires (sur base de l'id de la personne connecté) dans la page privé pour en faire un portrait personnel et modifiable . Pour cela nous avons besoin du nom [VARCHAR(30)], du prénom [VARCHAR(30)], du sex [CHAR(1)], du numéro de télephone [VARCHAR(15)], le mail [VARCHAR(40)], la date de naissance [DATE], la photo [VARCHAR(50)], le portrait [VARCHAR(120)], la ville via un join sur postal dans la table villes [INTEGER],  et pour finir les taches qu'il propose via un join sur idCom dans la table taches [ VARCHAR(100)]
       - Endpoint  : Cette procédure envoie dans la page du profil privé de la personne connecté les informations générales qu'il peut en partie modifier comme sa ville son mail, son portrait ext.. 
                 
 - Clémentine Sacré :
