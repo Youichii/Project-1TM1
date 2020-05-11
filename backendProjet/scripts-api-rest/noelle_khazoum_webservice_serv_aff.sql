@@ -16,6 +16,7 @@ BEGIN
    join dba.villes as V on C.postal = V.postal
    
    group by C.nom, C.prenom, C.mail, C.telephone, V.ville, T.tache, T.details, T.categorie
+   order by T.categorie
 
 END
 
