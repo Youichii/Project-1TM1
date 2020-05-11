@@ -12,7 +12,7 @@ Le site simple task offre la possibilité aux utilisateurs de déposer des annon
 
   - FONCTIONNALITÉS PRINCIPALES
   
-    - Une page regroupant l'ensemble des tâches déjà proposées sur le site ainsi que d'une zone pour ajouter ses propres propositions de tâches. La recherche peut être affiné selon une catégorie de tâche, un lieu géographique ou..    
+    - Une page regroupant l'ensemble des tâches déjà proposées sur le site ainsi que d'une zone pour ajouter ses propres propositions de tâches. La recherche peut être affiné selon une catégorie de tâche, un lieu géographique ou le profil de la personne    
     - Un système de connexion/ inscription qui vise à protéger ainsi qu'à limité l'accès aux informations personnelles introduite dans le site. 
     
 
