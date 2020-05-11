@@ -37,30 +37,35 @@ function description_tache(info){
 // Partir du script, afficher dans le HTML et sauvegarder ensuite dans la base de donnée
 
 function addTask(){
+	
+	 let nouvelleTache, descriptionTache ;
+	
+	
+	const coche = document.querySelectorAll('input [name="atache"]:checked');
+	
+	let categorieTache  ;
+	coche.forEach((checkbox) => {
+		categorieTache.push(checkbox.value);
+	  }
+	);
+	
+	
+	
 
-    let nouvelleTache, descriptionTache, categorieTache ;
-	let nom_cat = document.getElementsByTagName("a_tache");
-    if (nom_cat.checked == "maison"){
-        categorieTache = "maison";
-    }
-    else if (nom_cat.checked == "jardin"){
-        categorieTache = "jardin";
-    }
-    else if (nom_cat.checked == "garage"){
-        categorieTache = "garage";
-    }
-    else if (nom_cat.checked == "autre"){
-        categorieTache = "autre";
-    }
-	else if (nom_cat.checked == "reparation"){	
-		categorieTache ="reparation";
-	}
+
 	nouvelleTache = document.getElementById("titre").value;
+
 	descriptionTache = document.getElementById("champDescri").value;
+
     let xhr = new XMLHttpRequest;
+
     xhr.open('get', "http://localhost/serv_ajouerTask?task_="+nouvelleTache+"&personne_="+document.body.id+"&desc_="+descriptionTache+"&cat_="+categorieTache, true);
+
     xhr.send();
-	//console.log("Votre tâche a bien été ajoutée !" );
+
+	console.log("Votre tâche  " + nouvelleTache + categorieTache +  " a bien été ajoutée !" );
+	
+   
 }
 
 //AFFINER LES TACHES
@@ -72,101 +77,27 @@ function affinerTache(){
     xhr.onreadystatechange = function (){
             if (xhr.status == 200 && xhr.readyState == 4){
 				let jrep = JSON.parse(xhr.responseText) ;
-				for(let i = 0; i < jrep.length; i++){
-					if (jrep [i] == "maison"){
-						 document.getElementsById("idMaison").innerHTML += '<ul>'+ '<li>'+'<a href ="#">'+ jrep[i].tache + '</a>'+ '</li>' + '</ul>'; 
-					}
-					else if (jrep[i] == "jardin"){
-						 document.getElementsById("idJardin").innerHTML +='<ul>'+ '<li>'+'<a href ="#">'+ jrep[i].tache + '</a>'+ '</li>' + '</ul>';
-					}
-					else if (jrep[i]== "garage"){
-						 document.getElementsById("idGarage").innerHTML += '<ul>'+ '<li>'+'<a href ="#">'+ jrep[i].tache + '</a>'+ '</li>' + '</ul>';
-					}
-
-					else if (jrep[i] == "autre"){
-						 document.getElementsById("idAutre").innerHTML += '<ul>'+ '<li>'+'<a href ="#">'+ jrep[i].tache + '</a>'+ '</li>' + '</ul>';
-					}
-					else if (jrep[i] == "reparation"){
-						document.getElementById("idReparation").innerHTML += '<ul>'+ '<li>'+'<a href ="#">'+ jrep[i].tache + '</a>'+ '</li>' + '</ul>';
-					}	
-				
-				}	
-	
-				let var1 = '<ul>';
+		                let var1 = '<ul>';
 				let var2 = '<ul>';
+				let var3 = '<ul>';
+
 					
+
 				for (let i in jrep){
+
 					document.getElementById("annonceur").innerHTML += var1 +'<li>'+ '<a href = ProfilPublicPrive.js>' + jrep[i].nom +'</a>'+ '</li>' + '</ul>'; 
-					document.getElementById("localisationId").innerHTML += var2 = '<li>' +  jrep[i].ville + '</li>' + '</ul>';
+
+					document.getElementById("localisationId").innerHTML += var2 + '<li>' +"* " +  jrep[i].ville + '</li>'+'<li>'+ jrep[i].tache +'</li>' + '<li>' +'<a href = ProfilPublicPrive.js>'+"par:  "+ jrep[i].nom +'</a>'+'</li>'+ '</ul>' ;
+					
+					document.getElementById("AffinerDomaine").innerHTML += var3 +'<li>' + jrep[i].categorie  + " --->  " + jrep[i].tache + '</li>'  +"par:"+'<li>' + '<a href ="ProfilPublicPrive">' + jrep[i].nom + '</a>' + '</li>' +'</ul>';
+						
+
 				}
-			}
-	}
-    xhr.send();
-}
-
-function affiner(txt){
-    let jrep = JSON.parse(txt);
-	console.log(jrep + "clemicjou") ;
+				
 	
-    for(let i = 0; i < jrep.length; i++){
-        if (jrep [i] == "maison"){
-             document.getElementsById("idMaison").innerHTML += '<ul>'+ '<li>'+'<a href ="#">'+ jrep[i].tache + '</a>'+ '</li>' + '</ul>'; 
-        }
-        else if (jrep[i] == "jardin"){
-             document.getElementsById("idJardin").innerHTML +='<ul>'+ '<li>'+'<a href ="#">'+ jrep[i].tache + '</a>'+ '</li>' + '</ul>';
-        }
-        else if (jrep[i]== "garage"){
-             document.getElementsById("idGarage").innerHTML += '<ul>'+ '<li>'+'<a href ="#">'+ jrep[i].tache + '</a>'+ '</li>' + '</ul>';
-        }
-
-        else if (jrep[i] == "autre"){
-             document.getElementsById("idAutre").innerHTML += '<ul>'+ '<li>'+'<a href ="#">'+ jrep[i].tache + '</a>'+ '</li>' + '</ul>';
-        }
-		else if (jrep[i] == "reparation"){
-			document.getElementById("idReparation").innerHTML += '<ul>'+ '<li>'+'<a href ="#">'+ jrep[i].tache + '</a>'+ '</li>' + '</ul>';
-		}	
-	}	
-	
-	let var1 = '<ul>';
-	let var2 = '<ul>';
-		
-	for (let i in jrep){
-	    document.getElementById("annonceur").innerHTML += var1 +'<li>'+ '<a href = ProfilPublicPrive.js>' + jrep[i].nom +'</a>'+ '</li>' + '</ul>'; 
-		document.getElementById("localisationId").innerHTML += var2 = '<li>' +  jrep[i].ville + '</li>' + '</ul>';
-	}
-}
-
-
-
-// Barre de recherche
-
-/*
-function research(){
-    let xhr = newXMLHttpRequest();
-    xhr.open('get', "http://localhost/serv_aff", true);
-   
-    xhr.onreadystatechange =
-        function (){
-            if (xhr.status == 200 && xhr.readyState == 4){
-                rechercherT(xhr.responseText);
-            }
-        }
-    xhr.send();
-}
-// à terminer
-function rechercherT(motclé){
-    let mC = JSON.parse(motclé);
-    let trouve;
-    for (i=0; i= mC.lenght; i++){
-        if (document.getElementById(barrech).value == mC[i].prenom){
-            // envoyer sur le profil public de la personne
-        }
-        if(document.getElementById(barrech).value == mC[i].nom){
-            // envoyer sur le profil public de la personne
-        }
-        if(document.getElementById(barrech).value == mC[i].tache){
-            if (mC[i].tache == )
-        }
+				
+	 }
     }
+    xhr.send();
 }
-*/
+
