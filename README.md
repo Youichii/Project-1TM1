@@ -8,33 +8,38 @@ Aurélien Brille, Cécile Bonnet, Clémentine Sacré, Noelle Khazoum
   
 Nous désirons créer un site web qui permettra de déposer des annonces de travail et/ou d'en rechercher. Ces travaux constitueront uniquement en des petites tâches réalisables par tous (nettoyage, jardinage, photographie,...).
 
+// Le site simple task offre la possibilité aux utilisateurs de déposer des annonces et/ou d'en trouver et de se mettre en contact sans intermédiaires avec la personne désiré. \\
 
   - FONCTIONNALITÉS PRINCIPALES
   
     - Une page qui référence toutes les tâches postées sur le site et qui permet également à l'utilisateur d'en ajouter.
-    - Un système de connexion/inscription qui servira à identifier un utilisateur en lui fournissant accès à une page "profil privé"           regroupant ses données ainsi qu'avoir accès à toutes les fonctionnalités du site.
+    // Une page tache regroupant l'ensemble des tâches. La recherche peut être affiné selon une catégorie de tâche, un lieu géographique ou..    
+    - Un système de connexion/inscription qui servira à identifier un utilisateur en lui fournissant accès à une page "profil privé"           regroupant ses données modifiables ainsi qu'avoir accès à toutes les fonctionnalités du site.
+    // Un système de connexion/ inscription qui vise à protéger insi qu'à limité l'accès aux informations personnelles introduite dans le site. 
 
   - FONCTIONNALITÉS SECONDAIRES
     
     - Une page d'accueil permettant de s'inscrire ou de se connecter sur le site.
-    - Un profil public reprennant les données personnelles de chaque utilisateur, les commentaires des autres usagers ainsi qu'une note.
-    - Un profil privé uniquement accessible par la personne connectée lui permettant de voir et modifier ses informations personnelles.
+    - Un profil public (accessible par tous) reprennant les données personnelles de chaque utilisateur. La personne visitant le profil peut laisser un commentaire ainsi qu'une note sur la prestation de la personne. 
+    - Un profil privé accessible uniquement au "propriétaire" du compte, lui permettant de voir et de modifier ses informations personnelles.
     - Une page listant tous les profils inscrits sur le site, et permettant d'accéder directement à leur profil public via un boutton.
-    - Une fonctionnalité permettant de trier les tâches recherchées par mot-clés sur la page des tâches.
+    
 
 # Aspects implémentés
 La liste des aspects techniques qu'il faut implémenter pour mettre en place le projet, en séparant les aspects backend (base de données, procédures SQL, webservices, serveur de fichiers) et les aspects frontend (html, css, js, page web et fonctionnalités à proposer aux utilisateurs). ???
 
   - Base de données : Tables reprenant les informations sur les personnes, les tâches que certaines personnes proposent, et les avis laissés par d'autres personnes aux utilisateurs ;
   - Procédures SQL : Tables allant chercher les informations selon la page sur laquelle son se trouve et pouvant modifier des données quand certains boutons le proposent et ajouter des données lors d'une inscription ;
+  // Instructions appellées via un web service dans un JS affin d'ammener des informations dans la page ou de modifier la table selon la nature de la procédure. 
   - Webservices : La plupart des webservices en JSON afin de modifier/ajouter/chercher des données ;
-  - Serveur de fichiers : ?
+  - Serveur de fichiers : 
+  <!-- serveur central au sein d’un réseau d’ordinateurs qui met des systèmes de fichiers ou, tout du moins, des parties d’un système de fichiers à disposition des clients associés. Les serveurs de fichiers offrent ainsi aux utilisateurs un lieu de stockage centralisé pour les fichiers présents sur leurs propres supports de données, ce lieu étant accessible à tous les clients autorisés-->
   
   - HTML : page comprenant toutes les pages, affichant la page demandée et cachant le reste des pages en attendant ;
   - CSS : site le plus esthétique possible, et le plus ergonomique ; 
   - JS : fonctions appelées lors de l'affichage d'une page ou lors d'un appel de bouton ;
   - Page web : 
-  - Fonctionnalités : permet s'inscrire/de se connecter. Egalement de déposer/chercher des tables, de mettre des avis/note aux différentes personnes de la communauté ;
+  - Fonctionnalités : permet s'inscrire/de se connecter. Egalement de déposer/chercher des tâches, affiner sa recherche de tâche selon differents critères; de mettre des avis/note aux différentes personnes de la communauté, actualiser ses informations; 
 
 # Détail api rest
 endpoint = ce que fait ta procédure, son but, que fait-elle
