@@ -116,7 +116,7 @@ param = mm chose, que prend la procédure
                
   
 # Détail DB
-[]!(photo/Diagrammes des tables.png)
+[]!(photo/Diagramme des tables.png)
 - Table des villes (contient 6 villes et leur code postal attitré) :
     - postal représente la PK de la table, qui représente le code postal d'une ville, en chiffre ;
     - ville représente le nom de la ville ;
