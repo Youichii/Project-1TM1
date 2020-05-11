@@ -1,4 +1,4 @@
-/* Auteur : Aurélien Brille matricule */
+/* Auteur : Aurélien Brille HE201788 */
 
 
 CREATE PROCEDURE "DBA"."proc_connexion"(in nomUtilisateur varchar(30), in motDePasse long varchar)
