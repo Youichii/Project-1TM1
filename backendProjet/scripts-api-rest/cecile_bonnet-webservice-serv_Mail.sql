@@ -1,4 +1,4 @@
-/* Auteur : Cécile Bonnet HE201796*\
+/* Auteur : Cécile Bonnet HE201796*/
 
 
 CREATE PROCEDURE proc_Mail(in new_mail VARCHAR(20),new_utilisateur VARCHAR(50))
