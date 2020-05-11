@@ -45,15 +45,15 @@ format = ce qu'elle renvoie en quel format etc /!\ faire du français pas juste 
 param = mm chose, que prend la procédure
 
 - Aurélien Brille :
-    - receiveData :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+    - receiveData : appelle la procédure "inscription"
+      - Paramètres : ce service prend 9 paramètres en compte lors de l'inscription via le syte HTML. Le nom, prénom, nom d'utilisateur, mail, téléphone, ville, naissance, mot de passe, mot de passe de confirmation et couleur de l'avatar.
+      - Format de réponse : Ne renvoi rien.
+      - Endpoint  : ajoute dans la table dba.communaute, un nouvelle ligne contenant toutes les informations de la nouvelle personne inscrite sur base des données fournies.
       
-    - serv_connexions :
-      - Paramètres :
-      - Format de réponse :
-      - Endpoint  :
+    - serv_connexions : appelle la procédure "proc_connexion"
+      - Paramètres : les deux paramètre de ce service sont reçu lors de la connexion, le service reçoit le nom d'utilisateur et le mot de passe de l'utilisateur.
+      - Format de réponse : renvoi en JSON un tableau contenant (ou non) le nom d'utilisateur et le mot de passe entré par la personne qui correspond (ou non) à  "idCom VARCHAR(16) NOT NULL" et "mdp VARCHAR(20) NOT NULL" d'une même ligne dans la table dba.communaute.
+      - Endpoint  : permet une vérification du nom d'utilisateur et du mot de passe entré, en cas d'erreur, renvoi un tableau vide (tableau.length = 0 = false) en cas de concordance, renvoi un tableau de longueur 1 (tableau.length = 1 = true) et l'utilisateur est connecté.
  
 - Cécile Bonnet :
     - serv_Desc : appelle la procédure proc_Desc
