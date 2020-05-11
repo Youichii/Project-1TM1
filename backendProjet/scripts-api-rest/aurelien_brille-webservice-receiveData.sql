@@ -1,4 +1,4 @@
-/* Auteur : Aurélien Brille matricule */
+/* Auteur : Aurélien Brille HE201788*/
 
 
 CREATE PROCEDURE "DBA"."inscription"(IN LastName long varchar, IN FirstName long VARCHAR, IN Username long varchar, IN uMail long varchar, IN uPhone long varchar, IN uVille long varchar, in uBirth DATE , in uPswd long varchar, in uSex long varchar, in Color long varchar)
