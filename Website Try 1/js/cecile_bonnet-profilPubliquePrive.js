@@ -4,7 +4,6 @@
 
 
 var reponse ;
-var user = document.body.id
 var info;
 
 
@@ -64,6 +63,7 @@ function infos(donnee) {
 		    comment += " - " + reponse[i].commentaire + " par " + reponse[i].auteur +"<br>" ;
 	    }
     }
+	
 	cote=reponse[0].cote ;
 	if(cote == null ) {
 		cote = " Pas de cote pour le moment" ;
@@ -93,63 +93,49 @@ function infos(donnee) {
 
 function note(){
 	let inter = Number(reponse[0].cote)
-	
 	let newN = +prompt("Veuillez introduire une note sur 10") ;
 	let newNote
-	
 	 
 	if(newN <= 10 && newN > 0 && newN != String){
 		if(inter === null ){
-	     newNote = 0
-		newNote= newN
-		
-		
+			newNote = 0
+			newNote= newN
 		}
         else{
 			newNote = 0
 			newNote += (newN + inter)/2 ;
 			console.log(newNote)
 			alert("votre cote à bien été enregistré")
-			
 		}		
 	}
-	else{alert("Entrée non valide") 
+	else{
+		alert("Entrée non valide") 
 	}
-	
 	let xhr = new XMLHttpRequest() ;  
 	xhr.open('get', "http://localhost/serv_Note?new_note="+newNote+"&utilisateur="+reponse[0].idCom, true) ;
-console.log(reponse[0].idCom)	
-console.log("coucou")
+	console.log(reponse[0].idCom)	
+	console.log("coucou")
 	xhr.send() ;
-	
-document.getElementById("notation").innerHTML = newNote
-	
-	
+	document.getElementById("notation").innerHTML = newNote
 }
 	
 function commentaires(){
-	
-	
 	let newAuteur = String(document.getElementById("utilisateur").value) ;
 	let newCommentaire= document.getElementById("comm").value ;
-
-		alert("Votre commentaire à bien été enregistré");
-		let xhr = new XMLHttpRequest() ;  
-		xhr.open('get', "http://localhost/serv_Com?utilisateur="+reponse[0].idCom +"&new_com="+newCommentaire+"&new_auteur="+newAuteur, true) ;
-		xhr.send() ; 
-	
+	alert("Votre commentaire à bien été enregistré");
+	let xhr = new XMLHttpRequest() ;  
+	xhr.open('get', "http://localhost/serv_Com?utilisateur="+reponse[0].idCom +"&new_com="+newCommentaire+"&new_auteur="+newAuteur, true) ;
+	xhr.send() ; 
 	document.getElementById("zonecomm").innerHTML +=  " - " + newCommentaire + " par " + newAuteur +"<br>" ;
 }	
 	
 //////////////////////////////////////////////////////////////////////////Profil privé ///////////////////////////////////////////////////////////////////////////////////////////////
 function pageChargementBis(user){
-	
 	let xhr = new XMLHttpRequest() ;  
 	xhr.open('get', "http://localhost/serv_valeursBis?usager=" + user, true) ; 
 	xhr.onreadystatechange = function(){ 
 		if (xhr.status == 200 && xhr.readyState == 4) {  
 	        informations(xhr.responseText) ;
-			
 		}
 	}
 	xhr.send() ; 	
@@ -157,40 +143,39 @@ function pageChargementBis(user){
 }
 
 
-   
-
 function informations(donnee) {
-
     info = JSON.parse(donnee); 
 	console.log(info) ;
     let nom, prenom, sexe, telephone, mail,anniversaire, photo, portrait, tache, ville ;
-            ville=info[0].ville
-            nom =info[0].nom
-            prenom= info[0].prenom
-            sexe = info[0].sexe 
-            telephone = info[0].telephone
-            mail = info[0].mail
-            anniversaire = info[0].anniversaire
-			console.log(anniversaire)
-            photo = info[0].photo
-            portrait=info[0].portrait
-            if(portrait == null){ 
-                portrait = ("Pas de description pour le moment") 
-            }
-            else{
-                portrait=info[0].portrait
-            }
-            tache = info[0].tache
-            photo = info[0].photo
-            if(tache == null){
+	ville=info[0].ville
+	nom =info[0].nom
+	prenom= info[0].prenom ;
+	sexe = info[0].sexe ;
+	telephone = info[0].telephone ;
+	mail = info[0].mail ;
+	anniversaire = info[0].anniversaire ;
+	console.log(anniversaire)
+	photo = info[0].photo
+	
+	portrait=info[0].portrait
+	if(portrait == null){ 
+		portrait = ("Pas de description pour le moment") 
+	}
+	else{
+		portrait=info[0].portrait
+	}
+	
+	tache = info[0].tache
+	photo = info[0].photo
+	if(tache == null){
 
-                tache ="Vous n'avez pas de tâches pour le moment"
-            }
-            else{
-                tache = info[0].tache
-            }
+		tache ="Vous n'avez pas de tâches pour le moment"
+	}
+	else{
+		tache = info[0].tache
+	}
 
-	document.getElementById("nom").innerHTML = prenom +  ' ' + nom 
+	document.getElementById("nom_cb").innerHTML = prenom +  ' ' + nom 
     document.getElementById("sexe").innerHTML =  sexe 
     document.getElementById("anniversaire").innerHTML = anniversaire 
     document.getElementById("telephone").innerHTML = telephone + ' <input type="button" onclick="changTelephone()" value="Changer le Numéro de Telephone" id="Tel" class="change">'
@@ -204,16 +189,13 @@ function informations(donnee) {
     document.getElementById("description").innerHTML = portrait
     console.log(portrait)
     document.getElementById("cadrephoto").innerHTML =  '<img src="img?url='+ photo +'" alt="test" width="234" height="250"/>' ;
-
-
-
 }
 
 function changTelephone(){
 	let newTelephone = prompt("Introduire votre nouveau numéro de telephone");
 	console.log(newTelephone)
 	let xhr = new XMLHttpRequest() ;  
-	xhr.open('get', "http://localhost/serv_Telephone?new_telephone="+newTelephone+ "&new_utilisateur="+user, true) ;
+	xhr.open('get', "http://localhost/serv_Telephone?new_telephone="+newTelephone+ "&new_utilisateur="+document.body.id, true) ;
 	
 	xhr.send() ;
 	alert("Votre Numéro de telephone a bien été changé");
@@ -225,7 +207,7 @@ function changTelephone(){
 function changMail(){
 	let newMail = prompt("Introduire votre nouveau mail");
 	let xhr = new XMLHttpRequest() ;  
-	xhr.open('get', "http://localhost/serv_Mail?new_mail="+newMail+ "&new_utilisateur="+user, true) ;
+	xhr.open('get', "http://localhost/serv_Mail?new_mail="+newMail+ "&new_utilisateur="+document.body.id, true) ;
 	
 	xhr.send() ;
 	alert("Votre Mail a bien été changé");
@@ -250,22 +232,18 @@ function changVille(){
 	                                            ' <input type="button" onclick="changVille()" value="Changer la ville" id="ville" class="change">'}
 	else if( newVille == 6600 ) {document.getElementById("ville").innerHTML = 'Bastogne' +"   <select  name='villes' id='viLLe' class='change'><option value='1000'>1000 - Bruxelles</option><option value='1348' selected>1348 - Louvain-la-Neuve</option><option value='2000'>2000 - Anvers</option><option value='3500'>3500 - Hasselt</option><option value='4000'>4000 - Liège</option><option value='5000'>5000 - Namur</option><option value='6600'>6600 - Bastogne</option></select>" +
 	                                            ' <input type="button" onclick="changVille()" value="Changer la ville" id="ville" class="change">'}
-	
-	
 	let xhr = new XMLHttpRequest() ;  
-	xhr.open('get', "http://localhost/serv_Ville?new_ville="+newVille+ "&new_utilisateur="+user, true) ;
+	xhr.open('get', "http://localhost/serv_Ville?new_ville="+newVille+ "&new_utilisateur="+document.body.id, true) ;
 	
 	xhr.send() ;
-	alert("Votre Ville a bien été changé");
-	
-												
+	alert("Votre Ville a bien été changé");											
 }
 
 function changDescription(){ 
 	let newDescription = document.getElementById("descriptionTexte").value ;
 	console.log(newDescription) ;
 	let xhr = new XMLHttpRequest() ;  
-	xhr.open('get', "http://localhost/serv_Desc?new_desc="+newDescription+"&new_utilisateur="+user, true) ;
+	xhr.open('get', "http://localhost/serv_Desc?new_desc="+newDescription+"&new_utilisateur="+document.body.id, true) ;
 	
 	xhr.send() ;
 	alert("Votre Description a bien été changé");
