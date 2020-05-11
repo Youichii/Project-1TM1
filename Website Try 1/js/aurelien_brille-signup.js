@@ -2,8 +2,9 @@
 // auteur : Aurélien Brille HE201788
 /* ****************************** */
 
-var userVerification = "";
+let userVerification = "";
 let color = "" ;
+let tabData = {};
 
 function demarrage_ab() {
 	let xhr = new XMLHttpRequest() ;
@@ -20,11 +21,6 @@ function demarrage_ab() {
 function getId(Id){
    return document.getElementById(Id).value;
 }
-
-
-
-var DataJSON="";
-var tabData = {};
 
 function getInformation(){
 	color ="fantome_" + formulaire.fantColor.value + ".png";
