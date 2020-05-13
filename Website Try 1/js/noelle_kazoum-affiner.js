@@ -37,38 +37,20 @@ function description_tache(info){
 // Partir du script, afficher dans le HTML et sauvegarder ensuite dans la base de donnée
 
 function addTask(){
-	
-	 let nouvelleTache, descriptionTache ;
-	
-	
+	let nouvelleTache, descriptionTache, caseCoche = document.getElementsByName("atache"), categorieTache ;
+	console.log(caseCoche + "cas")
 	for (let i = 0; i < caseCoche.lenght; i++){
 		if (caseCoche[i].checked){
-			categorieTache = caseCoche[i].value;
+			categorieTache = caseCoche[i].value ;
 			alert ("Votre tâche" + categorieTache + " a bien été ajoutée !" );
-		
 		}
-
-        }
-
-
-	
-	
-	
-
-
+    }
 	nouvelleTache = document.getElementById("titre").value;
-
 	descriptionTache = document.getElementById("champDescri").value;
-
     let xhr = new XMLHttpRequest;
-
     xhr.open('get', "http://localhost/serv_ajouerTask?task_="+nouvelleTache+"&personne_="+document.body.id+"&desc_="+descriptionTache+"&cat_="+categorieTache, true);
-
     xhr.send();
-
     console.log("Votre tâche  " + nouvelleTache + categorieTache +  " a bien été ajoutée !" );
-	
-   
 }
 
 
@@ -82,27 +64,15 @@ function affinerTache(){
     xhr.onreadystatechange = function (){
             if (xhr.status == 200 && xhr.readyState == 4){
 				let jrep = JSON.parse(xhr.responseText) ;
-		                let var1 = '<ul>';
+		        let var1 = '<ul>';
 				let var2 = '<ul>';
 				let var3 = '<ul>';
-
-					
-
 				for (let i in jrep){
-
-					document.getElementById("annonceur").innerHTML += var1 +'<li>'+ '<a href = ProfilPublicPrive.js>' + jrep[i].nom +'</a>'+ '</li>' + '</ul>'; 
-
-					document.getElementById("localisationId").innerHTML += var2 + '<li>' +"* " +  jrep[i].ville + '</li>'+'<li>'+ jrep[i].tache +'</li>' + '<li>' +'<a href = ProfilPublicPrive.js>'+"par:  "+ jrep[i].nom +'</a>'+'</li>'+ '</ul>' ;
-					
-					document.getElementById("AffinerDomaine").innerHTML += var3 +'<li>' + jrep[i].categorie  + " --->  " + jrep[i].tache + '</li>'  +"par:"+'<li>' + '<a href ="ProfilPublicPrive">' + jrep[i].nom + '</a>' + '</li>' +'</ul>';
-						
-
+					document.getElementById("annonceur").innerHTML += var1 +'<li>'+ '<a onclick="cacher(\'pageprofilpublic_cb\'), pageChargement(\'' + jrep[i].idCom + '\');">' + jrep[i].nom +'</a>'+ '</li>' + '</ul>'; 
+					document.getElementById("localisationId").innerHTML += var2 + '<li>' +"* " +  jrep[i].ville + '</li>'+'<li>'+ jrep[i].tache +'</li>' + '<li>' +'<a onclick="cacher(\'pageprofilpublic_cb\'), pageChargement(\'' + jrep[i].idCom + '\');">'+"par:  "+ jrep[i].nom +'</a>'+'</li>'+ '</ul>' ;
+					document.getElementById("AffinerDomaine").innerHTML += var3 +'<li>' + jrep[i].categorie  + " --->  " + jrep[i].tache + '</li>'  +"par:"+'<li>' + '<a onclick="cacher(\'pageprofilpublic_cb\'), pageChargement(\'' + jrep[i].idCom + '\');">' + jrep[i].nom + '</a>' + '</li>' +'</ul>';
 				}
-				
-	
-				
-	 }
+		}
     }
     xhr.send();
 }
-
