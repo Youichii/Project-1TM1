@@ -184,6 +184,11 @@ div.BodyLogin{
   animation: appear 4s ease forwards;
 }
 
+a#colorBlue{
+  color: blue;
+  text-decoration: underline;
+}
+
 .LoginLogo a{
   margin : 1%;
   text-shadow: 2px 2px whitesmoke;
@@ -207,6 +212,7 @@ div.BodyLogin{
   height: 400px;
   min-width: 300px;
   border-radius: 10px;
+  background-color: #333333
 }
 
 .title{
@@ -257,14 +263,8 @@ margin-top: 20px;
 
 /* ----------------------------------------SIGNUP PAGE CSS - AURÉLIEN BRILLE--------------------------------------------- */
 
-div.BodySignup{
-  font-family: sans-serif;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  background-image: url("../img/Signup-Img.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
+#imgBack{
+  position: absolute;
 }
 
 h1.SignupTitle{
@@ -325,6 +325,11 @@ div.blocVilles select{
   font-size: 16px;
   border-radius: 9px;
   border: none;
+}
+
+select#fantColor {
+  margin-left: 42%;
+  border-radius: 10px;
 }
 
 div.blocVilles{
