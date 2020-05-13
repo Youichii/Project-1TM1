@@ -1,5 +1,5 @@
 "use strict";
-// auteur : Aurélien Brille HE201788
+// auteur : Aurélien Brille matricule
 
 /* ****************************** */
 
@@ -14,7 +14,7 @@ function changePage(){
 				if (xhr.status == 200 && xhr.readyState == 4) {
 					 profilConnexion = JSON.parse(xhr.responseText) ;
 					if(profilConnexion.length){
-						document.getElementById("blocCo").innerHTML = "<h1>Connexion Réussie!!</h1></br><a onclick='cacher(\"pageprofilprive_cb\"), pageChargementBis(document.body.id);'>Mon profil privé</a>";
+						document.getElementById("blocCo").innerHTML = "<h1>Connexion Réussie</h1></br><a id='colorBlue' onclick='cacher(\"pageprofilprive_cb\"), pageChargementBis(document.body.id);'>Mon profil privé</a>";
 						compte(nom) ;
 					}
 					else alert("Mauvais identifiants, réésayez ou inscrivez-vous");
@@ -23,5 +23,3 @@ function changePage(){
   xhr.send();
   return false;
 }
-
-
