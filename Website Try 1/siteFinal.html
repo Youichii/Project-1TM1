@@ -56,8 +56,7 @@
 				</div>
 				
 				<ul class="navButton">
-					<!-- <li><a onclick='cacher("accueil_ab");'>Accueil</a></li> -->
-					<li><a href="#" class="underline">Tâches</a></li>
+					<li><a onclick='cacher("taches_nk"),affichageTache() ;'>Tâches</a></li>
 					<li><a onclick='cacher("profils_cs"),demarrage_cs();'>Communauté</a></li>
 					<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
 				</ul>
@@ -69,51 +68,26 @@
 		<section class="SectionAffiner">
 		  <ul class="test">
 			<details>
-			  <summary class="summaryDomaine"><strong>DOMAINE</strong></summary>
-			  <p id="idMaison">
-				<strong>MAISON </strong>
-				  <li><a href="#"></a></li>
-				  
-			  </p>
-
-			  <p id="idJardin">
-				<strong>JARDIN </strong>
-				  <li><a href="#"></a></li>
-				  
-			  </p>
-
-			  <p id="idGarage">
-				<strong>GARAGE </strong>
-				  <li><a href="#"></a></li>
-				  
-			  </p>
-
-			  <p id="idReparation">
-				<strong>REPARATION</strong>
-				  <li><a href="#"></a></li>
-				  
-			  </p>
-
-			  <p id="idAutre">
-				<strong>AUTRE </strong>
-				  <li><a href="#"></a></li>
-				  
-			  </p>
+			  <summary id="AffinerDomaine" class="summaryDomaine"><strong>DOMAINE</strong></summary>
+			  
+			  <ul>
+				<li><a href="#"></a></li>
+			  </ul>
 			</details>
 
 			<details>
 			  <summary class="summaryLocalisation" id="localisationId"><strong>LOCALISATION</strong></summary>
+			  
 			  <ul>
 				<li><a href="#"></a></li>
-				
 			  </ul>
 			</details>
 
 			<details>
 			  <summary class="summaryAnnonceur" id="annonceur"><strong>ANNONCEUR</strong></summary>
+			  
 			  <ul>
 				<li><a href="#"></a></li>
-				
 			  </ul>
 			</details>
 		  </ul>
@@ -130,8 +104,7 @@
 				</div>
 				
 				<ul class="navButton">
-					<!-- <li><a onclick='cacher("accueil_ab");'>Accueil</a></li> -->
-					<li><a href="#" class="underline">Tâches</a></li>
+					<li><a onclick='cacher("taches_nk"),affichageTache() ;'>Tâches</a></li>
 					<li><a onclick='cacher("profils_cs"),demarrage_cs();'>Communauté</a></li>
 					<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
 				</ul>
@@ -149,25 +122,20 @@
 					
 					<input type="checkbox" name="atache"  value="maison">MAISON <br/>
 
-          
-                                        <input type="checkbox" name="atache"  value="jardin">JARDIN<br/>
-
-           
-
-                                        <input type="checkbox" name="atache"  value="garage">GARAGE<br/>
-
-           
-
-                                        <input type="checkbox" name="atache"  value="reparation">REPARATION<br/>
-
-            
-
-                                        <input type="checkbox" name="atache"  value="autre">AUTRE<br/>
+                                        <input type="checkbox" name="atache" value="jardin">JARDIN<br/>
+                                        <input type="checkbox" name="atache" value="garage">GARAGE<br/>
+                                        <input type="checkbox" name="atache" value="reparation">REPARATION<br/>
+                                        <input type="checkbox" name="atache" value="autre">AUTRE<br/>
+				</fieldset>
+				
+				<fieldset>
+					<label for="titre">Nom de la tâche</label>
+					<input type="text" name="titre" id="titre">
 				</fieldset>
 
 				<fieldset>
 					<legend>Description</legend>
-					<textarea></textarea>
+					<textarea id="champDescri"></textarea>
 				</fieldset>
 				
 				<div class="buttonAjouter">
@@ -176,7 +144,6 @@
 			</form>
 		</section>
 	</div>
-
 
 	
 <!--LoginPage-AB-->
@@ -218,9 +185,7 @@
 		</nav>
 		<div class="fond_ecran_cb">
 			<div id="cadrephoto"></div>
-			
 			<div id="services"></div>
-			
 			<div id="valeurs">
 						<div id="nom_cb"></div>
 						<div id="sexe"></div>
@@ -228,7 +193,6 @@
 						<div id="telephone"></div>
 						<div id="mail"></div>
 						<div id="ville"></div>
-		
 		      </div>
 			 
 			<fieldset id="portrait">
@@ -255,7 +219,6 @@
 			  </div>
 			  
 			  <ul class="navButton">
-				<!-- <li><a onclick='cacher("accueil_ab");'>Accueil</a></li> -->
 				<li><a onclick='cacher("taches_nk"),affichageTache();'>Tâches</a></li>
 				<li><a onclick='cacher("profils_cs"),demarrage_cs();'>Communauté</a></li>
 				<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
@@ -273,7 +236,6 @@
 				<legend class="leg">
 					Note des utilisateurs
 				</legend>
-				
 				<div id="notation"></div>
 				<input type="button" onclick="note()" value="Noter la prestation" name="Noter" id="Noter">
 			</fieldset>
@@ -282,7 +244,6 @@
 				<legend class="leg">
 					Je propose les services suivants
 				</legend>
-				
 				<div id ="tache"></div>
 			</fieldset>
 
@@ -294,7 +255,6 @@
 				<input type="text" placeholder="Nom d'utilisateur" id="utilisateur" required>
 					Introduire un commentaire:
 				<input type="text" placeholder="introduire un commentaire" id="comm" required>
-				
 				<input type="button" onclick="commentaires()" value="Envoyer le commentaire" id="Envoyer">
 			</fieldset>
 
@@ -321,7 +281,6 @@
 			</div>
 			
 			<ul class="navButton">
-				<!-- <li><a onclick='cacher("accueil_ab");'>Accueil</a></li> -->
 				<li><a onclick='cacher("taches_nk"),affichageTache();'>Tâches</a></li>
 				<li><a class="community" href="#">Communauté</a></li>
 				<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
@@ -415,7 +374,6 @@
 				</div>
 				
 				<ul class="navButton">
-					<!-- <li><a onclick='cacher("accueil_ab");'>Accueil</a></li> -->
 					<li><a href="#" class="underline">Tâches</a></li>
 					<li><a onclick='cacher("profils_cs"),demarrage_cs();'>Communauté</a></li>
 					<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
@@ -427,14 +385,7 @@
 			<div id="optionsTaches">
 				<ul class="listNav">
 					<li><a class="ajouterta" onclick="addTask(), cacher('ajouter_nk');">AJOUTER</a></li>
-					<li><a class="affinerta" onclick="affinerTache(), cacher('affiner_nk');">AFFINER</a></li>
-					<li>
-						<form class="barre">
-							<input type="search" name="barrech" id="barrech" placeholder="mot-clé">
-							<!--Faire une fonction js recherche () qui chercher un mot clé-->
-							<input class="button2"   type="button" value="RECHERCHER" onclick="rechercher()">
-						</form>
-					</li>
+					<li><a class="affinerta" onclick="affinerTache(), cacher('affiner_nk');">AFFINER</a></li>			
 				</ul>
 			</div>
 			
