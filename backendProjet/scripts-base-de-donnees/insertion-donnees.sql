@@ -46,7 +46,7 @@ VALUES
 ('louis46', '16', 'Watson', 'Louis', 'M', '+32411324325', 'watson.louis@gmail.com', '1994-12-12', 'fantome_bleu.png', NULL, 1000, 9),
 ('pierre26', '17', 'Mills', 'Pierre', 'M', '+32409876547', 'mills.pierre@gmail.com', '1981-01-11', 'pierre.jpg', NULL, 1348, 0.5),
 ('agathe86', '18', 'Moore', 'Agathe', 'F', '+32423456789', 'moore.agathe@gmail.com', '1965-04-10', 'fantome_rose.png', 'On a déménagé en Belgique depuis 12ans, et on a 3 chiens !', 2000, 2.5),
-('apolinne98', '19', 'King', 'Apolinne', 'F', '+32488765460', 'king.apolinne@gmail.com', '1983-06-06', 'apolinne.jpg', 'Je suis mariée depuis 10ans, je suis femme au foyer et je chercher de quoi m'occuper durant mes temps libres.', 1348, 2),
+('apolinne98', '19', 'King', 'Apolinne', 'F', '+32488765460', 'king.apolinne@gmail.com', '1983-06-06', 'apolinne.jpg', 'Je suis mariée depuis 10ans, je suis femme au foyer et je chercher de quoi m''occuper durant mes temps libres.', 1348, 2),
 ('henri14', '20', 'Ford', 'Henri', 'M', '+32409573849', 'ford.henri@gmail.com', '1992-03-27', 'henri.jpg', NULL, 1000, 8),
 ('hugues11', '21', 'Mary', 'Hugues', 'M', '+32400697895', 'mary.hugues@gmail.com', '1997-02-18', 'fantome_bleu.png', 'Je fais du saut en parachute tous les samedis.', 6600, 7),
 ('patricia09', '22', 'Reid', 'Patricia', 'F', '+32476639201', 'reid.patricia@gmail.com', '1998-08-15', 'patricia.jpg', 'J''adore prendre des photos de moi et parler de shopping.', 5000, 4.3),
