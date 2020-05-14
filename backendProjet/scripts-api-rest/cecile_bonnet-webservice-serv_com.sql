@@ -1,7 +1,7 @@
 /* Auteur : Cécile Bonnet HE201796 */
 
 
-CREATE PROCEDURE "DBA"."proc_Com"(in utilisateur VARCHAR(25), new_com LONG VARCHAR, new_auteur VARCHAR(25))
+CREATE PROCEDURE "DBA"."proc_Com"(in utilisateur VARCHAR(16), new_com LONG VARCHAR, new_auteur VARCHAR(16))
 BEGIN 
   insert into dba.commentaires
   (idCom,commentaire,auteur)
