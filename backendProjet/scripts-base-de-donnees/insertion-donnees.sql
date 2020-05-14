@@ -75,7 +75,7 @@ VALUES
 ('max97', '45', 'Knight', 'Max', 'm', '+32436548219', 'knight.max@gmail.com', '1999-10-26', 'max.jpg', NULL, 2000, 7),
 ('emile42', '46', 'Taylor', 'Emile', 'M', '+32445542627', 'taylor.emile@gmail.com', '1986-10-27', 'emile.jpg', NULL, 1000, 3),
 ('zoe73', '47', 'Ward', 'Zoé', 'F', '+32434219948', 'ward.zoe@gmail.com', '1992-11-15', 'fantome_mauve.png', NULL, 4000, NULL),
-('victoire72', '48', 'Davies', 'Victoire', 'F', '+32400912486', 'davies.victoire@gmail.com', '1989-06-25', 'victoire.jpg', 'J''aime beaucoup le contact social, j''en ai besoin.', 1000, NULL, 1),
+('victoire72', '48', 'Davies', 'Victoire', 'F', '+32400912486', 'davies.victoire@gmail.com', '1989-06-25', 'victoire.jpg', 'J''aime beaucoup le contact social, j''en ai besoin.', 1000, NULL),
 ('hector09', '49', 'Wallace', 'Hector', 'M', '+32413451665', 'wallace.hector@gmail.com', '2001-08-08', 'fantome_bleu.png', 'J''essaie de commencer le volley mais c''est dur.', 2000, 8),
 ('melchior98', '50', 'Wallace', 'Melchior', 'M', '+32442847481', 'wallace.melchior@gmail.com', '1998-09-14', 'melchior.jpg', 'Je me balade 1h30 par jour, je bois du thé et je suis végétarien.', 1348, 1);
 
