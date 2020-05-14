@@ -54,14 +54,15 @@ CREATE TABLE taches(
 
 //Table avec les commentaires
 CREATE TABLE commentaires (
+    idCommentaires INTEGER NOT NULL DEFAULT AUTOINCREMENT,
     idCom VARCHAR(16) NOT NULL,
     commentaire LONG VARCHAR NOT NULL,
     auteur VARCHAR(16) NOT NULL,
 
-    CONSTRAINT pk_communaute_commentaires FOREIGN KEY(auteur) REFERENCES communaute(idCom)
+    CONSTRAINT pk_communaute_commentaires FOREIGN KEY(auteur) REFERENCES communaute(idCom),
+    CONSTRAINT pk_communaut_comment FOREIGN KEY(idCom) REFERENCES communaute(idCom),
+    CONSTRAINT pk_commentaires PRIMARY KEY(idCommentaires)
 ) ;
-ALTER TABLE "DBA"."commentaires" ADD CONSTRAINT "communaute" NOT NULL FOREIGN KEY ( "idCom" ASC ) REFERENCES "DBA"."communaute" ( "idCom" );
-
 
 
 
