@@ -11,10 +11,10 @@ CREATE TABLE villes(
 //Table des catégories
 CREATE TABLE categories(
     idCat VARCHAR(4) NOT NULL,
-    categorie VARCHAR(11) NOT NULL,
+    categorie VARCHAR(30) NOT NULL,
 
     CONSTRAINT pk_categories PRIMARY KEY(idCat)
-)
+) ;
 
 
 
@@ -28,7 +28,7 @@ CREATE TABLE communaute (
     telephone VARCHAR(15) NOT NULL,
     mail VARCHAR(40) NOT NULL,
     anniversaire DATE NOT NULL,
-    photo VARCHAR(50) NULL,
+    photo VARCHAR(25) NULL,
     portrait VARCHAR(120) NULL,
     postal INTEGER NOT NULL,
     cote INTEGER NULL,
@@ -43,8 +43,8 @@ CREATE TABLE communaute (
 CREATE TABLE taches(
     idTaches INTEGER NOT NULL DEFAULT AUTOINCREMENT,
     idCom VARCHAR(16) NOT NULL,
-    tache VARCHAR(100) NOT NULL,
-    details LONG VARCHAR NULL,
+    titre_tache VARCHAR(100) NOT NULL,
+    desc_tache LONG VARCHAR NULL,
     idCat VARCHAR(4) NOT NULL,
     
     CONSTRAINT pk_communaute_taches FOREIGN KEY(idCom) REFERENCES communaute(idCom),
