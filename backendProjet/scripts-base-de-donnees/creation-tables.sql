@@ -32,7 +32,7 @@ CREATE TABLE communaute (
     portrait VARCHAR(120) NULL,
     postal INTEGER NOT NULL,
     cote INTEGER NULL,
-    nombreCote INTEGER AUTOINCREMENT,
+    nombreCote INTEGER NOT NULL,
     
     CONSTRAINT pk_communaute PRIMARY KEY(idCom),
     CONSTRAINT pk_communaute_villes FOREIGN KEY (postal) REFERENCES villes(postal) 
