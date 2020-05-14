@@ -20,13 +20,13 @@ CREATE TABLE categories(
 
 //Table avec toutes les informations sur la personne
 CREATE TABLE communaute (
-    idCom VARCHAR(16) NOT NULL,
+    idCom VARCHAR(16) NOT NULL UNIQUE,
     mdp VARCHAR(20) NOT NULL,
     nom VARCHAR(30) NOT NULL,
     prenom VARCHAR(30) NOT NULL,
     sexe CHAR(1) NOT NULL check(@col in ('M', 'F')),
     telephone VARCHAR(15) NOT NULL,
-    mail VARCHAR(40) NOT NULL,
+    mail VARCHAR(40) NOT NULL UNIQUE,
     anniversaire DATE NOT NULL,
     photo VARCHAR(25) NULL,
     portrait VARCHAR(120) NULL,
