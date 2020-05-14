@@ -21,7 +21,7 @@ CREATE TABLE categories(
 //Table avec toutes les informations sur la personne
 CREATE TABLE communaute (
     idCom VARCHAR(16) NOT NULL UNIQUE,
-    mdp VARCHAR(20) NOT NULL,
+    mdp LONG VARCHAR NOT NULL,
     nom VARCHAR(30) NOT NULL,
     prenom VARCHAR(30) NOT NULL,
     sexe CHAR(1) NOT NULL check(@col in ('M', 'F')),
