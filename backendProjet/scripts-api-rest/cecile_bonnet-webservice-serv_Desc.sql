@@ -1,7 +1,7 @@
 /* Auteur : Cécile Bonnet HE201796 */
 
 
-CREATE PROCEDURE proc_Desc(in new_desc LONG VARCHAR,new_utilisateur VARCHAR(50))
+CREATE PROCEDURE proc_Desc(in new_desc VARCHAR(120),new_utilisateur VARCHAR(16))
 BEGIN 
   update dba.communaute
   set portrait  = new_desc
