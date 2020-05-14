@@ -41,13 +41,15 @@ CREATE TABLE communaute (
 
 //Table avec toutes les tâches
 CREATE TABLE taches(
+    idTaches INTEGER NOT NULL DEFAULT AUTOINCREMENT,
     idCom VARCHAR(16) NOT NULL,
     tache VARCHAR(100) NOT NULL,
     details LONG VARCHAR NULL,
     idCat VARCHAR(4) NOT NULL,
     
     CONSTRAINT pk_communaute_taches FOREIGN KEY(idCom) REFERENCES communaute(idCom),
-    CONSTRAINT pk_communaute_categories FOREIGN KEY(idCat) REFERENCES categories(idCat)
+    CONSTRAINT pk_communaute_categories FOREIGN KEY(idCat) REFERENCES categories(idCat),
+    CONSTRAINT pk_taches PRIMARY KEY(idTaches)
 ) ;
 
 
