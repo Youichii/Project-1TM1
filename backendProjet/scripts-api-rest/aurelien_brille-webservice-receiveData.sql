@@ -1,12 +1,13 @@
 /* Auteur : Aurélien Brille HE201788*/
 
 
-CREATE PROCEDURE "DBA"."inscription"(IN LastName long varchar, IN FirstName long VARCHAR, IN Username long varchar, IN uMail long varchar, IN uPhone long varchar, IN uVille long varchar, in uBirth DATE , in uPswd long varchar, in uSex long varchar, in Color long varchar)
+CREATE PROCEDURE "DBA"."inscription"(IN LastName varchar(30), IN FirstName VARCHAR(30), IN Username varchar(16), IN uMail varchar(40), IN uPhone varchar(15), IN uVille INTEGER, in uBirth DATE , in uPswd varchar(20), in uSex char(1), in Color varchar(120))
 BEGIN 
     call sa_set_http_header('Access-Control-Allow-Origin', '*');
     INSERT INTO dba.communaute (idCom, mdp, nom, prenom , sexe, telephone, mail, anniversaire, photo, postal)
     VALUES (Username, uPswd, FirstName , LastName, uSex, uPhone, uMail, uBirth, Color, uVille);
-END
+END;
+
 
 
 /******************************************************/
