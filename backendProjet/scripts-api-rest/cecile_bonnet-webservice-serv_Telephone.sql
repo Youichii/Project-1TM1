@@ -1,7 +1,7 @@
 /* Auteur : Cécile Bonnet HE201796 */
 
 
-CREATE PROCEDURE proc_Telephone(in new_telephone VARCHAR(12),new_utilisateur VARCHAR(50))
+CREATE PROCEDURE proc_Telephone(in new_telephone VARCHAR(15),new_utilisateur VARCHAR(16))
 BEGIN 
   update dba.communaute
   set telephone = new_telephone 
