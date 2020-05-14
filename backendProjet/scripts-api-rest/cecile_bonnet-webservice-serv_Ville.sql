@@ -1,7 +1,7 @@
 /* Auteur : Cécile Bonnet HE201796*/
 
 
-CREATE  PROCEDURE "DBA"."proc_Ville"(in new_ville VARCHAR(50), new_utilisateur VARCHAR(50))
+CREATE  PROCEDURE "DBA"."proc_Ville"(in new_ville VARCHAR(50), new_utilisateur VARCHAR(16))
 
 Begin 
 
