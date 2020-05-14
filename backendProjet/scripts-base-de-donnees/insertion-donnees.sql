@@ -26,7 +26,7 @@ VALUES
 
 //Ajout des données dans la table communauté
 INSERT INTO communaute
-(idCom, mdp, nom, prenom, sexe, telephone, mail, anniversaire, photo, portrait, postal, cote)
+(idCom, mdp, nom, prenom, sexe, telephone, mail, anniversaire, photo, portrait, postal, cote, nombreCote)
 VALUES
 ('alizee13', '1', 'Smith', 'Alizée', 'F', '+32437384726', 'smith.alizee@gmail.com', '1987-04-13', 'fantome_mauve.png', 'J''adore les animaux, le chocolat et faire la fête !', 6600, 7),
 ('ambre21', '2', 'Turner', 'Ambre', 'F', '+32425363748', 'turner.ambre@gmail.com', '1994-12-21', 'ambre.jpg', 'Je fais de l''atléthisme 3 fois semaine et le reste du temps je vais à la salle.', 2000, 7),
