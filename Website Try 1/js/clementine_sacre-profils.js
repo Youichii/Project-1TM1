@@ -34,7 +34,7 @@ function affiche(texte) {
 			total = '<span>' + reponse[i].prenom + '</span>' ;
 		}
 		else {
-			cotation =  '<span class="cotation_personne">' + reponse[i].cote/reponse[i].nbr + '/10 </span>' ;
+			cotation =  '<span class="cotation_personne">' + Number((reponse[i].cote/reponse[i].nbr).toFixed(1)) + '/10 </span>' ;
 			name = '<span class="prenom_personne">' + reponse[i].prenom + '</span>' ;
 			total =  name + cotation ;
 		}
