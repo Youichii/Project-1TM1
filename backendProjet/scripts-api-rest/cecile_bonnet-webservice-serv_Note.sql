@@ -4,7 +4,7 @@
 CREATE PROCEDURE proc_Note(in new_note INTEGER,new_utilisateur VARCHAR(12))
 BEGIN 
   update dba.communautee
-  set note  = new_note
+  set note  = new_note, nombreCote = nombreCote + 1 
   where idCom = new_utilisateur 
 END
 
