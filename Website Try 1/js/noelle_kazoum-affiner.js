@@ -1,3 +1,4 @@
+
 "use strict";
 
 // auteur : Noelle Kazoum HE201903
@@ -24,10 +25,10 @@ function description_tache(info){
 	let finale = "" ;
     for (let i in data){
 		finale += "<details class='informations'><summary class='summaryTache'>" + data[i].titre_tache + "</summary><ul>" ;
-        finale += "<li class='idName'>Nom :" +data[i].nom + "</li>";
-        finale += "<li class='idPren'>Prénom :" +data[i].prenom + "</li>";
-        finale += "<li class='idEmail'>Mail :" +data[i].mail + "</li>";
-        finale += "<li class='idVille'>Ville :" +data[i].ville + "</li>";
+        finale += "<li class='idName'>Nom : " +data[i].nom + "</li>";
+        finale += "<li class='idPren'>Prénom : " +data[i].prenom + "</li>";
+        finale += "<li class='idEmail'>Mail : " +data[i].mail + "</li>";
+        finale += "<li class='idVille'>Ville : " +data[i].ville + "</li>";
 		finale += "</ul></details>" ;
     }
 	document.getElementById("informations").innerHTML = finale ;
@@ -37,33 +38,16 @@ function description_tache(info){
 // Partir du script, afficher dans le HTML et sauvegarder ensuite dans la base de donnée
 
 function addTask(){
-	
-
-
-
     let nouvelleTache, descriptionTache, categorieTache ;
-	
-    var l = document.getElementById("listeCategorie");
-	
+    var l = document.getElementById("listeCategorie"); 
     categorieTache = l.options[l.selectedIndex].value;
-	
     nouvelleTache = document.getElementById("titre").value;
-
     descriptionTache = document.getElementById("champDescri").value;
-	
-
     let xhr = new XMLHttpRequest;
-
-    xhr.open('get', "http://localhost/serv_ajouerTask?task_="+nouvelleTache+"&personne_="+document.body.id+"&desc_="+descriptionTache+"&cat_="+categorieTache, true);
-
+    xhr.open('get', "http://localhost/serv_ajouterTask?task_="+nouvelleTache+"&personne_="+document.body.id+"&desc_="+descriptionTache+"&cat_="+categorieTache, true);
     xhr.send();
-
     alert("Votre tâche  " + nouvelleTache + "  " +categorieTache +  " a bien été ajoutée !" );
-	
-
-
 }
-
 
 
 //AFFINER LES TACHES
@@ -71,10 +55,11 @@ function addTask(){
 
 function affinerTache(){
     let xhr = new XMLHttpRequest();
+	let jrep ;
     xhr.open('get', "http://localhost/serv_aff", true);
     xhr.onreadystatechange = function (){
             if (xhr.status == 200 && xhr.readyState == 4){
-				let jrep = JSON.parse(xhr.responseText) ;
+				jrep = JSON.parse(xhr.responseText) ;
 		        let var1 = '<ul>';
 				let var2 = '<ul>';
 				let var3 = '<ul>';
