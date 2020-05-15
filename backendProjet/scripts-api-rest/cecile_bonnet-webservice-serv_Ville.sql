@@ -1,15 +1,12 @@
-/* Auteur : Cécile Bonnet HE201796*/
+/* Auteur : Cécile Bonnet HE201796 */
 
 
-CREATE  PROCEDURE "DBA"."proc_Ville"(in new_ville VARCHAR(50), new_utilisateur VARCHAR(16))
-
-Begin 
-
+CREATE PROCEDURE proc_Ville(in new_ville VARCHAR(50), new_utilisateur VARCHAR(16))
+BEGIN
 update dba.communaute 
 set postal = new_ville
 where idCom = new_utilisateur 
-
-End
+END
 
 /******************************************************/
 
