@@ -20,17 +20,7 @@ function pageChargement(utilisateur){
 	xhr.send() ; 	
    
 }
-function identifiant(){
-	let xhr = new XMLHttpRequest() ;  
-	xhr.open('get', "http://localhost/serv_Id", true) ; 
-	xhr.onreadystatechange = function(){ 
-		if (xhr.status == 200 && xhr.readyState == 4) {  
-	       commentaires(JSON.parse(xhr.responseText)) ;
-		}
-	}
-	xhr.send() ; 
 
-}
  
 
 function infos(donnee) {
@@ -70,7 +60,7 @@ function infos(donnee) {
 		cote = " Pas de cote pour le moment" ;
 	}
 	else {
-		cote=reponse[0].cote/ nombreCote ;
+		cote=Number((reponse[0].cote/ nombreCote).toFixed(1)) ;
 	}
 	
 	tache = reponse[0].tache ;
@@ -108,8 +98,9 @@ function note(){
 			new_N = 0 
 			newNote += (totalNote + addNote)
 			console.log(newNote)
-			new_N += newNote/((reponse[0].nombreCote)+1) ;
-			console.log(new_N)
+			new_N += Number((newNote/reponse[0].nombreCote+1).toFixed(1)) ;
+			
+			
 			
 			alert("votre cote à bien été enregistré")
 		}		
@@ -118,7 +109,7 @@ function note(){
 		alert("Entrée non valide") 
 	}
 	let xhr = new XMLHttpRequest() ;  
-	xhr.open('get', "http://localhost/serv_Note?new_note="+newNote+"&utilisateur="+reponse[0].idCom, true) ;
+	xhr.open('get', "http://localhost/serv_Note?new_note="+newNote+"&new_utilisateur="+reponse[0].idCom, true) ;
 	
 	
 	xhr.send() ;
