@@ -70,7 +70,7 @@ function infos(donnee) {
 		cote = " Pas de cote pour le moment" ;
 	}
 	else {
-		cote=reponse[0].cote ;
+		cote=reponse[0].cote/ nombreCote ;
 	}
 	
 	tache = reponse[0].tache ;
@@ -85,7 +85,7 @@ function infos(donnee) {
 	
 	ville = reponse[0].ville ;
     document.getElementById("page").innerHTML = prenom + ' ' + nom + ' ' + '<br>' + sexe + '<br>' + ville + '<br>' + telephone + '<br>' + mail + '<br>' + anniversaire + '<br>' + portrait ;
-    document.getElementById("notation").innerHTML = cote/ nombreCote ;
+    document.getElementById("notation").innerHTML = cote  ;
     document.getElementById("zonecomm").innerHTML = comment ;
     document.getElementById("tache").innerHTML = tache ;
 	document.getElementById("mon_img").innerHTML =  '<img src="img?url='+ photo +'" alt="test" id="photo_img" width="234" height="250"/>' ;	
@@ -122,10 +122,7 @@ function note(){
 	
 	
 	xhr.send() ;
-	// xhr.open('get', "http://localhost/serv_NombreNote?utilisateur="+reponse[0].idCom, true) ;
 	
-	
-	// xhr.send() ;
 	
 	document.getElementById("notation").innerHTML = new_N;
 }
@@ -159,6 +156,7 @@ function informations(donnee) {
 	
     let nom, prenom, sexe, telephone, mail,anniversaire, photo, portrait, tache, ville ;
 	ville=info[0].ville
+	console.log(ville)
 	nom =info[0].nom
 	prenom= info[0].prenom ;
 	sexe = info[0].sexe ;
