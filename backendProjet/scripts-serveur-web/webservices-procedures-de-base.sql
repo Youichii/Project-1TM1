@@ -2,7 +2,7 @@
 
 /*_______________________-Chemin de la base de données-________________________________*/
 
-ALTER FUNCTION "DBA"."getPath"() 
+CREATE FUNCTION "DBA"."getPath"() 
 returns long varchar deterministic 
 BEGIN
     DECLARE dbPath long varchar; 
@@ -14,7 +14,7 @@ BEGIN
 END
 /*_______________________-CSS-________________________________*/
 
-ALTER PROCEDURE "DBA"."http_getCSS"(in url char(255)) 
+CREATE PROCEDURE "DBA"."http_getCSS"(in url char(255)) 
 RESULT(css long varchar)
 BEGIN
     CALL sa_set_http_header( 'Content-Type', 'text/css' );
@@ -22,7 +22,7 @@ BEGIN
 END
 /*_______________________-Images-________________________________*/
 
-ALTER PROCEDURE "DBA"."http_getIMG"(in filename char(255)) 
+CREATE PROCEDURE "DBA"."http_getIMG"(in filename char(255)) 
 RESULT(img long varchar)
 BEGIN
     CALL sa_set_http_header( 'Content-Type', 'image/png' );
@@ -30,7 +30,7 @@ BEGIN
 END
 /*_______________________-JavaScript-________________________________*/
 
-ALTER PROCEDURE "DBA"."http_getJS"(in url char(255)) 
+CREATE PROCEDURE "DBA"."http_getJS"(in url char(255)) 
 RESULT(js long varchar)
 BEGIN
     CALL sa_set_http_header( 'Content-Type', 'text/js' );
@@ -38,7 +38,7 @@ BEGIN
 END
 /*_______________________-HTML-________________________________*/
 
-ALTER PROCEDURE "DBA"."http_getPage"(in url char(255)) 
+CREATE PROCEDURE "DBA"."http_getPage"(in url char(255)) 
 RESULT(html long varchar)
 BEGIN
     CALL sa_set_http_header( 'Content-Type', 'text/html' );
