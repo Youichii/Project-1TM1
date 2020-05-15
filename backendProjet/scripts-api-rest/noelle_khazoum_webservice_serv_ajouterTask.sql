@@ -1,11 +1,11 @@
 /* Auteur : Noelle Khazoum HE201903 */
 
-CREATE PROCEDURE "DBA"."proc_ajouterTask"(in titreTask_ varchar(100), task_ integer, in personne_ integer, in desc_ long varchar, in cat_ varchar(30))
+CREATE PROCEDURE "DBA"."proc_ajouterTask"(in titreTask_ varchar(100), in personne_ VARCHAR(16), in desc_ long varchar, in cat_ varchar(4))
 BEGIN 
      insert into dba.taches
-     (idCom, idTaches, desc_tache, idCat, titre_tache)
+     (idCom, desc_tache, idCat, titre_tache)
      VALUES 
-     (task_,personne_,desc_,cat_,titreTask_);
+     (personne_, desc_, cat_, titreTask_)
 END
 
 
