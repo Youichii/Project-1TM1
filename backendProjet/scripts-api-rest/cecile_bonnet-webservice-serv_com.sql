@@ -13,4 +13,4 @@ END
 /******************************************************/
 
 
-CREATE SERVICE "serv_com" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call proc_com(:new_comm,:new_auteur,:utilisateur) ;
+CREATE SERVICE "serv_com" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call proc_com(:utilisateur,:new_comm,:new_auteur) ;
