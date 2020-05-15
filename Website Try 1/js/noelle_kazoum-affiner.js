@@ -23,7 +23,7 @@ function description_tache(info){
     let data = JSON.parse(info);
 	let finale = "" ;
     for (let i in data){
-		finale += "<details class='informations'><summary class='summaryTache'>" + data[i].tache + "</summary><ul>" ;
+		finale += "<details class='informations'><summary class='summaryTache'>" + data[i].titre_tache + "</summary><ul>" ;
         finale += "<li class='idName'>Nom :" +data[i].nom + "</li>";
         finale += "<li class='idPren'>Prénom :" +data[i].prenom + "</li>";
         finale += "<li class='idEmail'>Mail :" +data[i].mail + "</li>";
@@ -80,8 +80,8 @@ function affinerTache(){
 				let var3 = '<ul>';
 				for (let i in jrep){
 					document.getElementById("annonceur").innerHTML += var1 +'<li>'+ '<a onclick="cacher(\'pageprofilpublic_cb\'), pageChargement(\'' + jrep[i].idCom + '\');">' + jrep[i].nom +'</a>'+ '</li>' + '</ul>'; 
-					document.getElementById("localisationId").innerHTML += var2 + '<li>' +"* " +  jrep[i].ville + '</li>'+'<li>'+ jrep[i].tache +'</li>' + '<li>' +'<a onclick="cacher(\'pageprofilpublic_cb\'), pageChargement(\'' + jrep[i].idCom + '\');">'+"par:  "+ jrep[i].nom +'</a>'+'</li>'+ '</ul>' ;
-					document.getElementById("AffinerDomaine").innerHTML += var3 +'<li>' + jrep[i].categorie  + " --->  " + jrep[i].tache + '</li>'  +"par:"+'<li>' + '<a onclick="cacher(\'pageprofilpublic_cb\'), pageChargement(\'' + jrep[i].idCom + '\');">' + jrep[i].nom + '</a>' + '</li>' +'</ul>';
+					document.getElementById("localisationId").innerHTML += var2 + '<li>' +"* " +  jrep[i].ville + '</li>'+'<li>'+ jrep[i].titre_tache +'</li>' + '<li>' +'<a onclick="cacher(\'pageprofilpublic_cb\'), pageChargement(\'' + jrep[i].idCom + '\');">'+"par:  "+ jrep[i].nom +'</a>'+'</li>'+ '</ul>' ;
+					document.getElementById("AffinerDomaine").innerHTML += var3 +'<li>' + jrep[i].categorie  + " --->  " + jrep[i].titre_tache + '</li>'  +"par:"+'<li>' + '<a onclick="cacher(\'pageprofilpublic_cb\'), pageChargement(\'' + jrep[i].idCom + '\');">' + jrep[i].nom + '</a>' + '</li>' +'</ul>';
 				}
 		}
     }
