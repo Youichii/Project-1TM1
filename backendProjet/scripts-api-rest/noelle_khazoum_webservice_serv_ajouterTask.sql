@@ -1,11 +1,12 @@
 // pour ajouter des taches à la base de donnée
 
-CREATE PROCEDURE proc_ajouterTask(in task_ VARCHAR (50), in personne_ VARCHAR, in desc_ LONG VARCHAR, in cat_ VARCHAR)
-BEGIN
+CREATE PROCEDURE "DBA"."proc_ajouterTask"(in titreTask_ varchar(100), task_ integer, in personne_ integer, in desc_ long varchar, in cat_ varchar(30))
+BEGIN 
+     
      insert into dba.taches
-     (idCom, tache, details, categorie)
-     VALUES
-     (task_,personne_,desc_,cat_,)
+     (idCom, idTaches, desc_tache, idCat, titre_tache)
+     VALUES 
+     (task_,personne_,desc_,cat_,titreTask_);
 END
 
 
