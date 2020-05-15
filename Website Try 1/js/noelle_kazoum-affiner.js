@@ -37,20 +37,31 @@ function description_tache(info){
 // Partir du script, afficher dans le HTML et sauvegarder ensuite dans la base de donnée
 
 function addTask(){
-	let nouvelleTache, descriptionTache, caseCoche = document.getElementsByName("atache"), categorieTache ;
-	console.log(caseCoche + "cas")
-	for (let i = 0; i < caseCoche.lenght; i++){
-		if (caseCoche[i].checked){
-			categorieTache = caseCoche[i].value ;
-			alert ("Votre tâche" + categorieTache + " a bien été ajoutée !" );
-		}
-    }
-	nouvelleTache = document.getElementById("titre").value;
-	descriptionTache = document.getElementById("champDescri").value;
+	
+
+
+
+    let nouvelleTache, descriptionTache, categorieTache ;
+	
+    var l = document.getElementById("listeCategorie");
+	
+    categorieTache = l.options[l.selectedIndex].value;
+	
+    nouvelleTache = document.getElementById("titre").value;
+
+    descriptionTache = document.getElementById("champDescri").value;
+	
+
     let xhr = new XMLHttpRequest;
+
     xhr.open('get', "http://localhost/serv_ajouerTask?task_="+nouvelleTache+"&personne_="+document.body.id+"&desc_="+descriptionTache+"&cat_="+categorieTache, true);
+
     xhr.send();
-    console.log("Votre tâche  " + nouvelleTache + categorieTache +  " a bien été ajoutée !" );
+
+    alert("Votre tâche  " + nouvelleTache + "  " +categorieTache +  " a bien été ajoutée !" );
+	
+
+
 }
 
 
