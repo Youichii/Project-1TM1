@@ -24,29 +24,7 @@ function getId(Id){
 
 
 
-var DataJSON="";
 var tabData = {};
-
-/*function getInformation(){
-	color ="fantome_" + formulaire.fantColor.value + ".png";
-  if(getId("uPswd") != getId("uPswdConfirm")){
-		document.getElementById("errorMsg").innerHTML = "<p id='WrongPswd'>Les mots de passe ne sont pas identiques, rééssayez</p>";
-		return false;
-  }
-  else {
-		for(let i=0; i< userVerification.length; i++){
-	  	if(getId("uMail") == userVerification[i].mail || getId("uName") == userVerification[i].idCom){
-	  		document.getElementById("errorMsg").innerHTML = "<p id='WrongMail'>Désolé, cette adresse mail/nom d'utilisateur est déjà utilisé(e), rééssayez</p>";
-	  		return false;
-	 		}
-   }
- 	}
- 	document.getElementById("errorMsg").innerHTML ="";
-	tabData = {nom : getId("LastName"), prenom : getId("FirstName"), username : getId("uName"), mail : getId("uMail"),  telephone : getId("uPhone"), adresse : getId("uVille"), anniversaire : getId("uBirth"), pswd : getId("uPswd"), pswd2 :getId("uPswdConfirm"), sexe : getId("uSex")};
-  userVerification.push(tabData);
-  document.querySelector("#formulaire > a").hidden = false;
-  return false; //empêche le formulaire de partir;
-}*/
 
 function getInformation(){
 	color ="fantome_" + formulaire.fantColor.value + ".png";
