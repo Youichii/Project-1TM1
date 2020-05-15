@@ -2,9 +2,9 @@
 
 CREATE  PROCEDURE proc_NombreNote(in new_utilisateur VARCHAR(16))
 BEGIN 
-update dba.communaute 
-set nombreCote = nombre_cote + 1
-where idCom = new_utilisateur 
+  update dba.communaute 
+  set nombreCote = nombre_cote + 1
+  where idCom = new_utilisateur 
 END
 
 /******************************************************/
