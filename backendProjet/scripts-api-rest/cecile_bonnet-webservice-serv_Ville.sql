@@ -3,6 +3,7 @@
 
 CREATE PROCEDURE proc_Ville(in new_ville VARCHAR(50), new_utilisateur VARCHAR(16))
 BEGIN
+Call sa_set_http_header('Access-Control-Allow-Origin', '*');
 update dba.communaute 
 set postal = new_ville
 where idCom = new_utilisateur 
