@@ -3,6 +3,7 @@
 
 CREATE PROCEDURE proc_Mail(in new_mail VARCHAR(40),new_utilisateur VARCHAR(16))
 BEGIN 
+  Call sa_set_http_header('Access-Control-Allow-Origin', '*');
   update dba.communaute
   set mail  = new_mail
   where idCom = new_utilisateur 
