@@ -46,7 +46,7 @@ function addTask(){
     let xhr = new XMLHttpRequest;
     xhr.open('get', "http://localhost/serv_ajouterTask?task_="+nouvelleTache+"&personne_="+document.body.id+"&desc_="+descriptionTache+"&cat_="+categorieTache, true);
     xhr.send();
-    alert("Votre tâche  " + nouvelleTache + "  " +categorieTache +  " a bien été ajoutée !" );
+    alert("Votre tâche " + nouvelleTache + " a bien été ajoutée !" );
 }
 
 
