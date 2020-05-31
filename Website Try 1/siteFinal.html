@@ -58,7 +58,7 @@
 				<ul class="navButton">
 					<li><a onclick='cacher("taches_nk"),affichageTache() ;'>Tâches</a></li>
 					<li><a onclick='cacher("profils_cs"),demarrage_cs();'>Communauté</a></li>
-					<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
+					<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis(document.body.id);'>Profil</a></li>
 				</ul>
 			</nav>
 			
@@ -106,7 +106,7 @@
 				<ul class="navButton">
 					<li><a onclick='cacher("taches_nk"),affichageTache() ;'>Tâches</a></li>
 					<li><a onclick='cacher("profils_cs"),demarrage_cs();'>Communauté</a></li>
-					<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
+					<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis(document.body.id);'>Profil</a></li>
 				</ul>
 			</nav>
 			<h1 class="titreajout">Ajouter une tâche</h1>
@@ -227,7 +227,7 @@
 			  <ul class="navButton">
 				<li><a onclick='cacher("taches_nk"),affichageTache();'>Tâches</a></li>
 				<li><a onclick='cacher("profils_cs"),demarrage_cs();'>Communauté</a></li>
-				<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
+				<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis(document.body.id);'>Profil</a></li>
 			  </ul>
 			</nav>
 		</header>
@@ -289,7 +289,7 @@
 			<ul class="navButton">
 				<li><a onclick='cacher("taches_nk"),affichageTache();'>Tâches</a></li>
 				<li><a class="community" href="#">Communauté</a></li>
-				<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
+				<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis(document.body.id);'>Profil</a></li>
 			</ul>
 		</nav>
 		
@@ -357,7 +357,7 @@
 					</select>
 
 					<input class="buttonSignup" type="submit" name="Signup" value="s'inscrire"></button>
-					<a id='SignupConfirmation' onclick='soumettreForm();' hidden>Confirmer l'inscription?</a>
+					<a id='SignupConfirmation' onclick='soumettreForm(), cacher("pageprofilprive_cb"), pageChargementBis(document.body.id);' hidden>Confirmer l'inscription?</a>
 					<div class="verification" id="errorMsg">
 
 					</div>
@@ -381,7 +381,7 @@
 				<ul class="navButton">
 					<li><a href="#" class="underline">Tâches</a></li>
 					<li><a onclick='cacher("profils_cs"),demarrage_cs();'>Communauté</a></li>
-					<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis();'>Profil</a></li>
+					<li><a onclick='cacher("pageprofilprive_cb"),pageChargementBis(document.body.id);'>Profil</a></li>
 				</ul>
 			</nav>
 			
