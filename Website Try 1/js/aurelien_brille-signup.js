@@ -51,8 +51,6 @@ function getInformation(){
 function soumettreForm(){
 	storeData(formulaire.LastName.value, formulaire.FirstName.value, formulaire.uName.value, formulaire.uMail.value, formulaire.uPhone.value, formulaire.uVille.value, formulaire.uBirth.value, formulaire.uPswd.value, formulaire.uSex.value, color);
 	compte(document.getElementById("uName").value) ;
-	cacher("pageprofilprive_cb");
-	pageChargementBis(document.body.id) ;
 }
 
 
@@ -60,5 +58,4 @@ function storeData(LastName, FirstName, Username, Mail, Phone, Ville, Birth, Psw
   let xhr = new XMLHttpRequest();
 	xhr.open('get', "http://localhost/receiveData?LastName=" + LastName + "&FirstName=" + FirstName + "&Username=" + Username + "&uMail=" + Mail + "&uPhone=" + Phone + "&uVille=" + Ville + "&uBirth=" + Birth + "&uPswd=" + Pswd + "&uSex=" + Sex + "&Color=" + CouleurFant,  true);
 	xhr.send();
-	cacher('pageprofilprive_cb') ;
 }
