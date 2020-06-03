@@ -24,6 +24,7 @@ function getId(Id){
 
 
 
+var DataJSON="";
 var tabData = {};
 
 function getInformation(){
