@@ -1,4 +1,3 @@
-
 "use strict";
 
 // auteur : Noelle Kazoum HE201903
@@ -32,6 +31,7 @@ function description_tache(info){
 		finale += "</ul></details>" ;
     }
 	document.getElementById("informations").innerHTML = finale ;
+	//document.getElementById("informations").open ?????????????????????????????????
 }
 
 //AJOUTER UNE TACHE
@@ -72,3 +72,4 @@ function affinerTache(){
     }
     xhr.send();
 }
+
