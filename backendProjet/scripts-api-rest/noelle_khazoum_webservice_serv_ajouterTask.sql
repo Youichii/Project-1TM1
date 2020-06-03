@@ -1,6 +1,6 @@
 /* Auteur : Noelle Khazoum HE201903 */
 
-CREATE PROCEDURE "DBA"."proc_ajouterTask"(in titreTask_ varchar(100), in personne_ VARCHAR(16), in desc_ long varchar, in cat_ varchar(4))
+ALTER PROCEDURE "DBA"."proc_ajouterTask"(in titreTask_ varchar(100), in personne_ VARCHAR(16), in desc_ long varchar, in cat_ varchar(4))
 BEGIN 
      insert into dba.taches
      (idCom, desc_tache, idCat, titre_tache)
