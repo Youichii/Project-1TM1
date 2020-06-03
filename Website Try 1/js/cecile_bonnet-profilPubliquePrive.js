@@ -5,7 +5,6 @@
 var reponse ;
 var info;
 
-
 //////////////////////////////////////////////////////// Profil Publique/////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 
 function pageChargement(utilisateur){
@@ -16,8 +15,7 @@ function pageChargement(utilisateur){
 	        infos(xhr.responseText) ;
 		}
 	}
-	xhr.send() ; 	
-   
+	xhr.send() ;    
 }
 function identifiant(){
 	let xhr = new XMLHttpRequest() ;  
@@ -71,14 +69,12 @@ function infos(donnee) {
 		cote= Number((reponse[0].cote / nombreCote).toFixed(1)) ;
 	}
 	
-	tache = reponse[0].tache ;
+	tache = reponse[0].titre_tache ;
 	if(tache == null){
 		tache = "Pas de tâche pour le moment" ;
-		
 	}
 	else{
-		tache = reponse[0].tache ;
-		
+		tache = reponse[0].titre_tache ;
 	}
 	
 	ville = reponse[0].ville ;
@@ -106,7 +102,6 @@ function note(){
 			new_N = 0 ;
 			newNote += (totalNote + addNote) ;
 			new_N += Number(newNote/((reponse[0].nombreCote)+1).toFixed(1)) ;
-			
 			alert("votre cote à bien été enregistré") ;
 		}		
 	}
@@ -166,14 +161,14 @@ function informations(donnee) {
 		portrait=info[0].portrait
 	}
 	
-	tache = info[0].tache
+	tache = info[0].titre_tache
 	photo = info[0].photo
 	if(tache == null){
 
 		tache ="Vous n'avez pas de tâches pour le moment"
 	}
 	else{
-		tache = info[0].tache
+		tache = info[0].titre_tache
 	}
 
 	document.getElementById("nom_cb").innerHTML = prenom +  ' ' + nom 
