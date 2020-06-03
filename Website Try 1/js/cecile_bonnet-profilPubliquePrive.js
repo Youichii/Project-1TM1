@@ -2,7 +2,6 @@
 // auteur : Cécile Bonnet HE201796
 /* ****************************** */
 
-
 var reponse ;
 var info;
 
@@ -20,7 +19,16 @@ function pageChargement(utilisateur){
 	xhr.send() ; 	
    
 }
-
+function identifiant(){
+	let xhr = new XMLHttpRequest() ;  
+	xhr.open('get', "http://localhost/serv_Id", true) ; 
+	xhr.onreadystatechange = function(){ 
+		if (xhr.status == 200 && xhr.readyState == 4) {  
+	       commentaires(JSON.parse(xhr.responseText)) ;
+		}
+	}
+	xhr.send() ; 
+}
  
 
 function infos(donnee) {
@@ -60,7 +68,7 @@ function infos(donnee) {
 		cote = " Pas de cote pour le moment" ;
 	}
 	else {
-		cote=Number((reponse[0].cote/ nombreCote).toFixed(1)) ;
+		cote= Number((reponse[0].cote / nombreCote).toFixed(1)) ;
 	}
 	
 	tache = reponse[0].tache ;
@@ -89,31 +97,25 @@ function note(){
 	
 	if(addNote <= 10 && addNote > 0 && addNote != String){
 		if(totalNote === null ){
-			newNote = 0
-			newNote= addNote
-			new_N = addNote
+			newNote = 0 ;
+			newNote= addNote ;
+			new_N = addNote ;
 		}
         else{
-			newNote = 0
-			new_N = 0 
-			newNote += (totalNote + addNote)
-			console.log(newNote)
-			new_N += Number((newNote/reponse[0].nombreCote+1).toFixed(1)) ;
+			newNote = 0 ;
+			new_N = 0 ;
+			newNote += (totalNote + addNote) ;
+			new_N += Number(newNote/((reponse[0].nombreCote)+1).toFixed(1)) ;
 			
-			
-			
-			alert("votre cote à bien été enregistré")
+			alert("votre cote à bien été enregistré") ;
 		}		
 	}
 	else{
-		alert("Entrée non valide") 
+		alert("Entrée non valide") ;
 	}
 	let xhr = new XMLHttpRequest() ;  
 	xhr.open('get', "http://localhost/serv_Note?new_note="+newNote+"&new_utilisateur="+reponse[0].idCom, true) ;
-	
-	
 	xhr.send() ;
-	
 	
 	document.getElementById("notation").innerHTML = new_N;
 }
@@ -144,11 +146,10 @@ function pageChargementBis(user){
 
 function informations(donnee) {
     info = JSON.parse(donnee); 
-	
-    let nom, prenom, sexe, telephone, mail,anniversaire, photo, portrait, tache, ville ;
-	ville=info[0].ville
-	console.log(ville)
-	nom =info[0].nom
+		
+    let nom, prenom, sexe, telephone, mail, anniversaire, photo, portrait, tache, ville ;
+	ville = info[0].ville ;
+	nom = info[0].nom ;
 	prenom= info[0].prenom ;
 	sexe = info[0].sexe ;
 	telephone = info[0].telephone ;
