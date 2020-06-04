@@ -8,6 +8,7 @@ var info;
 //////////////////////////////////////////////////////// Profil Publique/////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 
 function pageChargement(utilisateur){
+	document.querySelector('input#Noter').hidden=false
 	let xhr = new XMLHttpRequest() ;  
 	xhr.open('get', "http://localhost/serv_valeurs?utilisateur=" + utilisateur, true) ; 
 	xhr.onreadystatechange = function(){ 
@@ -85,13 +86,14 @@ function infos(donnee) {
 	document.getElementById("mon_img").innerHTML =  '<img src="img?url='+ photo +'" alt="test" id="photo_img" width="234" height="250"/>' ;	
 }
 
+let noteInter = 0 
 
 function note(){
 	let totalNote = Number(reponse[0].cote)
 	let addNote = +prompt("Veuillez introduire une note sur 10") ;
 	let newNote, new_N;
 	
-	if(addNote <= 10 && addNote > 0 && addNote != String){
+	if(addNote <= 10 && addNote >= 0 && addNote != String){
 		if(totalNote === null ){
 			newNote = 0 ;
 			newNote= addNote ;
@@ -113,6 +115,7 @@ function note(){
 	xhr.send() ;
 	
 	document.getElementById("notation").innerHTML = new_N;
+	document.querySelector("input#Noter").hidden=true
 }
 	
 function commentaires(){
@@ -245,3 +248,4 @@ function changDescription(){
 	alert("Votre Description a bien été changé");
 	document.getElementById("description").innerHTML = newDescription
 } // fonctionne 
+
