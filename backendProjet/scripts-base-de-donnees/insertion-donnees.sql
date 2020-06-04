@@ -42,7 +42,7 @@ VALUES
 ('aubin87', '12', 'Long', 'Aubin', 'M', '+32400989075', 'long.aubin@gmail.com', '1989-07-30', 'aubin.jpg', 'Je suis cycliste professionel, j''ai fais 3 fois le tour de France et j''adore ça.', 1000, 3.1, 1),
 ('colin23', '13', 'Palmer', 'Colin', 'M', '+32409765665', 'palmer.colin@gmail.com', '1995-06-30', 'colin.jpg', 'Je suis passé à The Voice l''année passée car j''adore chanter.', 2000, 4, 1),
 ('elsa86', '14', 'Cox', 'Elsa', 'F', '+32422341198', 'coxe.elsa@gmail.com', '1992-10-28', 'fantome_mauve.png', 'Je fais de la boxe ainsi que de la danse classique, je cherche l''équilibre parfait.', 3500, 5, 1),
-('adele98', '15', 'Ward', 'Adèle', 'F', '+32490908754', 'ward.adele@gmail.com', '1992-11-29', 'adele.jpg', 'Je suis très gourmande et je suis maniaque du rangement.', 1000, 5, 0),
+('adele98', '15', 'Ward', 'Adèle', 'F', '+32490908754', 'ward.adele@gmail.com', '1992-11-29', 'adele.jpg', 'Je suis très gourmande et je suis maniaque du rangement.', 1000, NULL, 0),
 ('louis46', '16', 'Watson', 'Louis', 'M', '+32411324325', 'watson.louis@gmail.com', '1994-12-12', 'fantome_bleu.png', NULL, 1000, 9, 1),
 ('pierre26', '17', 'Mills', 'Pierre', 'M', '+32409876547', 'mills.pierre@gmail.com', '1981-01-11', 'pierre.jpg', NULL, 1348, NULL, 0),
 ('agathe86', '18', 'Moore', 'Agathe', 'F', '+32423456789', 'moore.agathe@gmail.com', '1965-04-10', 'fantome_rose.png', 'On a déménagé en Belgique depuis 12ans, et on a 3 chiens !', 2000, 2.5, 1),
